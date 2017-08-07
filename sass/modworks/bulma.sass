@@ -2,13 +2,13 @@
 
 // Colors
 
-$shades:       ()
-$primary:      hsl(189,  63%, 55%)
+$shades:    ()
+$primary:   hsl(189,  63%, 55%)
 $primarya:  hsl(175,  53%, 58%)
 $primaryb:  hsl(178,  67%, 67%)
-$dark:         hsl(240, 26%, 12%)
-$dark-alt:    hsl(240, 17%, 21%)
-// $light:       hsl(240, 26%, 96%)
+$dark:      hsl(240, 26%, 12%)
+$dark-alt:  hsl(240, 17%, 21%)
+// $light:  hsl(240, 26%, 96%)
 
 // Dimensions
 
@@ -28,9 +28,15 @@ $size-smallish: 0.9rem
 
 $navbar-height: 3.6rem
 
+// Misc
+
+$dimensions: 16 24 32 48 50 64 96 128
+$size-0: 5rem
+$tiny: 480px
+
 // Unfortunately SASS cannot accept dynamic paths so you will have to manually edit this to suit your env
 
-@import "../../../../bulma/sass/utilities/_all"
+@import "../utilities/_all"
 
 // Some variables need to be overwritten last
 
@@ -39,35 +45,36 @@ $navbar-item-color: $white
 $navbar-item-hover-background-color: transparent
 $navbar-item-hover-color: $white
 
-@import "../../../../bulma/sass/base/_all"
+@import "../base/_all"
 
-@import "../../../../bulma/sass/elements/_all"
+@import "../elements/_all"
 
-// @import "../../../../bulma/sass/components/_all"
-// @import "../../../../bulma/sass/components/breadcrumb.sass"
-@import "../../../../bulma/sass/components/card.sass"
-@import "../../../../bulma/sass/components/dropdown.sass"
-// @import "../../../../bulma/sass/components/level.sass"
-@import "../../../../bulma/sass/components/media.sass"
-@import "../../../../bulma/sass/components/menu.sass"
-// @import "../../../../bulma/sass/components/message.sass"
-@import "../../../../bulma/sass/components/modal.sass"
-@import "../../../../bulma/sass/components/nav.sass"
-@import "../../../../bulma/sass/components/navbar.sass"
-@import "../../../../bulma/sass/components/pagination.sass"
-// @import "../../../../bulma/sass/components/panel.sass"
-@import "../../../../bulma/sass/components/tabs.sass"
+// @import "../components/_all"
+// @import "../components/breadcrumb.sass"
+@import "../components/card.sass"
+@import "../components/dropdown.sass"
+// @import "../components/level.sass"
+@import "../components/media.sass"
+@import "../components/menu.sass"
+// @import "../components/message.sass"
+@import "../components/modal.sass"
+@import "../components/nav.sass"
+@import "../components/navbar.sass"
+@import "../components/pagination.sass"
+// @import "../components/panel.sass"
+@import "../components/tabs.sass"
 
-// @import "../../../../bulma/sass/grid/_all"
-@import "../../../../bulma/sass/grid/columns.sass"
-// @import "../../../../bulma/sass/grid/tiles.sass"
+// @import "../grid/_all"
+@import "../grid/columns.sass"
+// @import "../grid/tiles.sass"
 
-// @import "../../../../bulma/sass/layout/_all"
-// @import "../../../../bulma/sass/layout/footer.sass"
-@import "../../../../bulma/sass/layout/hero.sass"
-@import "../../../../bulma/sass/layout/section.sass"
+// @import "../layout/_all"
+// @import "../layout/footer.sass"
+@import "../layout/hero.sass"
+@import "../layout/section.sass"
 
-@import "badge.sass"
+@import "../extensions/_all"
+
 @import "overwrite.sass"
 @import "common.sass"
 
