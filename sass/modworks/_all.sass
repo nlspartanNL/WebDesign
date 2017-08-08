@@ -1,0 +1,75 @@
+@charset "utf-8"
+
+// Import initial variables
+
+@import "../utilities/initial-variables.sass"
+
+// Colors
+$shades:      ()
+$primary:     hsl(189,  63%, 55%)
+$primary-alt: hsl(175,  53%, 58%)
+$dark:        hsl(240, 26%, 12%)
+$dark-alt:    hsl(240, 17%, 21%)
+
+// Fonts
+$body-size: 14px
+$body-size-fullhd: 16px
+
+// Dimensions
+$header-height: 70px
+$header-logo: 50px
+$button-height: 36px
+$nav-height: 3.5rem
+
+// Navbar
+$navbar-height: 3.6rem
+
+// Misc
+$dimensions: 32 50
+$size-0: 5rem
+$tiny: 480px
+
+// Specific Content
+$table-color: $grey
+$navbar-item-color: $white
+$navbar-item-hover-background-color: transparent
+$navbar-item-hover-color: $white
+
+// Import functionality we use
+
+@import "../utilities/_all"
+
+@import "../base/_all"
+
+@import "../elements/_all"
+
+// @import "../components/_all"
+// @import "../components/breadcrumb.sass"
+@import "../components/card.sass"
+@import "../components/dropdown.sass"
+// @import "../components/level.sass"
+@import "../components/media.sass"
+@import "../components/menu.sass"
+// @import "../components/message.sass"
+@import "../components/modal.sass"
+// @import "../components/nav.sass"
+@import "../components/navbar.sass"
+@import "../components/pagination.sass"
+// @import "../components/panel.sass"
+@import "../components/tabs.sass"
+
+// @import "../grid/_all"
+@import "../grid/columns.sass"
+// @import "../grid/tiles.sass"
+
+// @import "../layout/_all"
+// @import "../layout/footer.sass"
+@import "../layout/hero.sass"
+@import "../layout/section.sass"
+
+@import "../extensions/_all"
+
+@import "overwrite.sass"
+@import "common.sass"
+@import "app.sass"
+@import "home.sass"
