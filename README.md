@@ -5,7 +5,7 @@ Design for [mod.works](https://mod.works) is powered by the [bulma.io](http://bu
 The enhancements for bulma we use are stored in the sass/extensions/ folder (if they were made by a 3rd party), and our own enhancements are stored in the sass/modworks/ folder.
 
 ## Setup
-To get the design up and running on your local machine:
+To get the [design](https://design.mod.works) up and running on your local machine:
 
 1. Clone or fork this repository
 2. Point your SASS compiler at the file bulma.sass
