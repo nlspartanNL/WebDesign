@@ -8,9 +8,9 @@ The enhancements for bulma we use are stored in the sass/extensions/ folder (if 
 To get the design up and running on your local machine:
 
 1. Clone or fork this repository
-2. Point your SASS compiler at the file sass/modworks/bulma.sass
-3. Output the bulma.css file to the test/ folder
-4. Load [index.html in the root folder](https://design.mod.works) to preview how your changes will look before submitting your contribution
+2. Point your SASS compiler at the file bulma.sass
+3. Output the bulma.css file to the docs/ folder
+4. Load [index.html in the docs folder](https://design.mod.works) to preview how your changes will look before submitting your contribution
 
 ## Contributions Welcome
 Want to enhance the design of [mod.works](https://mod.works)? Submit a pull request with your recommended changes to the SASS files.
