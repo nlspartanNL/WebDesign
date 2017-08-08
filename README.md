@@ -16,13 +16,8 @@ To get the design up and running on your local machine:
 Want to enhance the design of [mod.works](https://mod.works)? Submit a pull request with your recommended changes to the SASS files.
 
 ## Other Repositories
-Our aim with [mod.works](https://mod.works), is to provide an open modding API. You are welcome to view and fork our other codebases in use.
+Our aim with [mod.works](https://mod.works), is to provide an open modding API. You are welcome to view and fork our other codebases in use:
 
-### API Documentation
-Our [API documentation](https://docs.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksAPIDOCS). You are welcome to contribute.
-
-### SDK Documentation
-Our [SDK documentation](https://sdk.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksSDK). You are welcome to contribute.
-
-### SDK
-Our [SDK](https://sdk.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksSDK). Game developers are welcome to utilize it directly, to add support for mods in their games, or extend it to create plugins and wrappers for other engines and codebases. All contributions welcome.
+* [API documentation](https://docs.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksAPIDOCS).
+* [SDK documentation](https://sdk.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksSDK).
+* [SDK](https://sdk.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksSDK). Game developers are welcome to utilize it directly, to add support for mods in their games, or extend it to create plugins and wrappers for other engines and codebases.
