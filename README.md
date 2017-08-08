@@ -16,7 +16,7 @@ To get the design up and running on your local machine:
 Want to enhance the design of [mod.works](https://mod.works)? Submit a pull request with your recommended changes to the SASS files.
 
 ## Other Repositories
-Our aim with [mod.works](https://mod.works), is to provide an open modding API. You are welcome to view and fork our other codebases in use:
+Our aim with [mod.works](https://mod.works), is to provide an open modding API. You are welcome to view, fork and contribute to our other codebases in use:
 
 * [API documentation](https://docs.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksAPIDOCS).
 * [SDK documentation](https://sdk.mod.works) is public and open source, the repository can be [found here](https://github.com/DBolical/modworksSDK).
