@@ -1,258 +1,148 @@
 #appbar,
 #appmenu
-  background: $dark
   bottom: 0
   left: 0
   overflow: hidden
   position: fixed
   top: 0
   z-index: 19
-  .nav-scroll
+  .navscroll
     bottom: 0
     left: 0
+    padding: 1.5rem 0 0.75rem
     position: absolute
     right: 0
-    top: $header-height
+    top: $navbar-height
+
 #appbar
-  width: $header-height - 10
-  .nav
-    background: rgba($black, 0.4)
-  .nav-scroll
-    width: $header-height - 10
-    .nav-content
-      padding: 1.5rem 0 0.75rem
-      width: $header-height - 10
-  .nav-item
-    color: $white
-    padding: 0
-    width: 100%
-    .icon
-      margin: 0 auto
-      +mobile
-        height: 2.3rem
-        width: 2.3rem
-    &:hover
-      .fa
-        animation: spinAround 1s 1 ease-out
-        color: $black
-  .field
-    display: block
-    overflow: hidden
-    position: relative
-    img,
-    .image
-      border-radius: $radius
-    span
-      margin: 0 auto
-      &.imageicon
-        border-radius: $radius
-        opacity: 0.4
-      &:hover
-        &.imageicon
-          opacity: 0.8
-    &.is-active
-      &:before
-        border: 10px solid $white
-        border-color: transparent transparent transparent $white
-        border-radius: $radius-small
-        content: ""
-        display: inline-block
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-    &.sortable-drag
-      border-radius: $radius
-      &:before
-        display: none
-    &.sortable-ghost
-      span
-        &.image
-          border: 1px dashed $white
-          opacity: 0.4
-          img
-            display: none
-  .fieldremove
-    display: none
-    span
-      &.imageicon
-        opacity: 1
-    .field
-      opacity: 0
-      position: absolute
-      top: 0
-      left: 0
+  width: $navbar-width
+  .navbar
+    .navbar-brand,
+    .navbar-item
       width: 100%
-      z-index: 3
-#appmenu
-  background: $grey-darker
-  left: $header-height - 10
-  width: 240px
-  .menu
-    .tag
-      margin: -2px -6px 0 0
-  .nav
-    background: rgba($black, 0.2)
-  .nav-scroll
-    width: 240px
-    .nav-content
-      padding: 1.5rem 0.75rem 0.75rem
-      width: 240px
-  .nav-avatar
-    position: relative
-    .avatar
-      background: rgba($black, 0.2)
-      border-radius: $radius
-      display: block
-      height: 50px
-      max-height: 50px
-      width: 50px
-    span.avatar
-      border: 1px dashed rgba($black, 0.2)
-    .icon
-      display: none
-    .iconguest,
-    .iconmember
-      display: inherit
-      opacity: 0.5
-    &:hover
       .icon
-        display: inherit
-        opacity: 1
-      .iconmember
-        display: none
-      img
-        opacity: 0.5
-  .nav-holder
-    display: flex
-    flex-wrap: wrap
-    width: 100%
-    .nav-item
-      padding-left: 0
-    .nav-holder-top
-      .nav-item
-        padding-bottom: 0
-    .nav-holder-bottom
-      .nav-item
-        font-weight: $weight-normal
-        padding-top: 0
-    .nav-holder-top,
-    .nav-holder-bottom
-      display: flex
-      flex-basis: 100%
-      height: $header-height / 2
-    .nav-item-logout
+        margin: 0 auto
+      &:hover
+        .fa
+          animation: spinAround 1s 1 ease-out
+  .navscroll
+    .navscroll-content
+      width: $navbar-width
+    .field
+      display: block
+      overflow: hidden
+      position: relative
+      img,
+      .image
+        border-radius: $radius
+      span
+        margin: 0 auto
+      &.is-active
+        &:before
+          border: 10px solid $white
+          border-color: transparent transparent transparent $white
+          border-radius: $radius-small
+          content: ""
+          display: inline-block
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+      &.sortable-drag
+        border-radius: $radius
+        &:before
+          display: none
+      &.sortable-ghost
+        span
+          &.image
+            border: 1px dashed $white
+            opacity: 0.4
+            img,
+            .icon
+              display: none
+    .fieldremove
       display: none
-      margin-left: auto
-    &:hover
-      .nav-item-logout
+      .field
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 3
+  +tiny
+    display: none
+    .navscroll
+      overflow-y: auto
+    &.is-active
+      display: block
+
+#appmenu
+  left: $navbar-width
+  width: $navmenu-width
+  .navbar
+    .navbar-item
+      padding-left: 0.75rem
+      padding-right: 0.75rem
+      .avatar,
+      img
+        border-radius: $radius 
+      &.has-dropdown
+        padding: 0
+    .navbar-double
+      flex-wrap: wrap
+      .navbar-item
+        padding-left: 0
+      .navbar-top,
+      .navbar-bottom
         display: flex
+        flex-basis: 100%
+        height: $navbar-height/2
+      .navbar-top
+        padding-top: 4px
+      .navbar-bottom
+        padding-bottom: 4px
+  .navscroll
+    .navscroll-content
+      width: $navmenu-width
+      padding-left: 0.75rem
+      padding-right: 0.75rem
   .footer
-    font-size: 0.9em
+    color: $grey
+    font-size: $size-small
+    text-align: center
     a
       color: inherit
-      &:hover
+      &:hover,
+      &:visited:hover
         color: $white
+  +mobile
+    display: none
+    .navscroll
+      overflow-y: auto
+    &.is-active
+      display: block
+
 #appcontent
-  .section
-    padding-left: 0
-    padding-right: 0
-  a.nav-item
-    font-weight: $weight-normal
-  .nav-left
-    overflow: hidden
-    .nav-item
-      &:nth-child(2)
-        color: $white
-        font-size: 1.3em
-        font-weight: $weight-bold
+  .navbar
+    .navbar-search
+      position: relative
+      width: 100%
+      .input
+        min-width: 300px
+        +touch
+          min-width: inherit
+    .navbar-start
+      .navbar-item
+        &:first-child
+          font-size: $size-medium
+          font-weight: $weight-bold
   .tabs
-    padding-top: 0.75rem
+    padding-top: 1.5rem
+
 #appcontent,
 #app #profiler
-  margin-left: 240px + $header-height - 10
+  margin-left: $navmenu-width + $navbar-width
   overflow: hidden
-+mobile
-  #appbar
-    width: $nav-height
-    .nav-scroll
-      top: $nav-height
-      width: $nav-height
-      .nav-content
-        width: $nav-height
-  #appmenu
-    display: none
-    .nav-scroll
-      overflow-y: auto
-      top: $nav-height
-    .nav-holder
-      .nav-item-logout
-        display: flex
-    &.is-active
-      display: block
-      left: $nav-height
-      .nav-avatar
-        .avatar
-          height: 34px
-          max-height: 34px
-          width: 34px
-      .nav-holder
-        .nav-holder-top,
-        .nav-holder-bottom
-          height: $nav-height / 2
-  #appcontent,
-  #app #profiler
-    margin-left: $nav-height
-  #appbar,
-  #appmenu,
-  #appcontent
-    .nav
-      height: $nav-height
-+tiny
-  #appbar
-    display: none
-    .nav-scroll
-      overflow-y: auto
-    &.is-active
-      display: block
-  #appcontent,
-  #app #profiler
+  +mobile
+    margin-left: $navbar-width
+  +tiny
     margin-left: 0
-+touch
-  #appcontent
-    .container.is-fluid
-      margin: 0 10px
-    .hero
-      .container.is-fluid
-        margin: 0
-    .nav-left
-      .nav-item
-        &:nth-child(2)
-          font-size: inherit
-+tablet
-  #appbar,
-  #appmenu,
-  #appcontent
-    .nav
-      height: $header-height
-+tablet-only
-  #appcontent
-    .nav-left
-      .nav-item
-        &:nth-child(2)
-          padding-left: 0
-
-
-
-
-
-+mobile
-  .sectionprofile
-    padding-top: 0
-  .hero
-    .columnsholder,
-    .column,
-    .hero-body
-      margin-left: 0
-      margin-right: 0
-      padding-left: 0
-      padding-right: 0

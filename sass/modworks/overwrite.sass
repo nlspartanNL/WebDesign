@@ -146,6 +146,10 @@ body
 // helpers.sass
 // ############
 
+.is-flex-centered
+  flex-direction: column
+  justify-content: center
+
 .is-hidden-tiny
   +tiny
     display: none !important
@@ -157,6 +161,12 @@ body
 .is-shown-tiny
   +from($tiny)
     display: none !important
+
+.is-particles
+  z-index: 0
+
+.is-bold
+  font-weight: $weight-bold
 
 .has-text-inherit
   color: inherit
@@ -680,8 +690,13 @@ ul
 // menu.sass
 // #########
 
+.menu
+  .tag
+    margin: -2px -6px 0 0
+
 .menu-label
   font-size: $size-small
+
 
 
 // modal.sass
@@ -702,43 +717,29 @@ ul
   display: block
 
 
-// nav.sass
-// ########
+// navbar.sass
+// ###########
 
 .navbar
-  &.is-transparent
-    background: none
-  .navbar-item
-    img
-      max-height: none
+  .navbar-item,
+  .navbar-link
+    &:hover
+      color: $primary !important
+  .navbar-burger
+    span
+      background: $white
+    &:hover
+      background: $primary
+  .navbar-dropdown
+    color: $grey-dark
+  .is-active
+    .navbar-dropdown
+      color: $white
 
-// nav.sass
-// ########
-
-.nav-menu
-  // Responsiveness
-  +mobile
-    background-color: $white
-    box-shadow: 0 4px 7px rgba($black, 0.1)
-    left: 0
-    display: none
-    right: 0
-    top: 100%
-    position: absolute
-    .nav-item
-      border-top: 1px solid rgba($border, 0.5)
-      padding: 0.75rem
-    &.is-active
-      display: block
-
-.nav-left
-  flex-basis: 0
-
-.nav-center
-  // Responsiveness
-  +mobile
-    .nav-item
-      padding-right: 0
++tablet
+  .container > .navbar
+    margin-left: 0
+    margin-right: 0
 
 
 // pagination.sass
@@ -846,32 +847,6 @@ ul
     .nav
       box-shadow: none
       height: $header-logo + 20px
-    .nav-right
-      flex: inherit
-      overflow: visible
-    a.nav-item
-      font-weight: $weight-bold
-    .nav-logo
-      .icon
-        height: $header-logo
-        max-width: $header-logo
-        width: $header-logo
-      img
-        max-height: $header-logo
-        max-width: 200px
-      &:hover
-        .icon
-          animation: spinAround 1s 1 ease-out
-    .nav-search
-      position: relative
-      width: 100%
-      .input
-        min-width: 300px
-    .nav-menu
-      &.is-active
-        .input
-          max-width: none
-          width: 100%
     .has-text-primary
       color: $primary
     .tabs
@@ -921,37 +896,6 @@ ul
             color: $white
             cursor: pointer
 
-+mobile
-  .hero
-    &.is-primary
-      .nav-logo
-        padding-right: 0
-        .icon
-          height: 34px
-          max-width: 34px
-          width: 34px
-        img
-          max-height: 34px
-          max-width: 120px
-
-+touch
-  .hero
-    &.is-primary
-      .nav
-        height: auto
-      .nav-search
-        .input
-          min-width: inherit
-
-+desktop
-  .hero
-    &.is-primary
-      .nav-logo
-        padding-left: 0
-        padding-right: 0
-      .nav-searchitem
-        padding-right: 0
-
 
 // section.sass
 // ############
@@ -959,3 +903,7 @@ ul
 .section
   background: none
   padding: 1.5rem
+  .container
+    &.is-fluid
+      margin: 0
+  

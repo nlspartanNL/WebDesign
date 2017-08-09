@@ -11,16 +11,16 @@
   &[data-badge]::after, &:not([data-badge])::after
     background: $primary
     background-clip: padding-box
-    border-radius: 1rem
+    border-radius: 1024px
     color: #fff
     content: attr(data-badge)
     display: inline-block
   &[data-badge]::after
     font-size: $size-7
-    height: 1.4rem
-    line-height: 1
-    min-width: 1.4rem
-    padding: .3rem
+    height: 1.2rem
+    line-height: 1.2rem
+    min-width: 1.2rem
+    padding: 0 .2rem
     text-align: center
     white-space: nowrap
   &:not([data-badge])::after, &[data-badge=""]::after
@@ -28,6 +28,9 @@
     min-width: .6rem
     padding: 0
     width: .6rem
+  &.badge-empty
+    &:not([data-badge])::after, &[data-badge=""]::after
+      display: none
   &.is-bordered::after
     box-shadow: 0 0 0 .2rem #fff
   &.is-top::after
@@ -37,10 +40,3 @@
     -webkit-transform: translate(50%, -50%)
     -ms-transform: translate(50%, -50%)
     transform: translate(50%, -50%)
-  &.is-bottom::after
-    position: absolute
-    right: 0
-    bottom: 0
-    -webkit-transform: translate(50%, 50%)
-    -ms-transform: translate(50%, 50%)
-    transform: translate(50%, 50%)
