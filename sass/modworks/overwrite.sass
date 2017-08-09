@@ -732,6 +732,12 @@ ul
       background: $primary
   .navbar-dropdown
     color: $grey-dark
+    &.is-boxed
+      .navbar-item
+        &:first-child
+          border-radius: $navbar-dropdown-boxed-radius $navbar-dropdown-boxed-radius 0 0
+        &:last-child
+          border-radius: 0 0 $navbar-dropdown-boxed-radius $navbar-dropdown-boxed-radius
   .is-active
     .navbar-dropdown
       color: $white
