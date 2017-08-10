@@ -162,6 +162,12 @@ body
   +from($tiny)
     display: none !important
 
+.is-paddingright
+  padding-left: 0 !important
+
+.is-paddingleft
+  padding-right: 0 !important
+
 .is-particles
   z-index: 0
 
@@ -220,6 +226,14 @@ body
 
 // container.sass
 // ##########
+
+.container
+  +tablet
+    &.is-fluid
+      padding-left: $gap
+      padding-right: $gap
+      max-width: none
+      width: auto
 
 .containernooverflow
   max-width: 100%
@@ -511,12 +525,6 @@ ul
     &.has-text-right
       text-align: right
   tr
-    td:first-child,
-    th:first-child
-      padding-left: 0
-    td:last-child,
-    th:last-child
-      padding-right: 0
     &.rowtitle
       td,
       th
@@ -527,7 +535,14 @@ ul
         color: currentColor
   &:last-child
     margin-bottom: 0
-
+  &:not(.is-bordered)
+    tr
+      td:first-child,
+      th:first-child
+        padding-left: 0
+      td:last-child,
+      th:last-child
+        padding-right: 0
 
 // tag.sass
 // ########
@@ -720,11 +735,12 @@ ul
 // navbar.sass
 // ###########
 
+.navbar-item,
+.navbar-link
+  padding-left: 0.75rem
+  padding-right: 0.75rem
+
 .navbar
-  .navbar-item,
-  .navbar-link
-    &:hover
-      color: $primary !important
   .navbar-burger
     span
       background: $white
@@ -738,14 +754,34 @@ ul
           border-radius: $navbar-dropdown-boxed-radius $navbar-dropdown-boxed-radius 0 0
         &:last-child
           border-radius: 0 0 $navbar-dropdown-boxed-radius $navbar-dropdown-boxed-radius
-  .is-active
-    .navbar-dropdown
+  .avatar
+    border-radius: $radius
+    margin-left: 1.5rem
+    img
+      border-radius: $radius
+  &.is-dark
+    .navbar-item,
+    .navbar-link
       color: $white
-
-+tablet
-  .container > .navbar
-    margin-left: 0
-    margin-right: 0
+      &:hover
+        color: $primary
+    .is-active
+      .navbar-dropdown
+        color: $white
+  &.is-dark-mobile
+    +mobile
+      background: $dark
+      .navbar-item,
+      .navbar-link
+        color: $white
+        &:hover
+          color: $primary
+      .is-active
+        .navbar-dropdown
+          color: $white
+  &.is-primary
+    &:hover
+      background: $dark
 
 
 // pagination.sass
@@ -850,9 +886,6 @@ ul
   position: relative
   &.is-primary
     z-index: 1
-    .nav
-      box-shadow: none
-      height: $header-logo + 20px
     .has-text-primary
       color: $primary
     .tabs
@@ -908,8 +941,10 @@ ul
 
 .section
   background: none
-  padding: 1.5rem
+  padding: $gap
   .container
     &.is-fluid
-      margin: 0
+      padding: 0
+  +tiny
+    padding: $gap / 2
   

@@ -9,10 +9,12 @@
   .navscroll
     bottom: 0
     left: 0
-    padding: 1.5rem 0 0.75rem
+    padding: $gap 0 $gap / 2
     position: absolute
     right: 0
     top: $navbar-height
+    +tiny
+      padding-top: $gap / 2
 
 #appbar
   width: $navbar-width
@@ -54,8 +56,7 @@
       &.sortable-ghost
         span
           &.image
-            border: 1px dashed $white
-            opacity: 0.4
+            border: 1px dashed $dark
             img,
             .icon
               display: none
@@ -79,25 +80,12 @@
   left: $navbar-width
   width: $navmenu-width
   .navbar
+    .navbar-brand,
     .navbar-item
-      padding-left: 0.75rem
-      padding-right: 0.75rem
-      .avatar,
+      width: 100%
       img
-        border-radius: $radius 
-      &.has-dropdown
-        padding: 0
-    .navbar-double
-      flex-wrap: wrap
-      .navbar-top,
-      .navbar-bottom
-        display: flex
-        flex-basis: 100%
-        height: $navbar-height/2
-      .navbar-top
-        padding-top: 4px
-      .navbar-bottom
-        padding-bottom: 4px
+        margin: 0 auto
+        max-width: $navmenu-width - $navbar-width
   .navscroll
     .navscroll-content
       width: $navmenu-width
@@ -121,20 +109,15 @@
 
 #appcontent
   .navbar
-    .navbar-search
-      position: relative
-      width: 100%
-      .input
-        min-width: 300px
-        +touch
-          min-width: inherit
-    .navbar-start
-      .navbar-item
-        &:first-child
-          font-size: $size-medium
-          font-weight: $weight-bold
+    .navbar-brand
+      img
+        max-width: 160px
+    +tablet
+      padding: 0 $gap
+    +mobile
+      box-shadow: none
   .tabs
-    padding-top: 1.5rem
+    padding-top: $gap
 
 #appcontent,
 #app #profiler
