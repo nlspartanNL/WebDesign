@@ -6,11 +6,11 @@ $container-offset: 60px !default
   +from($desktop + $container-offset)
     max-width: $desktop - (2 * $gap)
     width: $desktop - (2 * $gap)
-    &.is-fluid
-      margin-left: $gap
-      margin-right: $gap
-      max-width: none
-      width: auto
+    // &.is-fluid
+      // margin-left: $gap
+      // margin-right: $gap
+      // max-width: none
+      // width: auto
   +until($widescreen + $container-offset)
     &.is-widescreen
       max-width: $widescreen - (2 * $gap)

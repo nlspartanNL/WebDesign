@@ -1,0 +1,140 @@
+#appbar,
+#appmenu
+  bottom: 0
+  left: 0
+  overflow: hidden
+  position: fixed
+  top: 0
+  z-index: 19
+  .navscroll
+    bottom: 0
+    left: 0
+    padding: $gap 0 $gap / 2
+    position: absolute
+    right: 0
+    top: $navbar-height
+    +tiny
+      padding-top: $gap / 2
+
+#appbar
+  width: $navbar-width
+  .navbar
+    .navbar-brand,
+    .navbar-item
+      width: 100%
+      .icon
+        margin: 0 auto
+      &:hover
+        .fa
+          animation: spinAround 1s 1 ease-out
+  .navscroll
+    .navscroll-content
+      width: $navbar-width
+    .field
+      display: block
+      overflow: hidden
+      position: relative
+      img,
+      .image
+        border-radius: $radius
+      span
+        margin: 0 auto
+      &.is-active
+        &:before
+          border: 10px solid $white
+          border-color: transparent transparent transparent $white
+          border-radius: $radius-small
+          content: ""
+          display: inline-block
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+      &.sortable-drag
+        border-radius: $radius
+        &:before
+          display: none
+      &.sortable-ghost
+        span
+          &.image
+            border: 1px dashed $dark
+            img,
+            .icon
+              display: none
+    .fieldremove
+      display: none
+      .field
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 3
+  +tiny
+    display: none
+    .navscroll
+      overflow-y: auto
+    &.is-active
+      display: block
+
+#appmenu
+  left: $navbar-width
+  width: $navmenu-width
+  .navbar
+    .navbar-brand,
+    .navbar-item
+      width: 100%
+      img
+        margin: 0 auto
+        max-width: $navmenu-width - $navbar-width
+  .navscroll
+    .navscroll-content
+      width: $navmenu-width
+      padding-left: 0.75rem
+      padding-right: 0.75rem
+  .footer
+    color: $grey
+    font-size: $size-small
+    text-align: center
+    a
+      color: inherit
+      &:hover,
+      &:visited:hover
+        color: $white
+  +mobile
+    display: none
+    .navscroll
+      overflow-y: auto
+    &.is-active
+      display: block
+
+#appcontent
+  .navbar
+    .navbar-brand
+      img
+        max-width: 160px
+    +tablet
+      padding: 0 $gap
+    +mobile
+      box-shadow: none
+  .tabs
+    padding-top: $gap
+  .columnsidemenu
+    border-radius: $radius
+    margin: 0.75rem
+    max-width: 880px
+    padding: 0.75rem
+    a:not(.button)
+      &:hover
+        color: inherit
+    .body
+      &:first-child
+        padding: 0
+
+#appcontent,
+#app #profiler
+  margin-left: $navmenu-width + $navbar-width
+  overflow: hidden
+  +mobile
+    margin-left: $navbar-width
+  +tiny
+    margin-left: 0

@@ -7,7 +7,7 @@
       background-color: $color
       color: $color-invert
   &.is-primary-gradient
-    background: linear-gradient(60deg, $primary 0%, $primarya 100%)
+    background: linear-gradient(60deg, $primary 0%, $primary-alt 100%)
 
 
 .is-facebook
@@ -191,12 +191,9 @@
 
 // Euro Cookies
 .ec
-  background: $black
   bottom: 0
-  color: $white
   display: none
   left: 0
-  overflow: hidden
   padding: 10px
   position: fixed
   right: 0
@@ -225,6 +222,7 @@
 
 // Search Suggest
 .search-suggest
+  font-size: $size-small
   position: relative
 
 .box-links
@@ -241,7 +239,7 @@
     text-align: left
     text-overflow: ellipsis
     white-space: nowrap
-  a .suggest,
+  a.suggest,
   li
     &:hover
       background: $primary
@@ -432,24 +430,12 @@
       font-weight: $weight-bold
 
 .body
-  padding: 0.75rem 0
+  padding: 0.75rem 0 0
   .content
     overflow: hidden
 
 .supporter
   text-align: center
-
-.normalcorner
-  .is-primary
-    border-radius: $radius $radius 0 0
-  .has-addons
-    .control
-      &:first-child
-        .button
-          border-radius: $radius 0 0 0
-      &:last-child
-        .button
-          border-radius: 0 $radius 0 0
 
 #tinymce
   background: $white
@@ -475,6 +461,10 @@
     .container
       background: none
 
+.mediabox
+  &:not(:last-child)
+    margin-bottom: 0.75rem
+
 +mobile
   .sectionprofile
     .columnsholder
@@ -484,8 +474,6 @@
         .columnfull
           padding-bottom: 0
           padding-top: 0
-    .mediabox
-      margin-bottom: 0
   .section
     .columns
       overflow: hidden
@@ -494,3 +482,19 @@
     border-radius: 0 !important
   .has-text-centered-mobile
     text-align: center
+
+.shake
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
+  perspective: 1000px
+
+@keyframes shake
+  10%, 90%
+    transform: translate3d(-1px, 0, 0)
+  20%, 80%
+    transform: translate3d(2px, 0, 0)
+  30%, 50%, 70%
+    transform: translate3d(-4px, 0, 0)
+  40%, 60%
+    transform: translate3d(4px, 0, 0)

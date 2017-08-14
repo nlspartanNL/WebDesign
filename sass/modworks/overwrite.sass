@@ -142,12 +142,13 @@ html
 body
   background: $body-background-color
 
-code, small, pre
-  font-size: $size-smallish
-
 
 // helpers.sass
 // ############
+
+.is-flex-centered
+  flex-direction: column
+  justify-content: center
 
 .is-hidden-tiny
   +tiny
@@ -161,8 +162,23 @@ code, small, pre
   +from($tiny)
     display: none !important
 
+.is-paddingright
+  padding-left: 0 !important
+
+.is-paddingleft
+  padding-right: 0 !important
+
+.is-particles
+  z-index: 0
+
+.is-bold
+  font-weight: $weight-bold
+
 .has-text-inherit
   color: inherit
+
+.has-text-grey
+  color: $grey-light !important
 
 
 
@@ -214,6 +230,14 @@ code, small, pre
 // container.sass
 // ##########
 
+.container
+  +tablet
+    &.is-fluid
+      padding-left: $gap
+      padding-right: $gap
+      max-width: none
+      width: auto
+
 .containernooverflow
   max-width: 100%
   overflow: hidden
@@ -233,9 +257,6 @@ code, small, pre
 
 // form.sass
 // #########
-
-.help
-  font-size: $size-smallish
 
 .control
   &.is-dark
@@ -408,6 +429,7 @@ ul
       height: 56px
       max-width: 56px
   &.is-filled
+    img,
     svg
       height: 100%
       max-width: 100%
@@ -497,7 +519,7 @@ ul
       &:hover
         color: $primary
     .tablesubtitle
-      font-size: $size-smallish
+      font-size: $size-small
     +touch
       word-break: break-word
       word-wrap: break-word
@@ -507,12 +529,6 @@ ul
     &.has-text-right
       text-align: right
   tr
-    td:first-child,
-    th:first-child
-      padding-left: 0
-    td:last-child,
-    th:last-child
-      padding-right: 0
     &.rowtitle
       td,
       th
@@ -523,11 +539,21 @@ ul
         color: currentColor
   &:last-child
     margin-bottom: 0
-
+  &:not(.is-bordered)
+    tr
+      td:first-child,
+      th:first-child
+        padding-left: 0
+      td:last-child,
+      th:last-child
+        padding-right: 0
 
 // tag.sass
 // ########
 
+.tags
+  &.is-pulled-right
+    justify-content: flex-end
 .tag
   border-radius: $radius
   font-weight: $weight-bold
@@ -658,7 +684,8 @@ ul
 
 .tablethread
   .media
-    .formbox
+    .commentform,
+    .commentformedit
       margin-top: 0.5rem
     .media
       margin-top: 0.5rem
@@ -686,8 +713,13 @@ ul
 // menu.sass
 // #########
 
+.menu
+  .tag
+    margin: -2px -6px 0 0
+
 .menu-label
   font-size: $size-small
+
 
 
 // modal.sass
@@ -708,43 +740,56 @@ ul
   display: block
 
 
-// nav.sass
-// ########
+// navbar.sass
+// ###########
+
+.navbar-item,
+.navbar-link
+  padding-left: 0.75rem
+  padding-right: 0.75rem
 
 .navbar
-  &.is-transparent
-    background: none
-  .navbar-item
+  .navbar-burger
+    span
+      background: $white
+    &:hover
+      background: $primary
+  .navbar-dropdown
+    color: $grey-dark
+    &.is-boxed
+      .navbar-item
+        &:first-child
+          border-radius: $navbar-dropdown-boxed-radius $navbar-dropdown-boxed-radius 0 0
+        &:last-child
+          border-radius: 0 0 $navbar-dropdown-boxed-radius $navbar-dropdown-boxed-radius
+  .avatar
+    border-radius: $radius
+    margin-left: 1.5rem
     img
-      max-height: none
-
-// nav.sass
-// ########
-
-.nav-menu
-  // Responsiveness
-  +mobile
-    background-color: $white
-    box-shadow: 0 4px 7px rgba($black, 0.1)
-    left: 0
-    display: none
-    right: 0
-    top: 100%
-    position: absolute
-    .nav-item
-      border-top: 1px solid rgba($border, 0.5)
-      padding: 0.75rem
-    &.is-active
-      display: block
-
-.nav-left
-  flex-basis: 0
-
-.nav-center
-  // Responsiveness
-  +mobile
-    .nav-item
-      padding-right: 0
+      border-radius: $radius
+  &.is-dark
+    .navbar-item,
+    .navbar-link
+      color: $white
+      &:hover
+        color: $primary
+    .is-active
+      .navbar-dropdown
+        color: $white
+  &.is-dark-mobile
+    +mobile
+      background: $dark
+      .navbar-item,
+      .navbar-link
+        color: $white
+        &:hover
+          color: $primary
+      .is-active
+        .navbar-dropdown
+          color: $white
+  &.is-primary
+    &:hover
+      background: $dark
 
 
 // pagination.sass
@@ -753,6 +798,8 @@ ul
 .paginationalt
   margin-top: 0.75rem
 
+.paginationurls
+  margin-top: 2.25rem
 
 
 
@@ -767,6 +814,7 @@ ul
     flex-wrap: nowrap
     margin-left: 0
     margin-right: 0
+    margin-top: 1.5em
     overflow: hidden
   &.slick-slider
     overflow: visible
@@ -849,35 +897,6 @@ ul
   position: relative
   &.is-primary
     z-index: 1
-    .nav
-      box-shadow: none
-      height: $header-logo + 20px
-    .nav-right
-      flex: inherit
-      overflow: visible
-    a.nav-item
-      font-weight: $weight-bold
-    .nav-logo
-      .icon
-        height: $header-logo
-        max-width: $header-logo
-        width: $header-logo
-      img
-        max-height: $header-logo
-        max-width: 200px
-      &:hover
-        .icon
-          animation: spinAround 1s 1 ease-out
-    .nav-search
-      position: relative
-      width: 100%
-      .input
-        min-width: 300px
-    .nav-menu
-      &.is-active
-        .input
-          max-width: none
-          width: 100%
     .has-text-primary
       color: $primary
     .tabs
@@ -927,41 +946,16 @@ ul
             color: $white
             cursor: pointer
 
-+mobile
-  .hero
-    &.is-primary
-      .nav-logo
-        padding-right: 0
-        .icon
-          height: 34px
-          max-width: 34px
-          width: 34px
-        img
-          max-height: 34px
-          max-width: 120px
-
-+touch
-  .hero
-    &.is-primary
-      .nav
-        height: auto
-      .nav-search
-        .input
-          min-width: inherit
-
-+desktop
-  .hero
-    &.is-primary
-      .nav-logo
-        padding-left: 0
-        padding-right: 0
-      .nav-searchitem
-        padding-right: 0
-
 
 // section.sass
 // ############
 
 .section
   background: none
-  padding: 1.5rem
+  padding: $gap
+  .container
+    &.is-fluid
+      padding: 0
+  +tiny
+    padding: $gap / 2
+  
