@@ -177,6 +177,9 @@ body
 .has-text-inherit
   color: inherit
 
+.has-text-grey
+  color: $grey-light !important
+
 
 
 
@@ -426,6 +429,7 @@ ul
       height: 56px
       max-width: 56px
   &.is-filled
+    img,
     svg
       height: 100%
       max-width: 100%
@@ -547,6 +551,9 @@ ul
 // tag.sass
 // ########
 
+.tags
+  &.is-pulled-right
+    justify-content: flex-end
 .tag
   border-radius: $radius
   font-weight: $weight-bold
@@ -677,7 +684,8 @@ ul
 
 .tablethread
   .media
-    .formbox
+    .commentform,
+    .commentformedit
       margin-top: 0.5rem
     .media
       margin-top: 0.5rem
@@ -790,6 +798,8 @@ ul
 .paginationalt
   margin-top: 0.75rem
 
+.paginationurls
+  margin-top: 2.25rem
 
 
 
@@ -804,6 +814,7 @@ ul
     flex-wrap: nowrap
     margin-left: 0
     margin-right: 0
+    margin-top: 1.5em
     overflow: hidden
   &.slick-slider
     overflow: visible
