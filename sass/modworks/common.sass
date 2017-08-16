@@ -93,17 +93,42 @@
       padding-left: 20px
       padding-right: 20px
 
-.is-scrollable
-  overflow: hidden
+.is-scrollable,
+.is-scrollable-x
   -webkit-overflow-scrolling: touch
-  &:hover
-    overflow-y: auto
   &::-webkit-scrollbar
     background: transparent
+    height: 7px
     width: 7px
   &::-webkit-scrollbar-thumb
-    background: rgba(0,0,0,0.5) !important
+    background: rgba($black,0.5)
     border-radius: $radius
+    &:hover
+      background: $black
+
+.is-scrollable
+  overflow: hidden
+  &:hover
+    overflow-y: auto
+
+.is-scrollable-x
+  overflow-x: auto
+
+.background
+  &.is-dark
+    .is-scrollable,
+    .is-scrollable-x
+      &::-webkit-scrollbar-thumb
+        background: rgba($primary,0.5)
+        &:hover
+          background: $primary
+  &.is-primary
+    .is-scrollable,
+    .is-scrollable-x
+      &::-webkit-scrollbar-thumb
+        background: rgba($dark,0.5)
+        &:hover
+          background: $dark
 
 .highlight
   font-weight: $weight-bold

@@ -118,40 +118,46 @@
       box-shadow: none
   .tabs
     padding-top: $gap
+  .columnsheader
+    .column
+      padding-bottom: 0
   .columnsidemenu
-    border-radius: $radius
-    margin: 0.75rem
     max-width: 880px
-    padding: 0.75rem
-    a:not(.button)
-      &:hover
-        color: inherit
-    .body
-      &:first-child
-        padding: 0
-  .columngallery
     order: 2
-    +touch
-      background: none
-      font-size: 0
-      padding: 0
-      .scrollbox
-        overflow-x: auto
-        overflow-y: hidden
-        white-space: nowrap
-        .normalbox
-          display: inline-block
-          margin: 0
-          max-width: 50%
-          width: 50%
-        .menubox
-          display: none
-        .image
-          padding-top: 56.25%
-        img
-          +overlay
-          height: 100%
-          width: 100%
+    .columninner 
+      border-radius: $radius
+      padding: 0.75rem
+      a:not(.button)
+        &:hover
+          color: inherit
+      .body
+        &:first-child
+          padding: 0
+      +touch
+        margin-bottom: -0.75rem
+  .columngallery
+    .columninner
+      +touch
+        background: none
+        font-size: 0
+        padding: 0
+        .scrollbox
+          overflow-x: auto
+          overflow-y: hidden
+          white-space: nowrap
+          .normalbox
+            display: inline-block
+            margin: 0
+            max-width: 50%
+            width: 50%
+          .menubox
+            display: none
+          .image
+            padding-top: 56.25%
+          img
+            +overlay
+            height: 100%
+            width: 100%
 
 #appcontent,
 #app #profiler
