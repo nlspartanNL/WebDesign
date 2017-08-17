@@ -1,6 +1,8 @@
 #home
   // Hero
   .hero-body
+    h1
+      font-size: 4rem
     form
       margin-left: auto
       margin-right: auto
@@ -9,13 +11,33 @@
     margin-top: 4em
     z-index: 1
     .columns
-      padding: 2em 0.75em 2.75em
-      .is-circle
+      padding: 2em 0.75em 4em
+      .column
+        &:hover
+          .iconbg
+            animation: spinAround 10s infinite linear
+      .subtitle
+        margin-left: auto
+        margin-right: auto
+        max-width: 250px
+        +mobile
+          max-width: 370px
+      .button
+        background: transparent
         margin: -1.8em 0 0.5em
+        .icon
+          z-index: 1
+          &.iconbg
+            font-size: 5rem
+            z-index: 0
+            .fa
+              font-size: 130px
+              height: 130px
+              max-width: 130px
       +mobile
         .column
           &:nth-child(n+2)
-            .is-circle
+            .button
               margin-top: 0.2em
   // Content
   .section
@@ -25,7 +47,6 @@
   // Benefits
   .benefits
     background: none
-    padding-top: 2em
     padding-bottom: 3em
     .background
       bottom: 0
@@ -59,6 +80,11 @@
           transform: scaleX(-1) skewY(2deg)
     .column
       padding-top: 2em
+      &:first-child
+        padding-top: 4em
+        +mobile
+          margin: 0 auto
+          max-width: 460px
     .media
       border-top: none
   // Footer
@@ -84,7 +110,7 @@
             color: $dark
     .footer-foot
       color: $grey
-      padding: 1.5rem 0
+      padding: 3rem 0
       ul
         margin-bottom: 1rem
       li

@@ -92,8 +92,10 @@
       padding-left: 0.75rem
       padding-right: 0.75rem
   .footer
+    border-top: 1px dotted $grey-darker
     color: $grey
     font-size: $size-small
+    padding: 0.75rem 0.75rem 0
     text-align: center
     a
       color: inherit
@@ -135,6 +137,10 @@
           padding: 0
       +touch
         margin-bottom: -0.75rem
+        .mediaboxsingle
+          margin: 0
+        #sharemod
+          display: none
   .columngallery
     .columninner
       +touch
@@ -150,8 +156,6 @@
             margin: 0
             max-width: 50%
             width: 50%
-          .menubox
-            display: none
           .image
             padding-top: 56.25%
           img

@@ -537,6 +537,12 @@ ul
       .titletable:hover,
       .is-link
         color: currentColor
+      &:hover
+        .titletable
+          color: currentColor !important
+    &:hover
+      .titletable
+        color: $primary !important
   &:last-child
     margin-bottom: 0
   &:not(.is-bordered)
@@ -649,7 +655,9 @@ ul
     &.is-link
       background: none
   &:hover
-    box-shadow: 0 0 1px rgba($black, 0.1), 0 7px 18px 0 rgba($black, 0.15)
+    box-shadow: 0 0 1px rgba($black, 0.1), 0 4px 10px 0 rgba($black, 0.15)
+    .card-header-title
+      color: $primary !important
     .card-overlay
       opacity: 0.98
     .togglehover
@@ -719,6 +727,14 @@ ul
 
 .menu-label
   font-size: $size-small
+
+.menu-list
+  li
+    ul
+      margin: 0.5rem 0 0.5rem 0.75rem
+      padding-left: 0.5rem
+  .blockmenu+li
+    margin-top: 0.5rem
 
 
 
