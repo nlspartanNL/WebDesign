@@ -113,6 +113,13 @@
 
 .is-scrollable-x
   overflow-x: auto
+  &::-webkit-scrollbar
+    background: $light
+    border-radius: $radius
+  &::-webkit-scrollbar-thumb
+    background: rgba($black,0.2)
+    &:hover
+      background: rgba($black,0.4)
 
 .background
   &.is-primary
@@ -217,23 +224,6 @@
   right: 0
   z-index: 9999
 
-// Sort Options
-.fieldsort
-  flex-wrap: wrap
-  .field
-    flex-wrap: wrap
-    .control
-      margin-bottom: 0.75rem !important
-    &.is-grouped-right
-      flex-grow: 1
-  .subtitle
-    line-height: $button-height
-  .button
-    margin-left: 10px
-  + .tablebrowse
-    border-top: 1px solid rgba($border, 0.5)
-    padding-top: 0.75rem
-
 // Filter
 .field.filter
   margin-bottom: 1.5rem
@@ -318,7 +308,7 @@
   .textareatinymce
     padding: 0
   .fieldindent
-    margin-left: $button-height
+    margin-left: 2.25em
 
 // Tokens
 .tokenfield

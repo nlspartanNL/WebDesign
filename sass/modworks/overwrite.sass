@@ -135,6 +135,7 @@
 // ############
 
 html
+  -webkit-text-size-adjust: 100%
   background: none
   +fullhd
     font-size: $body-size-fullhd
@@ -226,7 +227,6 @@ body
     margin: 0
 
 
-
 // container.sass
 // ##########
 
@@ -242,7 +242,6 @@ body
   max-width: 100%
   overflow: hidden
   position: relative
-
 
 
 // content.sass
@@ -554,6 +553,7 @@ ul
       th:last-child
         padding-right: 0
 
+
 // tag.sass
 // ########
 
@@ -664,7 +664,6 @@ ul
       display: inline-flex
 
 
-
 // media.sass
 // ##########
 
@@ -717,7 +716,6 @@ ul
         color: $primary
       
 
-
 // menu.sass
 // #########
 
@@ -733,9 +731,8 @@ ul
     ul
       margin: 0.5rem 0 0.5rem 0.75rem
       padding-left: 0.5rem
-  .blockmenu+li
+  .blockmenu+.blockmenu
     margin-top: 0.5rem
-
 
 
 // modal.sass
@@ -752,8 +749,57 @@ ul
   overflow: auto
 
 .modal-image
-  cursor: zoom-out
   display: block
+
+.modal-prev,
+.modal-next
+  -moz-appearance: none
+  -webkit-appearance: none
+  background: none
+  border: none
+  border-radius: 290486px
+  cursor: pointer
+  height: $modal-close-dimensions
+  outline: none
+  position: fixed
+  width: $modal-close-dimensions
+  &:hover,
+  &:focus
+    background-color: rgba($black, 0.3)
+  &:active
+    background-color: rgba($black, 0.4)
+  &:before
+    border-bottom: $modal-close-dimensions / 4 solid transparent
+    border-top: $modal-close-dimensions / 4 solid transparent
+    content: ""
+    display: block
+    height: 0
+    left: 50%
+    margin: 0 auto
+    position: absolute
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    transform-origin: center center
+    width: 0
+
+.modal-prev
+  left: $modal-close-right
+  &:before
+    border-right: $modal-close-dimensions / 2.66666666666 solid $white
+
+.modal-next
+  right: $modal-close-right
+  &:before
+    border-left: $modal-close-dimensions / 2.66666666666 solid $white
+
+.modal-title
+  background-color: rgba($black, 0.4)
+  border-radius: $radius
+  bottom: $modal-close-right
+  color: $white
+  font-weight: $weight-semibold
+  padding: 2px 6px
+  position: fixed
 
 
 // navbar.sass
@@ -816,6 +862,20 @@ ul
 
 .paginationurls
   margin-top: 2.25rem
+
+
+// tabs.sass
+// ###############
+
+.tabfilter
+  margin-right: 0.25rem
+  a
+    padding: 0.5em
+  &+.tabtitle
+    margin-left: 0.25rem
+.tabtitle
+  margin-right: auto
+
 
 
 

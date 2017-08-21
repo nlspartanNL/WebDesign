@@ -1,3 +1,42 @@
+@charset "utf-8"
+
+// Import functionality we use
+@import "variables.sass"
+
+@import "../utilities/_all"
+
+@import "../base/_all"
+
+@import "../elements/_all"
+
+// @import "../components/_all"
+// @import "../components/breadcrumb.sass"
+@import "../components/card.sass"
+@import "../components/dropdown.sass"
+// @import "../components/level.sass"
+@import "../components/media.sass"
+@import "../components/menu.sass"
+// @import "../components/message.sass"
+@import "../components/modal.sass"
+@import "../components/navbar.sass"
+@import "../components/pagination.sass"
+// @import "../components/panel.sass"
+@import "../components/tabs.sass"
+
+// @import "../grid/_all"
+@import "../grid/columns.sass"
+// @import "../grid/tiles.sass"
+
+// @import "../layout/_all"
+// @import "../layout/footer.sass"
+// @import "../layout/hero.sass"
+// @import "../layout/section.sass"
+
+@import "../extensions/_all"
+
+@import "overwrite.sass"
+@import "common.sass"
+
 #appbar,
 #appmenu
   bottom: 0
@@ -116,9 +155,7 @@
         max-width: 160px
     +tablet
       padding: 0 $gap
-    +mobile
-      box-shadow: none
-  .tabs
+  .tabsmenu
     padding-top: $gap
   .columnsheader
     .column
@@ -135,6 +172,8 @@
       .body
         &:first-child
           padding: 0
+      #sharemod
+        margin-top: 0.75rem
       +touch
         margin-bottom: -0.75rem
         .mediaboxsingle
@@ -145,7 +184,6 @@
     .columninner
       +touch
         background: none
-        font-size: 0
         padding: 0
         .scrollbox
           overflow-x: auto
@@ -153,15 +191,12 @@
           white-space: nowrap
           .normalbox
             display: inline-block
-            margin: 0
-            max-width: 50%
-            width: 50%
-          .image
-            padding-top: 56.25%
+            margin: 0 0 0 0.75rem
+            &:first-child
+              margin-left: 0
           img
-            +overlay
-            height: 100%
-            width: 100%
+            height: 126px
+            width: auto
 
 #appcontent,
 #app #profiler
