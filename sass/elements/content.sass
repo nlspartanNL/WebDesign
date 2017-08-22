@@ -36,9 +36,7 @@ $content-table-foot-cell-color: $text-strong !default
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6
+  h4
     //color: $content-heading-color
     font-weight: $content-heading-weight
     line-height: $content-heading-line-height
@@ -60,12 +58,6 @@ $content-table-foot-cell-color: $text-strong !default
   h4
     font-size: 1.25em
     margin-bottom: 0.8em
-  h5
-    font-size: 1.125em
-    margin-bottom: 0.8888em
-  h6
-    font-size: 1em
-    margin-bottom: 1em
   blockquote
     background-color: $content-blockquote-background-color
     border-left: $content-blockquote-border-left
@@ -83,8 +75,6 @@ $content-table-foot-cell-color: $text-strong !default
       margin-top: 0.5em
       ul
         list-style-type: square
-  dd
-    margin-left: 2em
   figure
     margin: 2em
     text-align: center
@@ -101,36 +91,36 @@ $content-table-foot-cell-color: $text-strong !default
   sup,
   sub
     font-size: 75%
-  table
-    width: 100%
-    td,
-    th
-      border: $content-table-cell-border
-      border-width: $content-table-cell-border-width
-      padding: $content-table-cell-padding
-      vertical-align: top
-    th
-      color: $content-table-cell-heading-color
-      text-align: left
-    tr
-      &:hover
-        background-color: $content-table-row-hover-background-color
-    thead
-      td,
-      th
-        border-width: $content-table-head-cell-border-width
-        color: $content-table-head-cell-color
-    tfoot
-      td,
-      th
-        border-width: $content-table-foot-cell-border-width
-        color: $content-table-foot-cell-color
-    tbody
-      tr
-        &:last-child
-          td,
-          th
-            border-bottom-width: 0
+  // table
+    // width: 100%
+    // td,
+    // th
+      // border: $content-table-cell-border
+      // border-width: $content-table-cell-border-width
+      // padding: $content-table-cell-padding
+      // vertical-align: top
+    // th
+      // color: $content-table-cell-heading-color
+      // text-align: left
+    // tr
+      // &:hover
+        // background-color: $content-table-row-hover-background-color
+    // thead
+      // td,
+      // th
+        // border-width: $content-table-head-cell-border-width
+        // color: $content-table-head-cell-color
+    // tfoot
+      // td,
+      // th
+        // border-width: $content-table-foot-cell-border-width
+        // color: $content-table-foot-cell-color
+    // tbody
+      // tr
+        // &:last-child
+          // td,
+          // th
+            // border-bottom-width: 0
   // Sizes
   &.is-small
     font-size: $size-small
