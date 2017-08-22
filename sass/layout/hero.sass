@@ -1,5 +1,7 @@
 // Main container
 
+$herocolors:  ("dark": ($dark, $dark-invert))
+
 .hero
   align-items: stretch
   display: flex
@@ -8,11 +10,11 @@
   // .nav
     // background: none
     // box-shadow: 0 1px 0 rgba($border, 0.3)
-  .tabs
-    ul
-      border-bottom: none
+  // .tabs
+    // ul
+      // border-bottom: none
   // Colors
-  @each $name, $pair in $colors
+  @each $name, $pair in $herocolors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
@@ -39,32 +41,32 @@
         // &:hover,
         // &.is-active
           // color: $color-invert
-      .tabs
-        a
-          color: $color-invert
-          opacity: 0.9
-          &:hover
-            opacity: 1
-        li
-          &.is-active a
-            opacity: 1
-        &.is-boxed,
-        &.is-toggle
-          a
-            color: $color-invert
-            &:hover
-              background-color: rgba($black, 0.1)
-          li.is-active a
-            &,
-            &:hover
-              background-color: $color-invert
-              border-color: $color-invert
-              color: $color
+      // .tabs
+        // a
+          // color: $color-invert
+          // opacity: 0.9
+          // &:hover
+            // opacity: 1
+        // li
+          // &.is-active a
+            // opacity: 1
+        // &.is-boxed,
+        // &.is-toggle
+          // a
+            // color: $color-invert
+            // &:hover
+              // background-color: rgba($black, 0.1)
+          // li.is-active a
+            // &,
+            // &:hover
+              // background-color: $color-invert
+              // border-color: $color-invert
+              // color: $color
       // Modifiers
-      &.is-bold
-        $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
-        $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
-        background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
+      // &.is-bold
+        // $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
+        // $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
+        // background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
         // +mobile
           // .nav-menu
             // background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
@@ -87,56 +89,56 @@
       .hero-body
         padding-bottom: 9rem
         padding-top: 9rem
-  &.is-large
-    +tablet
-      .hero-body
-        padding-bottom: 18rem
-        padding-top: 18rem
-  &.is-halfheight,
-  &.is-fullheight
-    .hero-body
-      align-items: center
-      display: flex
-      & > .container
-        flex-grow: 1
-        flex-shrink: 1
-  &.is-halfheight
-    min-height: 50vh
-  &.is-fullheight
-    min-height: 100vh
+  // &.is-large
+    // +tablet
+      // .hero-body
+        // padding-bottom: 18rem
+        // padding-top: 18rem
+  // &.is-halfheight,
+  // &.is-fullheight
+    // .hero-body
+      // align-items: center
+      // display: flex
+      // & > .container
+        // flex-grow: 1
+        // flex-shrink: 1
+  // &.is-halfheight
+    // min-height: 50vh
+  // &.is-fullheight
+    // min-height: 100vh
 
 // Components
 
-.hero-video
-  +overlay
-  overflow: hidden
-  video
-    left: 50%
-    min-height: 100%
-    min-width: 100%
-    position: absolute
-    top: 50%
-    transform: translate3d(-50%, -50%, 0)
+// .hero-video
+  // +overlay
+  // overflow: hidden
+  // video
+    // left: 50%
+    // min-height: 100%
+    // min-width: 100%
+    // position: absolute
+    // top: 50%
+    // transform: translate3d(-50%, -50%, 0)
   // Modifiers
-  &.is-transparent
-    opacity: 0.3
+  // &.is-transparent
+    // opacity: 0.3
   // Responsiveness
-  +mobile
-    display: none
+  // +mobile
+    // display: none
 
-.hero-buttons
-  margin-top: 1.5rem
+// .hero-buttons
+  // margin-top: 1.5rem
   // Responsiveness
-  +mobile
-    .button
-      display: flex
-      &:not(:last-child)
-        margin-bottom: 0.75rem
-  +tablet
-    display: flex
-    justify-content: center
-    .button:not(:last-child)
-      margin-right: 1.5rem
+  // +mobile
+    // .button
+      // display: flex
+      // &:not(:last-child)
+        // margin-bottom: 0.75rem
+  // +tablet
+    // display: flex
+    // justify-content: center
+    // .button:not(:last-child)
+      // margin-right: 1.5rem
 
 // Containers
 

@@ -40,14 +40,14 @@ $column-gap: 0.75rem !default
     .columns.is-mobile > &.is-#{$i}
       flex: none
       width: ($i / 12) * 100%
-    .columns.is-mobile > &.is-offset-#{$i}
-      margin-left: ($i / 12) * 100%
-  +mobile
-    &.is-narrow-mobile
-      flex: none
-    &.is-full-mobile
-      flex: none
-      width: 100%
+    // .columns.is-mobile > &.is-offset-#{$i}
+      // margin-left: ($i / 12) * 100%
+  // +mobile
+    // &.is-narrow-mobile
+      // flex: none
+    // &.is-full-mobile
+      // flex: none
+      // width: 100%
     // &.is-three-quarters-mobile
       // flex: none
       // width: 75%
@@ -73,20 +73,19 @@ $column-gap: 0.75rem !default
       // margin-left: 33.3333%
     // &.is-offset-one-quarter-mobile
       // margin-left: 25%
-    @for $i from 1 through 12
-      &.is-#{$i}-mobile
-        flex: none
-        width: ($i / 12) * 100%
-      &.is-offset-#{$i}-mobile
-        margin-left: ($i / 12) * 100%
+    // @for $i from 1 through 12
+      // &.is-#{$i}-mobile
+        // flex: none
+        // width: ($i / 12) * 100%
+      // &.is-offset-#{$i}-mobile
+        // margin-left: ($i / 12) * 100%
   +tablet
-    &.is-narrow,
-    &.is-narrow-tablet
+    &.is-narrow
       flex: none
-    &.is-full,
-    &.is-full-tablet
-      flex: none
-      width: 100%
+    // &.is-full,
+    // &.is-full-tablet
+      // flex: none
+      // width: 100%
     // &.is-three-quarters,
     // &.is-three-quarters-tablet
       // flex: none
@@ -123,19 +122,18 @@ $column-gap: 0.75rem !default
     // &.is-offset-one-quarter-tablet
       // margin-left: 25%
     @for $i from 1 through 12
-      &.is-#{$i},
-      &.is-#{$i}-tablet
+      &.is-#{$i}
         flex: none
         width: ($i / 12) * 100%
-      &.is-offset-#{$i},
-      &.is-offset-#{$i}-tablet
-        margin-left: ($i / 12) * 100%
-  +touch
-    &.is-narrow-touch
-      flex: none
-    &.is-full-touch
-      flex: none
-      width: 100%
+      // &.is-offset-#{$i},
+      // &.is-offset-#{$i}-tablet
+        // margin-left: ($i / 12) * 100%
+  // +touch
+    // &.is-narrow-touch
+      // flex: none
+    // &.is-full-touch
+      // flex: none
+      // width: 100%
     // &.is-three-quarters-touch
       // flex: none
       // width: 75%
@@ -161,18 +159,18 @@ $column-gap: 0.75rem !default
       // margin-left: 33.3333%
     // &.is-offset-one-quarter-touch
       // margin-left: 25%
-    @for $i from 1 through 12
-      &.is-#{$i}-touch
-        flex: none
-        width: ($i / 12) * 100%
-      &.is-offset-#{$i}-touch
-        margin-left: ($i / 12) * 100%
+    // @for $i from 1 through 12
+      // &.is-#{$i}-touch
+        // flex: none
+        // width: ($i / 12) * 100%
+      // &.is-offset-#{$i}-touch
+        // margin-left: ($i / 12) * 100%
   +desktop
-    &.is-narrow-desktop
-      flex: none
-    &.is-full-desktop
-      flex: none
-      width: 100%
+    // &.is-narrow-desktop
+      // flex: none
+    // &.is-full-desktop
+      // flex: none
+      // width: 100%
     // &.is-three-quarters-desktop
       // flex: none
       // width: 75%
@@ -202,14 +200,14 @@ $column-gap: 0.75rem !default
       &.is-#{$i}-desktop
         flex: none
         width: ($i / 12) * 100%
-      &.is-offset-#{$i}-desktop
-        margin-left: ($i / 12) * 100%
-  +widescreen
-    &.is-narrow-widescreen
-      flex: none
-    &.is-full-widescreen
-      flex: none
-      width: 100%
+      // &.is-offset-#{$i}-desktop
+        // margin-left: ($i / 12) * 100%
+  // +widescreen
+    // &.is-narrow-widescreen
+      // flex: none
+    // &.is-full-widescreen
+      // flex: none
+      // width: 100%
     // &.is-three-quarters-widescreen
       // flex: none
       // width: 75%
@@ -235,18 +233,18 @@ $column-gap: 0.75rem !default
       // margin-left: 33.3333%
     // &.is-offset-one-quarter-widescreen
       // margin-left: 25%
-    @for $i from 1 through 12
-      &.is-#{$i}-widescreen
-        flex: none
-        width: ($i / 12) * 100%
-      &.is-offset-#{$i}-widescreen
-        margin-left: ($i / 12) * 100%
+    // @for $i from 1 through 12
+      // &.is-#{$i}-widescreen
+        // flex: none
+        // width: ($i / 12) * 100%
+      // &.is-offset-#{$i}-widescreen
+        // margin-left: ($i / 12) * 100%
   +fullhd
-    &.is-narrow-fullhd
-      flex: none
-    &.is-full-fullhd
-      flex: none
-      width: 100%
+    // &.is-narrow-fullhd
+      // flex: none
+    // &.is-full-fullhd
+      // flex: none
+      // width: 100%
     // &.is-three-quarters-fullhd
       // flex: none
       // width: 75%
@@ -276,8 +274,8 @@ $column-gap: 0.75rem !default
       &.is-#{$i}-fullhd
         flex: none
         width: ($i / 12) * 100%
-      &.is-offset-#{$i}-fullhd
-        margin-left: ($i / 12) * 100%
+      // &.is-offset-#{$i}-fullhd
+        // margin-left: ($i / 12) * 100%
 
 .columns
   margin-left: (-$column-gap)
@@ -316,13 +314,13 @@ $column-gap: 0.75rem !default
     &.is-desktop
       display: flex
 
-.columns.is-variable
-  --columnGap: 0.75rem
-  margin-left: calc(-1 * var(--columnGap))
-  margin-right: calc(-1 * var(--columnGap))
-  .column
-    padding-left: var(--columnGap)
-    padding-right: var(--columnGap)
-  @for $i from 0 through 8
-    &.is-#{$i}
-      --columnGap: $i * 0.25rem
+// .columns.is-variable
+  // --columnGap: 0.75rem
+  // margin-left: calc(-1 * var(--columnGap))
+  // margin-right: calc(-1 * var(--columnGap))
+  // .column
+    // padding-left: var(--columnGap)
+    // padding-right: var(--columnGap)
+  // @for $i from 0 through 8
+    // &.is-#{$i}
+      // --columnGap: $i * 0.25rem
