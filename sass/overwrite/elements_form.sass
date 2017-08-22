@@ -1,0 +1,59 @@
+.textarea
+  height: auto
+
+.checkbox,
+.radio
+  &.is-block
+    line-height: inherit
+
+.select
+  select
+    width: 100%
+    .optgroup
+      background-color: $dark
+      color: $white
+      font-weight: bold
+
+.range
+  max-width: 100%
+  margin-top: 0.4em
+  width: 100%
+
+ul
+  &.help
+    list-style: inherit
+    margin-bottom: 5px
+    margin-left: 2em
+
+.field
+  &.filter
+    margin-bottom: 1.5rem
+  .control
+    &.is-narrowwidth
+      max-width: 120px
+    &.is-expanded
+      .button,
+      .select
+        width: 100%
+      .select
+        select
+          width: 100%
+
+.control
+  &.is-dark
+    .input
+      background-color: $dark-alt
+      border-color: $dark-alt
+      color: $white
+      &::placeholder
+        color: $white
+        opacity: 0.5
+      &:focus,
+      &.is-focused,
+      &:active,
+      &.is-active
+        border-color: $primary
+  &.is-loading
+    &.has-icons-right
+      .icon
+        display: none

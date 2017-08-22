@@ -1,0 +1,27 @@
+.is-scrollable,
+.is-scrollable-x
+  -webkit-overflow-scrolling: touch
+  &::-webkit-scrollbar
+    background: transparent
+    height: 7px
+    width: 7px
+  &::-webkit-scrollbar-thumb
+    background: rgba($primary,0.5)
+    border-radius: $radius
+    &:hover
+      background: $primary
+
+.is-scrollable
+  overflow: hidden
+  &:hover
+    overflow-y: auto
+
+.is-scrollable-x
+  overflow-x: auto
+  &::-webkit-scrollbar
+    background: $light
+    border-radius: $radius
+  &::-webkit-scrollbar-thumb
+    background: rgba($black,0.2)
+    &:hover
+      background: rgba($black,0.4)

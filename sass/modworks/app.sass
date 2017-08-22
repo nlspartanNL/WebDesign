@@ -1,3 +1,66 @@
+@charset "utf-8"
+
+// Import functionality we use
+@import "variables.sass"
+
+@import "../utilities/_all"
+// @import "../overwrite/utilities_animations.sass"
+@import "../overwrite/utilities_mixins.sass"
+
+@import "../base/_all"
+@import "../overwrite/base_generic.sass"
+@import "../overwrite/base_helpers.sass"
+
+@import "../elements/_all"
+@import "../overwrite/elements_button.sass"
+@import "../overwrite/elements_container.sass"
+@import "../overwrite/elements_content.sass"
+@import "../overwrite/elements_form.sass"
+@import "../overwrite/elements_icon.sass"
+@import "../overwrite/elements_image.sass"
+@import "../overwrite/elements_notification.sass"
+// @import "../overwrite/elements_other.sass"
+@import "../overwrite/elements_table.sass"
+@import "../overwrite/elements_tag.sass"
+@import "../overwrite/elements_title.sass"
+
+// @import "../components/_all"
+// @import "../components/breadcrumb.sass"
+@import "../components/card.sass"
+@import "../overwrite/components_card.sass"
+@import "../components/dropdown.sass"
+@import "../overwrite/components_dropdown.sass"
+// @import "../components/level.sass"
+@import "../components/media.sass"
+@import "../overwrite/components_media.sass"
+@import "../components/menu.sass"
+@import "../overwrite/components_menu.sass"
+// @import "../components/message.sass"
+@import "../components/modal.sass"
+@import "../overwrite/components_modal.sass"
+@import "../components/navbar.sass"
+@import "../overwrite/components_navbar.sass"
+@import "../components/pagination.sass"
+@import "../overwrite/components_pagination.sass"
+// @import "../components/panel.sass"
+@import "../components/tabs.sass"
+@import "../overwrite/components_tabs.sass"
+
+// @import "../grid/_all"
+@import "../grid/columns.sass"
+@import "../overwrite/grid_columns.sass"
+@import "../overwrite/grid_columns_slick.sass"
+// @import "../grid/tiles.sass"
+
+// @import "../layout/_all"
+// @import "../layout/footer.sass"
+// @import "../layout/hero.sass"
+// @import "../overwrite/layout_hero.sass"
+// @import "../layout/section.sass"
+@import "../overwrite/layout_section.sass"
+
+@import "../extensions/_all"
+
 #appbar,
 #appmenu
   bottom: 0
@@ -92,9 +155,9 @@
       padding-left: 0.75rem
       padding-right: 0.75rem
   .footer
+    border-top: 1px dotted $grey-darker
     color: $grey
-    font-size: $size-small
-    text-align: center
+    padding: 0.75rem 0.75rem 0
     a
       color: inherit
       &:hover,
@@ -114,21 +177,48 @@
         max-width: 160px
     +tablet
       padding: 0 $gap
-    +mobile
-      box-shadow: none
-  .tabs
+  .tabsmenu
     padding-top: $gap
+  .columnsheader
+    .column
+      padding-bottom: 0
   .columnsidemenu
-    border-radius: $radius
-    margin: 0.75rem
     max-width: 880px
-    padding: 0.75rem
-    a:not(.button)
-      &:hover
-        color: inherit
-    .body
-      &:first-child
+    order: 2
+    .columninner 
+      border-radius: $radius
+      padding: 0.75rem
+      a:not(.button)
+        &:hover
+          color: inherit
+      .body
+        &:first-child
+          padding: 0
+      #sharemod
+        margin-top: 0.75rem
+      +touch
+        margin-bottom: -0.75rem
+        .mediaboxsingle
+          margin: 0
+        #sharemod
+          display: none
+  .columngallery
+    .columninner
+      +touch
+        background: none
         padding: 0
+        .scrollbox
+          overflow-x: auto
+          overflow-y: hidden
+          white-space: nowrap
+          .normalbox
+            display: inline-block
+            margin: 0 0 0 0.75rem
+            &:first-child
+              margin-left: 0
+          img
+            height: 126px
+            width: auto
 
 #appcontent,
 #app #profiler
@@ -138,3 +228,155 @@
     margin-left: $navbar-width
   +tiny
     margin-left: 0
+
+// Boxes
+.normalbox,
+.headerbox
+  &:not(:last-child)
+    margin-bottom: 1.5rem
+.mediabox
+  &:not(:last-child)
+    margin-bottom: 0.75rem
+
+// Modals
+.thickbox
+  img
+    cursor: zoom-in
+
+// Comments
+.commentbox
+  .rowdull,
+  .rowspamorham,
+  .rowdeleted,
+  .rowbury
+    opacity: 0.7
+
+// Forms
+.formbox
+  .previewimage
+    width: 100%
+    .image
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      cursor: pointer
+  .previewmultiple
+    .previewimage
+      float: left
+      margin: 0 0.75rem 0.75rem 0
+      .image
+        background-size: contain
+  .textareatinymce
+    padding: 0
+  .fieldindent
+    margin-left: 2.25em
+
+// Other
+.body
+  padding: 0.75rem 0 0
+  .content
+    overflow: hidden
+
+// Browse
+.tablebrowse
+  thead
+    th
+      vertical-align: bottom
+      white-space: nowrap
+  tbody
+    td
+      vertical-align: middle
+      .clamptoggle
+        cursor: pointer
+      .clampavatar
+        +clamp(2)
+      .clamp
+        +clamp(4)
+      .imageholder
+        width: 160px
+      +touch
+        .imageholder
+          width: 120px
+        .clamp
+          +clamp(3)
+      +mobile
+        .imageholder
+          width: 80px
+        .clamp
+          +clamp(2)
+
+// Forums
+.tableforum
+  td
+    vertical-align: middle
+  tr
+    &.post
+      td
+        vertical-align: top
+        &.details
+          min-width: 110px
+          width: 1%
+      .actions
+        font-weight: $weight-bold
+        margin-bottom: 0.5rem
+      .username
+        color: $text
+        font-weight: $weight-bold
+        margin-top: 0.5rem
+        word-break: break-all
+        .icon
+          margin-right: 0.25rem
+        &:hover
+          color: $primary
+  .postdeleted
+    opacity: 0.5
+  .subcategorydeleted
+    opacity: 0.5
+    .thread
+      text-decoration: line-through
+
+// Tokens
+.tokenfield
+  &.textarea
+    padding: 1px 8px
+  .token-input
+    background: none
+    border: 0
+    border-color: transparent
+    box-shadow: none
+    height: 24px
+    margin: 3px 0
+    min-width: 60px
+    outline: 0
+    padding: 0
+    width: 60px
+  .tag
+    margin: 3px 5px 2px 0
+
+// Member Level
+.levelinfo
+  line-height: 32px
+  margin-bottom: 5px
+  .levelcircle
+    float: right
+
+.levelcircle
+  border: 2px solid
+  border-radius: 16px
+  display: inline-block
+  font-weight: $weight-bold
+  font-size: 18px
+  height: 32px
+  line-height: 28px
+  margin-left: 5px
+  text-align: center
+  min-width: 32px
+
+.background
+  &.is-primary
+    .is-scrollable,
+    .is-scrollable-x
+      &::-webkit-scrollbar-thumb
+        background: rgba($dark,0.5)
+        &:hover
+          background: $dark

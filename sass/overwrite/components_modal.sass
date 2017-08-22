@@ -1,0 +1,64 @@
+.modal-iframe
+  border-radius: $radius-large
+
+.modal-iframe,
+.modal-div,
+.modal-image
+  max-height: calc(100vh - 40px)
+  max-width: calc(100vw - 40px)
+  overflow: auto
+
+.modal-image
+  display: block
+
+.modal-prev,
+.modal-next
+  -moz-appearance: none
+  -webkit-appearance: none
+  background: none
+  border: none
+  border-radius: 290486px
+  cursor: pointer
+  height: $modal-close-dimensions
+  outline: none
+  position: absolute
+  width: $modal-close-dimensions
+  z-index: 2
+  &:hover,
+  &:focus
+    background-color: rgba($black, 0.3)
+  &:active
+    background-color: rgba($black, 0.4)
+  &:before
+    border-bottom: $modal-close-dimensions / 4 solid transparent
+    border-top: $modal-close-dimensions / 4 solid transparent
+    content: ""
+    display: block
+    height: 0
+    left: 50%
+    margin: 0 auto
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    transform-origin: center center
+    width: 0
+
+.modal-prev
+  left: $modal-close-right
+  &:before
+    border-right: $modal-close-dimensions / 2.66666666666 solid $white
+
+.modal-next
+  right: $modal-close-right
+  &:before
+    border-left: $modal-close-dimensions / 2.66666666666 solid $white
+
+.modal-title
+  background-color: rgba($black, 0.4)
+  border-radius: $radius
+  bottom: $modal-close-right
+  color: $white
+  font-weight: $weight-semibold
+  padding: 2px 6px
+  position: absolute
+  z-index: 2

@@ -1,0 +1,67 @@
+.card-header
+  .image.background,
+  img
+    border-radius: $radius
+  .togglehover
+    display: none
+  
+.card-header-title
+  overflow: hidden
+  .icon
+    margin-right: 0.25rem
+  &:not(:last-child)
+    padding-right: 0
+  &:hover
+    color: $primary
+
+.card-header-icon
+  flex-shrink: 0
+  &:last-child
+    padding-left: 0.25rem
+
+.card-content
+  background: $white-bis
+  overflow: hidden
+  padding: 0.5rem 0.75rem
+
+.card-image
+  border-radius: $radius $radius 0 0
+  img
+    border-radius: $radius $radius 0 0
+
+.card-actions
+  box-shadow: 0 0 8px rgba($black, 0.8)
+  position: absolute
+  right: 0.75rem
+  top: 0.75rem
+  z-index: 1
+
+.card-overlay
+  background: $dark
+  background: rgba($dark, 0.97)
+  bottom: 0
+  border-radius: $radius $radius 0 0
+  color: $white
+  left: 0
+  opacity: 0
+  overflow: hidden
+  padding: 0.75rem
+  position: absolute
+  right: 0
+  top: 0
+  transition-duration: $speed*2
+
+.card
+  border-radius: $radius
+  box-shadow: 0 0 1px rgba($black, 0.15)
+  .button
+    &.is-link
+      background: none
+  &:hover
+    box-shadow: 0 0 1px rgba($black, 0.1), 0 4px 10px 0 rgba($black, 0.15)
+    .card-header-title
+      color: $primary !important
+    .card-overlay
+      opacity: 0.98
+    .togglehover
+      display: inline-flex
