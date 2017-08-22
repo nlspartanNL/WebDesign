@@ -152,12 +152,12 @@
   .navscroll
     .navscroll-content
       width: $navmenu-width
-      padding-left: 0.75rem
-      padding-right: 0.75rem
+      padding-left: $column-gap
+      padding-right: $column-gap
   .footer
     border-top: 1px dotted $grey-darker
     color: $grey
-    padding: 0.75rem 0.75rem 0
+    padding: $column-gap $column-gap 0
     a
       color: inherit
       &:hover,
@@ -187,7 +187,7 @@
     order: 2
     .columninner 
       border-radius: $radius
-      padding: 0.75rem
+      padding: $column-gap
       a:not(.button)
         &:hover
           color: inherit
@@ -195,9 +195,9 @@
         &:first-child
           padding: 0
       #sharemod
-        margin-top: 0.75rem
+        margin-top: $column-gap
       +touch
-        margin-bottom: -0.75rem
+        margin-bottom: (-$column-gap)
         .mediaboxsingle
           margin: 0
         #sharemod
@@ -213,7 +213,7 @@
           white-space: nowrap
           .normalbox
             display: inline-block
-            margin: 0 0 0 0.75rem
+            margin: 0 0 0 $column-gap
             &:first-child
               margin-left: 0
           img
@@ -236,7 +236,7 @@
     margin-bottom: 1.5rem
 .mediabox
   &:not(:last-child)
-    margin-bottom: 0.75rem
+    margin-bottom: $column-gap
 
 // Modals
 .thickbox
@@ -263,7 +263,7 @@
   .previewmultiple
     .previewimage
       float: left
-      margin: 0 0.75rem 0.75rem 0
+      margin: 0 $column-gap $column-gap 0
       .image
         background-size: contain
   .textareatinymce
@@ -273,7 +273,7 @@
 
 // Other
 .body
-  padding: 0.75rem 0 0
+  padding: $column-gap 0 0
   .content
     overflow: hidden
 
