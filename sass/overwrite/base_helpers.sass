@@ -1,0 +1,101 @@
+// Typography
+
+.is-font0
+  font-size: 0
+
+.is-bold
+  font-weight: $weight-bold
+
+.is-centered-text
+  left: 50%
+  position: absolute
+  text-align: center
+  top: 50%
+  transform: translate(-50%, -50%)
+  max-width: 100%
+
+.spoiler
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5T/wDltzBKAAAAE0lEQVR42mJgYGDEQAzYBAECDAABJgANo0Ss7wAAAABJRU5ErkJggg==)
+  &:hover
+    background: none
+
+.center
+  .twitter-tweet
+    margin-left: auto
+    margin-right: auto
+
+.twitter-tweet
+  width: auto !important
+
+// Overflow
+
+.wordwrap
+  word-break: break-word
+  word-wrap: break-word
+
+.truncate
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.truncate-simple
+  overflow: hidden
+  white-space: nowrap
+
+// Other
+
+.is-flex-centered
+  flex-direction: column
+  justify-content: center
+
+.is-paddingright
+  padding-left: 0 !important
+
+.is-paddingleft
+  padding-right: 0 !important
+
+.is-autowidth
+  width: auto
+
+.is-cursor-pointer
+  cursor: pointer
+
+.is-cursor-auto
+  cursor: auto
+
+.is-cursor-e
+  cursor: e-resize
+
+.is-cursor-w
+  cursor: w-resize
+
+.is-zoom
+  &:hover
+    transform: scale(1.5)
+    z-index: 2
+
+.is-divider
+  padding: 10px 0
+  .controlicon
+    margin: 0.3rem 0.75rem 0
+  .title
+    line-height: 40px
+    padding: 0 0.75rem
+    white-space: nowrap
+
+.dropzone
+  border-radius: $radius
+
+// Hide content
+
+.is-hidden-desktop-all
+  +desktop-all
+    display: none !important
+
+.is-hidden-tiny
+  +tiny
+    display: none !important
+
+.is-shown-tiny
+  +from($tiny)
+    display: none !important

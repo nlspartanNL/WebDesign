@@ -1,0 +1,20 @@
+.column
+  &.is-dynamic
+    flex: none
+    width: 320px
+    +until(2360px)
+      width: 16.6666%
+    +until(2020px)
+      width: 20%
+    +until(1680px)
+      width: 25%
+    +until(1280px)
+      width: 33.3333%
+    +touch
+      width: 50%
+    +mobile
+      width: 33.3333%
+    +until(620px)
+      width: 50%
+    +until(420px)
+      width: 100%

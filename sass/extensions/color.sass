@@ -1,0 +1,37 @@
+.background
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      background-color: $color
+      color: $color-invert
+  &.is-primary-gradient
+    background: linear-gradient(60deg, $primary 0%, $primary-alt 100%)
+
+@each $name, $pair in $socialmedia
+  $color: nth($pair, 1)
+  $color-invert: nth($pair, 2)
+  .is-#{$name}
+    background: $color !important
+    border-color: transparent !important
+    color: $color-invert !important
+    &:hover
+      background-color: darken($color, 5%) !important
+
+.has-text-inherit
+  color: inherit
+
+.has-text-grey
+  color: $grey-light !important
+
+.is-opaque25
+  opacity: 0.25
+.is-opaque50
+  opacity: 0.5
+.is-opaque75
+  opacity: 0.75
+.is-opaque25,
+.is-opaque50,
+.is-opaque75
+  &:hover
+    opacity: inherit

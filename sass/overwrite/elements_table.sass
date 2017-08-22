@@ -1,0 +1,43 @@
+.table
+  width: 100%
+  td
+    .titletable
+      color: $text
+      font-weight: $weight-bold
+      .icon
+        margin-right: 0.25rem
+      &:hover
+        color: $primary
+    .tablesubtitle
+      font-size: $size-small
+    &.has-text-right
+      .field
+        float: right
+    +touch
+      word-break: break-word
+      word-wrap: break-word
+  tr
+    &.rowtitle
+      td,
+      th
+        color: $text-strong
+    &.is-selected
+      .titletable:hover,
+      .is-link
+        color: currentColor
+      &:hover
+        .titletable
+          color: currentColor !important
+    &:hover
+      .titletable
+        color: $primary !important
+  &:last-child
+    margin-bottom: 0
+  &:not(.is-bordered)
+    tr
+      td:first-child,
+      th:first-child
+        padding-left: 0
+      td:last-child,
+      th:last-child
+        padding-right: 0

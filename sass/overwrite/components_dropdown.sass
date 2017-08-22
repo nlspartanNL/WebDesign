@@ -1,0 +1,21 @@
+// We updated jquery.ui.menu and added "is-active" when "ui-state-focus" is used
+// We also added "dropdown-item" when "ui-corner-all" is used
+
+.dropdown-menu
+  width: 100%
+
+.dropdown-item
+  overflow: hidden
+  padding-left: 0.5rem
+  padding-right: 0.5rem
+  text-overflow: ellipsis
+  small
+    float: right
+    opacity: 0.5
+    margin-top: 2px
+  &:first-child
+    border-top-left-radius: $dropdown-content-radius
+    border-top-right-radius: $dropdown-content-radius
+  &:last-child
+    border-bottom-left-radius: $dropdown-content-radius
+    border-bottom-right-radius: $dropdown-content-radius

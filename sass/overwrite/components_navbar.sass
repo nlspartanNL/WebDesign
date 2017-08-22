@@ -1,0 +1,49 @@
+.navbar-item,
+.navbar-link
+  padding-left: 0.75rem
+  padding-right: 0.75rem
+
+.navbar
+  .navbar-burger
+    span
+      background: $white
+    &:hover
+      background: $primary
+  .navbar-dropdown
+    color: $grey-dark
+    &.is-boxed
+      .navbar-item
+        &:first-child
+          border-top-left-radius: $navbar-dropdown-boxed-radius
+          border-top-right-radius: $navbar-dropdown-boxed-radius
+        &:last-child
+          border-bottom-left-radius: $navbar-dropdown-boxed-radius
+          border-bottom-right-radius: $navbar-dropdown-boxed-radius
+  .avatar
+    border-radius: $radius
+    margin-left: 1.5rem
+    img
+      border-radius: $radius
+  &.is-dark
+    .navbar-item,
+    .navbar-link
+      color: $white
+      &:hover
+        color: $primary
+    .is-active
+      .navbar-dropdown
+        color: $white
+  &.is-dark-mobile
+    +mobile
+      background: $dark
+      .navbar-item,
+      .navbar-link
+        color: $white
+        &:hover
+          color: $primary
+      .is-active
+        .navbar-dropdown
+          color: $white
+  &.is-primary
+    &:hover
+      background: $dark

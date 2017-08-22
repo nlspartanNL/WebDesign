@@ -4,51 +4,75 @@
 @import "variables.sass"
 
 @import "../utilities/_all"
+@import "../overwrite/utilities_animations.sass"
+@import "../overwrite/utilities_mixins.sass"
 
 @import "../base/_all"
+@import "../overwrite/base_generic.sass"
+@import "../overwrite/base_helpers.sass"
 
 // @import "../elements/_all"
 @import "../elements/box.sass"
 @import "../elements/button.sass"
+@import "../overwrite/elements_button.sass"
 @import "../elements/container.sass"
+@import "../overwrite/elements_container.sass"
 @import "../elements/content.sass"
+@import "../overwrite/elements_content.sass"
 @import "../elements/form.sass"
+@import "../overwrite/elements_form.sass"
 @import "../elements/icon.sass"
+@import "../overwrite/elements_icon.sass"
 @import "../elements/image.sass"
+@import "../overwrite/elements_image.sass"
 @import "../elements/notification.sass"
+@import "../overwrite/elements_notification.sass"
 @import "../elements/other.sass"
+// @import "../overwrite/elements_other.sass"
 // @import "../elements/progress.sass"
 // @import "../elements/table.sass"
+// @import "../overwrite/elements_table.sass"
 @import "../elements/tag.sass"
+@import "../overwrite/elements_tag.sass"
 @import "../elements/title.sass"
+@import "../overwrite/elements_title.sass"
 
 // @import "../components/_all"
 // @import "../components/breadcrumb.sass"
 @import "../components/card.sass"
+@import "../overwrite/components_card.sass"
 @import "../components/dropdown.sass"
+@import "../overwrite/components_dropdown.sass"
 // @import "../components/level.sass"
 @import "../components/media.sass"
+@import "../overwrite/components_media.sass"
 // @import "../components/menu.sass"
+// @import "../overwrite/components_menu.sass"
 // @import "../components/message.sass"
 @import "../components/modal.sass"
+@import "../overwrite/components_modal.sass"
 @import "../components/navbar.sass"
+@import "../overwrite/components_navbar.sass"
 // @import "../components/pagination.sass"
+@import "../overwrite/components_pagination.sass"
 // @import "../components/panel.sass"
 // @import "../components/tabs.sass"
+// @import "../overwrite/components_tabs.sass"
 
 // @import "../grid/_all"
 @import "../grid/columns.sass"
+@import "../overwrite/grid_columns.sass"
+@import "../overwrite/grid_columns_slick.sass"
 // @import "../grid/tiles.sass"
 
 // @import "../layout/_all"
 // @import "../layout/footer.sass"
 @import "../layout/hero.sass"
+@import "../overwrite/layout_hero.sass"
 // @import "../layout/section.sass"
+@import "../overwrite/layout_section.sass"
 
 @import "../extensions/_all"
-
-@import "overwrite.sass"
-@import "common.sass"
 
 #home
   overflow-x: hidden
@@ -96,6 +120,8 @@
     margin: 6em 0 2em
   .sectionprofile
     margin: 6em 0 7em
+  .is-particles
+    z-index: 0
   // Benefits
   .benefits
     background: none
@@ -152,7 +178,7 @@
       width: 10rem
       z-index: 0
     .footer-head
-      padding: 6rem 0 4rem
+      padding: 6rem 0.75rem 4rem
       position: relative
       .subtitle
         a
@@ -181,3 +207,21 @@
         width: 50px
         &:hover
           animation: spinAround 0.8s 1 ease-out
+
+.button
+  &.is-huge
+    font-size: $size-1
+  .icon
+    &.is-huge
+      height: 1.5em
+      width: 1.5em
+
+.icon
+  &.is-huge
+    height: 4rem
+    width: 4rem
+    .fa
+      font-size: 56px
+    svg
+      height: 56px
+      max-width: 56px

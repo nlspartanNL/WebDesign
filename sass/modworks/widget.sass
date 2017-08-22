@@ -1,0 +1,86 @@
+@charset "utf-8"
+
+// Import functionality we use
+@import "variables.sass"
+
+@import "../utilities/_all"
+// @import "../overwrite/utilities_animations.sass"
+@import "../overwrite/utilities_mixins.sass"
+
+@import "../base/_all"
+@import "../overwrite/base_generic.sass"
+@import "../overwrite/base_helpers.sass"
+
+@import "../elements/_all"
+@import "../overwrite/elements_button.sass"
+@import "../overwrite/elements_container.sass"
+@import "../overwrite/elements_content.sass"
+@import "../overwrite/elements_form.sass"
+@import "../overwrite/elements_icon.sass"
+@import "../overwrite/elements_image.sass"
+@import "../overwrite/elements_notification.sass"
+// @import "../overwrite/elements_other.sass"
+@import "../overwrite/elements_table.sass"
+@import "../overwrite/elements_tag.sass"
+@import "../overwrite/elements_title.sass"
+
+// @import "../components/_all"
+// @import "../components/breadcrumb.sass"
+// @import "../components/card.sass"
+// @import "../overwrite/components_card.sass"
+// @import "../components/dropdown.sass"
+// @import "../overwrite/components_dropdown.sass"
+// @import "../components/level.sass"
+// @import "../components/media.sass"
+// @import "../overwrite/components_media.sass"
+// @import "../components/menu.sass"
+// @import "../overwrite/components_menu.sass"
+// @import "../components/message.sass"
+// @import "../components/modal.sass"
+// @import "../overwrite/components_modal.sass"
+// @import "../components/navbar.sass"
+// @import "../overwrite/components_navbar.sass"
+// @import "../components/pagination.sass"
+// @import "../overwrite/components_pagination.sass"
+// @import "../components/panel.sass"
+@import "../components/tabs.sass"
+@import "../overwrite/components_tabs.sass"
+
+// @import "../grid/_all"
+@import "../grid/columns.sass"
+// @import "../overwrite/grid_columns.sass"
+// @import "../overwrite/grid_columns_slick.sass"
+// @import "../grid/tiles.sass"
+
+// @import "../layout/_all"
+// @import "../layout/footer.sass"
+// @import "../layout/hero.sass"
+// @import "../overwrite/layout_hero.sass"
+// @import "../layout/section.sass"
+@import "../overwrite/layout_section.sass"
+
+// @import "../extensions/_all"
+// @import "../extensions/badge.sass"
+@import "../extensions/color.sass"
+// @import "../extensions/scroll.sass"
+
+#widget
+  background: none
+  height: 100%
+  text-align: center
+  .container
+    background: $white
+    border-radius: $radius-large
+    &.is-fluid
+      margin: 0 auto
+      padding: 20px
+      text-align: left
+    &.is-centered
+      display: inline-block
+      max-width: $desktop
+      vertical-align: middle
+      .logo img
+        max-width: 80%
+  .hero
+    .container
+      background: none
