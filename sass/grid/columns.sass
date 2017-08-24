@@ -128,7 +128,7 @@ $column-gap: 0.75rem !default
       // &.is-offset-#{$i},
       // &.is-offset-#{$i}-tablet
         // margin-left: ($i / 12) * 100%
-  // +touch
+  +touch
     // &.is-narrow-touch
       // flex: none
     // &.is-full-touch
@@ -159,10 +159,10 @@ $column-gap: 0.75rem !default
       // margin-left: 33.3333%
     // &.is-offset-one-quarter-touch
       // margin-left: 25%
-    // @for $i from 1 through 12
-      // &.is-#{$i}-touch
-        // flex: none
-        // width: ($i / 12) * 100%
+    @for $i from 1 through 12
+      &.is-#{$i}-touch
+        flex: none
+        width: ($i / 12) * 100%
       // &.is-offset-#{$i}-touch
         // margin-left: ($i / 12) * 100%
   +desktop
@@ -202,7 +202,7 @@ $column-gap: 0.75rem !default
         width: ($i / 12) * 100%
       // &.is-offset-#{$i}-desktop
         // margin-left: ($i / 12) * 100%
-  // +widescreen
+  +widescreen
     // &.is-narrow-widescreen
       // flex: none
     // &.is-full-widescreen
@@ -233,10 +233,10 @@ $column-gap: 0.75rem !default
       // margin-left: 33.3333%
     // &.is-offset-one-quarter-widescreen
       // margin-left: 25%
-    // @for $i from 1 through 12
-      // &.is-#{$i}-widescreen
-        // flex: none
-        // width: ($i / 12) * 100%
+    @for $i from 1 through 12
+      &.is-#{$i}-widescreen
+        flex: none
+        width: ($i / 12) * 100%
       // &.is-offset-#{$i}-widescreen
         // margin-left: ($i / 12) * 100%
   +fullhd

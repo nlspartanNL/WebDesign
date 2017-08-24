@@ -188,7 +188,7 @@
     .columninner 
       border-radius: $radius
       padding: $column-gap
-      a:not(.button)
+      a:not(.button):not(.tag)
         &:hover
           color: inherit
       .body
@@ -205,8 +205,6 @@
   .columngallery
     .columninner
       +touch
-        background: none
-        padding: 0
         .scrollbox
           overflow-x: auto
           overflow-y: hidden
@@ -217,7 +215,7 @@
             &:first-child
               margin-left: 0
           img
-            height: 126px
+            height: 117px
             width: auto
 
 #appcontent,
@@ -369,6 +367,7 @@
   height: 32px
   line-height: 28px
   margin-left: 5px
+  padding: 0 2px
   text-align: center
   min-width: 32px
 
