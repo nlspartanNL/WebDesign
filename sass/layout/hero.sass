@@ -29,7 +29,7 @@ $herocolors:  ("dark": ($dark, $dark-invert))
         color: rgba($color-invert, 0.9)
         a:not(.button),
         strong
-          color: $color-invert
+          color: $primary
       // .nav
         // box-shadow: 0 1px 0 rgba($color-invert, 0.2)
       // .nav-menu
@@ -95,17 +95,17 @@ $herocolors:  ("dark": ($dark, $dark-invert))
         // padding-bottom: 18rem
         // padding-top: 18rem
   // &.is-halfheight,
-  // &.is-fullheight
-    // .hero-body
-      // align-items: center
-      // display: flex
-      // & > .container
-        // flex-grow: 1
-        // flex-shrink: 1
+  &.is-fullheight
+    .hero-body
+      align-items: center
+      display: flex
+      & > .container
+        flex-grow: 1
+        flex-shrink: 1
   // &.is-halfheight
     // min-height: 50vh
-  // &.is-fullheight
-    // min-height: 100vh
+  &.is-fullheight
+    min-height: 100vh
 
 // Components
 
