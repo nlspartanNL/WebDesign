@@ -30,7 +30,7 @@ $tag-delete-margin: 1px !default
   align-items: center
   background-color: $tag-background-color
   border-radius: $tag-radius
-  color: $tag-color
+  color: $tag-color !important
   display: inline-flex
   font-size: $size-small
   height: 2em
@@ -48,7 +48,7 @@ $tag-delete-margin: 1px !default
     $color-invert: nth($pair, 2)
     &.is-#{$name}
       background-color: $color
-      color: $color-invert
+      color: $color-invert !important
   // Sizes
   &.is-medium
     font-size: $size-normal
