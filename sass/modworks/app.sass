@@ -3,9 +3,15 @@
 // Import functionality we use
 @import "variables.sass"
 
-@import "../utilities/_all"
+// @import "../utilities/_all"
+// @import "../utilities/initial-variables.sass"
+// @import "../utilities/functions.sass"
+// @import "../utilities/derived-variables.sass"
+@import "../utilities/animations.sass"
 // @import "../overwrite/utilities_animations.sass"
+@import "../utilities/mixins.sass"
 @import "../overwrite/utilities_mixins.sass"
+@import "../utilities/controls.sass"
 
 @import "../base/_all"
 @import "../overwrite/base_generic.sass"
@@ -185,6 +191,8 @@
   .columnsidemenu
     max-width: 880px
     order: 2
+    .fieldfooter
+      margin-top: $column-gap
     .columninner 
       border-radius: $radius
       padding: $column-gap
@@ -198,15 +206,11 @@
         margin-top: $column-gap
       +touch
         margin-bottom: (-$column-gap)
-        .mediaboxsingle
-          margin: 0
         #sharemod
           display: none
   .columngallery
     .columninner
       +touch
-        background: none
-        padding: 0
         .scrollbox
           overflow-x: auto
           overflow-y: hidden
@@ -217,8 +221,10 @@
             &:first-child
               margin-left: 0
           img
-            height: 126px
+            height: 117px
             width: auto
+          .is-16by9
+            width: 208px
 
 #appcontent,
 #app #profiler
@@ -369,6 +375,7 @@
   height: 32px
   line-height: 28px
   margin-left: 5px
+  padding: 0 2px
   text-align: center
   min-width: 32px
 

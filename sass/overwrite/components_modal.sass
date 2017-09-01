@@ -11,6 +11,12 @@
 .modal-image
   display: block
 
+.modal-close
+  &:hover,
+  &:focus,
+  &:active
+    background: none
+
 .modal-prev,
 .modal-next
   -moz-appearance: none
@@ -24,11 +30,6 @@
   position: absolute
   width: $modal-close-dimensions
   z-index: 2
-  &:hover,
-  &:focus
-    background-color: rgba($black, 0.3)
-  &:active
-    background-color: rgba($black, 0.4)
   &:before
     border-bottom: $modal-close-dimensions / 4 solid transparent
     border-top: $modal-close-dimensions / 4 solid transparent

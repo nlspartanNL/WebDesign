@@ -1,5 +1,5 @@
 .background
-  @each $name, $pair in $colors
+  @each $name, $pair in $backgroundcolors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
@@ -20,9 +20,6 @@
 
 .has-text-inherit
   color: inherit
-
-.has-text-grey
-  color: $grey-light !important
 
 .is-opaque25
   opacity: 0.25

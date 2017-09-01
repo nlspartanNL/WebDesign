@@ -3,9 +3,15 @@
 // Import functionality we use
 @import "variables.sass"
 
-@import "../utilities/_all"
+// @import "../utilities/_all"
+// @import "../utilities/initial-variables.sass"
+// @import "../utilities/functions.sass"
+// @import "../utilities/derived-variables.sass"
+@import "../utilities/animations.sass"
 @import "../overwrite/utilities_animations.sass"
+@import "../utilities/mixins.sass"
 @import "../overwrite/utilities_mixins.sass"
+@import "../utilities/controls.sass"
 
 @import "../base/_all"
 @import "../overwrite/base_generic.sass"
@@ -121,6 +127,7 @@
   .sectionprofile
     margin: 6em 0 7em
   .is-particles
+    overflow: hidden
     z-index: 0
   // Benefits
   .benefits
