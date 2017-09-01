@@ -3,10 +3,11 @@
   -webkit-overflow-scrolling: touch
   &::-webkit-scrollbar
     background: transparent
+    border-radius: $radius
     height: 7px
     width: 7px
   &::-webkit-scrollbar-thumb
-    background: rgba($primary,0.5)
+    background: rgba($white,0.1)
     border-radius: $radius
     &:hover
       background: $primary
@@ -19,9 +20,4 @@
 .is-scrollable-x
   overflow-x: auto
   &::-webkit-scrollbar
-    background: $light
-    border-radius: $radius
-  &::-webkit-scrollbar-thumb
-    background: rgba($black,0.2)
-    &:hover
-      background: rgba($black,0.4)
+    background: $dark-alt
