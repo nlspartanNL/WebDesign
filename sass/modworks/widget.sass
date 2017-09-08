@@ -32,8 +32,8 @@
 
 // @import "../components/_all"
 // @import "../components/breadcrumb.sass"
-// @import "../components/card.sass"
-// @import "../overwrite/components_card.sass"
+@import "../components/card.sass"
+@import "../overwrite/components_card.sass"
 // @import "../components/dropdown.sass"
 // @import "../overwrite/components_dropdown.sass"
 // @import "../components/level.sass"
@@ -42,8 +42,8 @@
 // @import "../components/menu.sass"
 // @import "../overwrite/components_menu.sass"
 // @import "../components/message.sass"
-// @import "../components/modal.sass"
-// @import "../overwrite/components_modal.sass"
+@import "../components/modal.sass"
+@import "../overwrite/components_modal.sass"
 // @import "../components/navbar.sass"
 // @import "../overwrite/components_navbar.sass"
 // @import "../components/pagination.sass"
@@ -60,15 +60,15 @@
 
 // @import "../layout/_all"
 // @import "../layout/footer.sass"
-// @import "../layout/hero.sass"
-// @import "../overwrite/layout_hero.sass"
+@import "../layout/hero.sass"
+@import "../overwrite/layout_hero.sass"
 // @import "../layout/section.sass"
 @import "../overwrite/layout_section.sass"
 
 // @import "../extensions/_all"
 // @import "../extensions/badge.sass"
 @import "../extensions/color.sass"
-// @import "../extensions/scroll.sass"
+@import "../extensions/scroll.sass"
 
 #widget
   background: none
@@ -77,6 +77,8 @@
   .container
     background: $white
     border-radius: $radius-large
+    &.is-border
+      border-top: 3px solid $primary
     &.is-fluid
       margin: 0 auto
       padding: 20px
@@ -92,3 +94,18 @@
   .hero
     .container
       background: none
+  .cardwidget
+    .card-header
+      background: linear-gradient(to bottom, rgba($dark, 0) 0%, $dark 100%)
+      bottom: 0
+      padding-top: 0.75rem
+      position: absolute
+      text-shadow: 1px 1px 10px rgba($black,0.2)
+      width: 100%
+      a,
+      span
+        color: inherit
+    &:hover
+      .spin
+        .fa
+          animation: spinAround 1s 1 ease-out

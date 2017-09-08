@@ -40,16 +40,11 @@
 .card-overlay
   background: $dark
   background: rgba($dark, 0.97)
-  bottom: 0
   border-radius: $radius $radius 0 0
   color: $white
-  left: 0
   opacity: 0
   overflow: hidden
   padding: 0.75rem
-  position: absolute
-  right: 0
-  top: 0
   transition-duration: $speed*2
 
 .card
@@ -58,6 +53,9 @@
   .button
     &.is-link
       background: none
+  .is-overlay,
+  &.is-overlay
+    position: absolute
   &:hover
     box-shadow: 0 0 1px rgba($black, 0.1), 0 4px 10px 0 rgba($black, 0.15)
     .card-header-title
