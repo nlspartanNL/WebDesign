@@ -212,6 +212,7 @@
     .columninner
       +touch
         .scrollbox
+          font-size: 0
           overflow-x: auto
           overflow-y: hidden
           white-space: nowrap
@@ -313,8 +314,13 @@
 
 // Forums
 .tableforum
+  tfoot
+    td
+      padding-top: 1em !important
   td
     vertical-align: middle
+    &.bicon
+      padding-right: 0
   tr
     &.post
       td
@@ -334,6 +340,9 @@
           margin-right: 0.25rem
         &:hover
           color: $primary
+    &.poll
+      td
+        padding: 1em !important
   .postdeleted
     opacity: 0.5
   .subcategorydeleted
@@ -370,7 +379,6 @@
   border: 2px solid
   border-radius: 16px
   display: inline-block
-  font-weight: $weight-bold
   font-size: 18px
   height: 32px
   line-height: 28px
