@@ -97,6 +97,9 @@
         .fa
           animation: spinAround 1s 1 ease-out
   .navscroll
+    color: $white
+    a
+      color: inherit
     .navscroll-content
       width: $navbar-width
     .field
@@ -131,6 +134,8 @@
               display: none
     .fieldremove
       display: none
+      .image
+        background: $danger
       .field
         opacity: 0
         position: absolute
@@ -164,6 +169,8 @@
     border-top: 1px dotted $grey-darker
     color: $grey
     padding: $column-gap
+    div
+      color: $primary
     a
       color: inherit
       &:hover,
@@ -181,6 +188,9 @@
     .navbar-brand
       img
         max-width: 160px
+    .navbar-item
+      .is-link
+        color: $primary
     +tablet
       padding: 0 $gap
   .tabsmenu

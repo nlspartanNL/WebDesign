@@ -89,7 +89,7 @@ $alignments: ('centered': 'center', 'left': 'left', 'right': 'right')
 .is-uppercase
   text-transform: uppercase !important
 
-@each $name, $pair in $colors
+@each $name, $pair in $textcolors
   $color: nth($pair, 1)
   .has-text-#{$name}
     color: $color !important
