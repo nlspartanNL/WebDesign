@@ -37,7 +37,7 @@ $navbar-divider-background-color: $border !default
   background-color: $navbar-background-color
   min-height: $navbar-height
   position: relative
-  @each $name, $pair in $colors
+  @each $name, $pair in $navbarcolors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.is-#{$name}
@@ -176,7 +176,7 @@ a.navbar-item,
       align-items: center
       display: flex
   .navbar-menu
-    background-color: $white
+    // background-color: $white
     box-shadow: 0 8px 16px rgba($black, 0.1)
     padding: 0.5rem 0
     &.is-active
