@@ -1,0 +1,31 @@
+@charset "utf-8"
+
+// Theme Variables
+$primary:      hsl(189,  63%, 55%)
+$dark:         hsl(240, 26%, 12%)
+$shade:        hsl(0, 0%, 96%)
+$success:      hsl(141, 71%,  48%)
+$warning:      hsl(48,  100%, 67%)
+$danger:       hsl(348, 100%, 61%)
+
+// Derived Variables
+$yellow:       $warning
+$green:        $success
+$turquoise:    $primary
+$red:          $danger
+$light:        $shade
+$light:        change-color($shade, $lightness: 96%)
+$black:        change-color($shade, $lightness: 4%) 
+$black-bis:    change-color($shade, $lightness: 7%)
+$black-ter:    change-color($shade, $lightness: 14%)
+$grey-darker:  change-color($shade, $lightness: 21%)
+$grey-dark:    change-color($shade, $lightness: 29%)
+$grey:         change-color($shade, $lightness: 48%)
+$grey-light:   change-color($shade, $lightness: 71%)
+$grey-lighter: change-color($shade, $lightness: 86%)
+$white-ter:    change-color($shade, $lightness: 96%)
+$white-bis:    change-color($shade, $lightness: 98%)
+$white:        change-color($shade, $lightness: 100%)
+
+// Load the template
+@import "../modworks/app.sass"

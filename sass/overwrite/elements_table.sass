@@ -6,11 +6,10 @@
   td
     .titletable
       color: $text
+      display: block
       font-weight: $weight-bold
       .icon
         margin-right: 0.25rem
-      &:hover
-        color: $primary
     .tablesubtitle
       font-size: 0.875em
     &.has-text-right
@@ -36,6 +35,7 @@
     &:hover
       .titletable
         color: $primary !important
+        opacity: 1
   &:last-child
     margin-bottom: 0
   &:not(.is-bordered)

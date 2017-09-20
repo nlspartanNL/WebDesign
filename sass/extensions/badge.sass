@@ -12,7 +12,7 @@
     background: $primary
     background-clip: padding-box
     border-radius: 1024px
-    color: #fff
+    color: $white
     content: attr(data-badge)
     display: inline-block
   &[data-badge]::after
@@ -32,7 +32,7 @@
     &:not([data-badge])::after, &[data-badge=""]::after
       display: none
   &.is-bordered::after
-    box-shadow: 0 0 0 .2rem #fff
+    box-shadow: 0 0 0 .2rem $white
   &.is-top::after
     position: absolute
     right: 0

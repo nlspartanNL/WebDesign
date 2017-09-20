@@ -82,9 +82,14 @@
 
 #home
   overflow-x: hidden
+  .hero-head
+    .is-link
+      color: $primary
   .hero-body
     h1
       font-size: 4rem
+      span
+        color: $primary
     form
       margin-left: auto
       margin-right: auto
@@ -98,6 +103,7 @@
         left: 50%
         position: absolute
         transform: translate(-50%, 50%)
+        z-index: 2
     .container
       padding-bottom: 4em
       a
@@ -106,6 +112,12 @@
     .columns
       padding: 2em 0.75em 0
       .column
+        &.is-active .title,
+        &.is-active .subtitle,
+        .icon
+          color: $dark
+        .iconbg
+          color: $white
         &:hover
           .iconbg
             animation: spinAround 10s infinite linear
@@ -137,6 +149,8 @@
             .button
               margin-top: 0.2em
   // Content
+  h2
+    color: $dark
   .section
     margin: 7em 0 2em
   .sectionprofile
@@ -148,6 +162,8 @@
   .benefits
     background: none
     padding-bottom: 3em
+    .icon
+      color: $primary
     .background
       bottom: 0
       position: absolute
@@ -220,7 +236,13 @@
         &:hover,
         &:visited:hover
           color: $white
+      .is-link
+        color: $primary
+        &:hover,
+        &:visited:hover
+          color: $dark
     .footer-title
+      color: $primary
       height: 2.3em
       line-height: 2.3em
     .footer-logo
