@@ -47,7 +47,7 @@
 // +fullhd
   // +typography-size('fullhd')
 
-$alignments: ('centered': 'center', 'left': 'left', 'right': 'right')
+$alignments: ('centered': 'center', 'justified': 'justify', 'left': 'left', 'right': 'right')
 
 @each $alignment, $text-align in $alignments
   .has-text-#{$alignment}
@@ -101,6 +101,15 @@ $alignments: ('centered': 'center', 'left': 'left', 'right': 'right')
 @each $name, $shade in $shades
   .has-text-#{$name}
     color: $shade !important
+
+.has-text-weight-light
+  font-weight: $weight-light !important
+.has-text-weight-normal
+  font-weight: $weight-normal !important
+.has-text-weight-semibold
+  font-weight: $weight-semibold !important
+.has-text-weight-bold
+  font-weight: $weight-bold !important
 
 // Visibility
 
