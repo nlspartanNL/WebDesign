@@ -236,6 +236,79 @@
             width: auto
           .is-16by9
             width: 208px
+  &.background.is-dark
+    background-color: $dark-alt
+    .navbar-item,
+    .navbar-link
+      color: $dark-invert
+      &:hover,
+      &.is-active
+        color: $navbar-item-hover-color
+    .navbar-dropdown
+      .navbar-item,
+      .navbar-link
+        color: inherit
+    .navbar-start
+      .navbar-item
+        &:first-child
+          color: $navbar-item-hover-color
+    .tabs
+      &.tabsmenu
+        background-color: $dark
+      a
+        border-bottom-color: transparent
+        border-bottom-width: 2px
+        color: $grey-light
+        margin-bottom: -2px
+        &.background
+          color: currentColor
+        &:hover
+          color: $tabs-link-hover-color
+      li
+        &.is-active
+          a
+            background: $primary
+            border-color: $primary
+            color: $primary-invert
+      ul
+        border-bottom-color: $primary
+        border-bottom-width: 2px
+    .button
+      &.is-link
+        color: $button-link-hover-background-color
+        &:hover,
+        &.is-hovered,
+        &:focus,
+        &.is-focused,
+        &:active,
+        &.is-active
+          color: $button-link-hover-color
+    .table
+      color: $grey-light
+      td,
+      th
+        border-color: $dark
+      th,
+      td .titletable,
+      tr.rowtitle td,
+      tr.rowtitle th
+        color: $grey-lighter
+      tr
+        &:hover
+          background-color: $dark
+    .media
+      border-color: $dark
+    .background.is-dark
+      .media
+        border-color: rgba($border, 0.2)
+    .tablethread
+      .media
+        .author
+          color: $grey-lighter
+    .card
+      .button
+        &.is-link
+          color: $button-link-color
 
 #appcontent,
 #app #profiler
@@ -245,6 +318,19 @@
     margin-left: $navbar-width
   +tiny
     margin-left: 0
+
+#colortheme
+  position: relative
+  .button
+    &.edit
+      bottom: $radius-small
+      left: 50%
+      position: absolute
+      transform: translate(-50%, 100%)
+      z-index: 1
+  .container
+    display: none
+    padding: $gap
 
 // Boxes
 .normalbox,
@@ -342,7 +428,6 @@
         font-weight: $weight-bold
         margin-bottom: 0.5rem
       .username
-        color: $text
         font-weight: $weight-bold
         margin-top: 0.5rem
         word-break: break-all
