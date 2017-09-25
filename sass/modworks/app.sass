@@ -293,9 +293,10 @@
       tr.rowtitle td,
       tr.rowtitle th
         color: $grey-lighter
-      tr
-        &:hover
-          background-color: $dark
+      tbody
+        tr
+          &:hover
+            background-color: $dark
     .media
       border-color: $dark
     .background.is-dark
@@ -313,6 +314,42 @@
     .radio
       &:hover
         color: $grey-lighter
+    .pagination
+      .pagination-link:not(.is-current),
+      .pagination-next:not([disabled]),
+      .pagination-previous:not([disabled])
+        &:hover
+          background: $link-hover-border
+  // Footer
+  .footer
+    border-bottom: 3px solid $primary
+    .footer-foot
+      color: $grey
+      padding: 3rem 0
+      ul
+        margin-bottom: 1rem
+      li
+        margin-bottom: 0.5rem
+      a
+        color: inherit
+        &:hover,
+        &:visited:hover
+          color: $white
+      .is-link
+        color: $primary
+        &:hover,
+        &:visited:hover
+          color: $dark
+    .footer-title
+      color: $primary
+      height: 2.3em
+      line-height: 2.3em
+    .footer-logo
+      img
+        min-width: 50px
+        width: 50px
+        &:hover
+          animation: spinAround 0.8s 1 ease-out
 
 #appcontent,
 #app #profiler
