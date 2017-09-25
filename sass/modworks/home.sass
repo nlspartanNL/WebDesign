@@ -203,6 +203,14 @@
           max-width: 460px
     .media
       border-top: none
+      .media-alt
+        display: none
+      &:hover
+        .media-alt
+          display: block
+        .media-primary
+          display: none
+      
   // Footer
   .footer
     border-bottom: 3px solid $primary
