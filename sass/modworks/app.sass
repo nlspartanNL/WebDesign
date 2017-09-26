@@ -67,6 +67,9 @@
 
 @import "../extensions/_all"
 
+body.darkmode
+  background-color: $dark-alt
+
 #appbar,
 #appmenu
   bottom: 0
@@ -145,8 +148,6 @@
         z-index: 3
   +tiny
     display: none
-    .navscroll
-      overflow-y: auto
     &.is-active
       display: block
 
@@ -184,6 +185,7 @@
       display: block
 
 #appcontent
+  min-height: 100vh
   .navbar
     .navbar-brand
       img
@@ -471,7 +473,6 @@
       .username
         font-weight: $weight-bold
         margin-top: 0.5rem
-        word-break: break-all
         .icon
           margin-right: 0.25rem
         &:hover
