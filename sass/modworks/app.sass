@@ -55,7 +55,6 @@
 // @import "../grid/_all"
 @import "../grid/columns.sass"
 @import "../overwrite/grid_columns.sass"
-@import "../overwrite/grid_columns_slick.sass"
 // @import "../grid/tiles.sass"
 
 // @import "../layout/_all"
@@ -66,9 +65,6 @@
 @import "../overwrite/layout_section.sass"
 
 @import "../extensions/_all"
-
-body.darkmode
-  background-color: $dark-alt
 
 #appbar,
 #appmenu
@@ -112,6 +108,7 @@ body.darkmode
       img,
       .image
         border-radius: $radius
+        overflow: hidden
       span
         margin: 0 auto
       &.is-active
@@ -167,8 +164,8 @@ body.darkmode
       padding-left: $column-gap
       padding-right: $column-gap
   .footer
-    border-top: 1px dotted $grey-darker
-    color: $grey
+    border-top: 1px dotted lighten($dark-alt, 10%)
+    color: $dark-invert
     padding: $column-gap
     div
       color: $primary
@@ -176,7 +173,7 @@ body.darkmode
       color: inherit
       &:hover,
       &:visited:hover
-        color: $white
+        color: $dark-invert
   +mobile
     display: none
     .navscroll
@@ -200,24 +197,26 @@ body.darkmode
   .columnsheader
     .column
       padding-bottom: 0
+  .columninner 
+    border-radius: $radius
+    padding: $column-gap
+    a:not(.button)
+      &:hover
+        color: inherit
+    .body
+      &:first-child
+        padding: 0
+    +touch
+      margin-bottom: (-$column-gap)
   .columnsidemenu
     max-width: 880px
     order: 2
     .fieldfooter
       margin-top: $column-gap
     .columninner 
-      border-radius: $radius
-      padding: $column-gap
-      a:not(.button)
-        &:hover
-          color: inherit
-      .body
-        &:first-child
-          padding: 0
       #sharemod
         margin-top: $column-gap
       +touch
-        margin-bottom: (-$column-gap)
         #sharemod
           display: none
   .columngallery
@@ -238,6 +237,37 @@ body.darkmode
             width: auto
           .is-16by9
             width: 208px
+  // Footer
+  .footer
+    border-bottom: 3px solid $primary
+    .footer-foot
+      color: $grey
+      padding: 3rem 0
+      ul
+        margin-bottom: 1rem
+      li
+        margin-bottom: 0.5rem
+      a
+        color: inherit
+        &:hover,
+        &:visited:hover
+          color: $white
+      .is-link
+        color: $primary
+        &:hover,
+        &:visited:hover
+          color: $dark
+    .footer-title
+      color: $primary
+      height: 2.3em
+      line-height: 2.3em
+    .footer-logo
+      img
+        min-width: 50px
+        width: 50px
+        &:hover
+          animation: spinAround 0.8s 1 ease-out
+  // Dark mode
   &.background.is-dark
     background-color: $dark-alt
     .navbar-item,
@@ -322,36 +352,16 @@ body.darkmode
       .pagination-previous:not([disabled])
         &:hover
           background: $link-hover-border
-  // Footer
-  .footer
-    border-bottom: 3px solid $primary
-    .footer-foot
-      color: $grey
-      padding: 3rem 0
-      ul
-        margin-bottom: 1rem
-      li
-        margin-bottom: 0.5rem
-      a
-        color: inherit
-        &:hover,
-        &:visited:hover
-          color: $white
-      .is-link
-        color: $primary
-        &:hover,
-        &:visited:hover
-          color: $dark
-    .footer-title
-      color: $primary
-      height: 2.3em
-      line-height: 2.3em
-    .footer-logo
-      img
-        min-width: 50px
-        width: 50px
-        &:hover
-          animation: spinAround 0.8s 1 ease-out
+    .slick-slider
+      .slick-prev,
+      .slick-next
+        .button
+          background-color: $dark-alt
+          color: $dark-invert
+        &:before
+          background: linear-gradient(to bottom, rgba($dark-alt,1) 0%, rgba($dark-alt,0.75) 50%, rgba($dark-alt,0) 100%)
+        &:after
+          background: linear-gradient(to top, rgba($dark-alt,1) 0%, rgba($dark-alt,0.75) 50%, rgba($dark-alt,0) 100%)
 
 #appcontent,
 #app #profiler
@@ -473,6 +483,7 @@ body.darkmode
       .username
         font-weight: $weight-bold
         margin-top: 0.5rem
+        white-space: nowrap
         .icon
           margin-right: 0.25rem
         &:hover
