@@ -32,10 +32,16 @@
       &:hover
         .titletable
           color: currentColor !important
+    &.is-selected,
     &:hover
       a.titletable
         color: $primary !important
         opacity: 1
+  &.is-bordered
+    thead
+      tr
+        &.is-selected
+          background-color: $table-row-active-background-color
   &:last-child
     margin-bottom: 0
   &:not(.is-bordered)
