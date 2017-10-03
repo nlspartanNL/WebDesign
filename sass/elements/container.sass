@@ -3,7 +3,7 @@
   position: relative
   +from($desktop)
     max-width: $desktop - (2 * $gap)
-    width: $desktop - (2 * $gap)
+    // width: $desktop - (2 * $gap)
     // &.is-fluid
       // margin-left: $gap
       // margin-right: $gap
@@ -12,14 +12,14 @@
   +until($widescreen)
     &.is-widescreen
       max-width: $widescreen - (2 * $gap)
-      width: auto
+      // width: auto
   +until($fullhd)
     &.is-fullhd
       max-width: $fullhd - (2 * $gap)
-      width: auto
+      // width: auto
   +from($widescreen)
     max-width: $widescreen - (2 * $gap)
-    width: $widescreen - (2 * $gap)
+    // width: $widescreen - (2 * $gap)
   +from($fullhd)
     max-width: $fullhd - (2 * $gap)
-    width: $fullhd - (2 * $gap)
+    // width: $fullhd - (2 * $gap)

@@ -174,6 +174,11 @@
       &:hover,
       &:visited:hover
         color: $dark-invert
+    .is-link
+      color: $primary
+      &:hover,
+      &:visited:hover
+        color: $dark
   +mobile
     display: none
     .navscroll
@@ -183,6 +188,13 @@
 
 #appcontent
   min-height: 100vh
+  .menuclose
+    left: 0
+    margin-left: $navmenu-width + $navbar-width - 8
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 18
   .navbar
     .navbar-brand
       img
@@ -253,18 +265,16 @@
         &:visited:hover
           color: $white
       .is-link
-        color: $primary
+        color: $primary !important
         &:hover,
         &:visited:hover
-          color: $dark
+          color: $dark !important
     .footer-title
       color: $primary
       height: 2.3em
       line-height: 2.3em
     .footer-logo
-      img
-        min-width: 50px
-        width: 50px
+      svg
         &:hover
           animation: spinAround 0.8s 1 ease-out
   // Dark mode
@@ -422,10 +432,6 @@
       margin: 0 $column-gap $column-gap 0
       .image
         background-size: contain
-  .textareatinymce
-    padding: 0
-  .fieldindent
-    margin-left: 2.25em
 
 // Other
 .body
@@ -497,24 +503,6 @@
     opacity: 0.5
     .thread
       text-decoration: line-through
-
-// Tokens
-.tokenfield
-  &.textarea
-    padding: 1px 8px
-  .token-input
-    background: none
-    border: 0
-    border-color: transparent
-    box-shadow: none
-    height: 24px
-    margin: 3px 0
-    min-width: 60px
-    outline: 0
-    padding: 0
-    width: 60px
-  .tag
-    margin: 3px 5px 2px 0
 
 // Member Level
 .levelinfo
