@@ -34,8 +34,8 @@
 // @import "../components/breadcrumb.sass"
 @import "../components/card.sass"
 @import "../overwrite/components_card.sass"
-// @import "../components/dropdown.sass"
-// @import "../overwrite/components_dropdown.sass"
+@import "../components/dropdown.sass"
+@import "../overwrite/components_dropdown.sass"
 // @import "../components/level.sass"
 // @import "../components/media.sass"
 // @import "../overwrite/components_media.sass"
@@ -70,6 +70,7 @@
 @import "../extensions/scroll.sass"
 // @import "../extensions/slick.sass"
 @import "../extensions/tipsy.sass"
+@import "../extensions/tokenfield.sass"
 
 #widget
   background: none
@@ -112,3 +113,23 @@
       .spin
         .fa
           animation: spinAround 1s 1 ease-out
+
+// Forms
+.formbox
+  .previewimage
+    width: 100%
+    .image
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      cursor: pointer
+  .previewmultiple
+    .previewimage
+      float: left
+      margin: 0 $column-gap $column-gap 0
+      .image
+        background-size: contain
+  .textareatinymce
+    padding: 0
+  .fieldindent
+    margin-left: 2.25em
