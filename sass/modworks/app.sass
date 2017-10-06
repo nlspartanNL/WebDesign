@@ -113,8 +113,8 @@
         margin: 0 auto
       &.is-active
         &:before
-          border: 10px solid $dark
-          border-color: transparent transparent transparent $dark
+          border: 10px solid $primary-invert
+          border-color: transparent transparent transparent $primary-invert
           border-radius: $radius-small
           content: ""
           display: inline-block
@@ -231,6 +231,12 @@
       +touch
         #sharemod
           display: none
+  .columncontent
+    .columnsidemenu
+      margin-top: 0
+      padding-top: 0
+      .columninner
+        border-radius: 0 0 $radius $radius
   .columngallery
     .columninner
       +touch
@@ -297,6 +303,11 @@
     .tabs
       &.tabsmenu
         background-color: $dark
+        a
+          border-bottom-width: 0
+          margin-bottom: 0
+        ul
+          border-bottom-width: 8px
       a
         border-bottom-color: transparent
         border-bottom-width: 2px
@@ -440,6 +451,24 @@
   padding: $column-gap 0 0
   .content
     overflow: hidden
+
+// Corner Buttons
+.normalcorner
+  .button
+    border-radius: $radius $radius 0 0 !important
+    border-style: solid
+    border-width: 0 0 4px 0
+    &.is-primary,
+    &.is-dark
+      background: none
+      border-bottom-color: $primary
+      color: inherit
+    &.is-dark
+      &:hover
+        background: $primary
+        color: $primary-invert
+    &.control
+      padding-left: 0
 
 // Browse
 .tablebrowse
