@@ -209,15 +209,14 @@
   .columnsheader
     .column
       padding-bottom: 0
+    .normalcorner
+      margin-bottom: 0
   .columninner 
     border-radius: $radius
     padding: $column-gap
     a:not(.button)
       &:hover
         color: inherit
-    .body
-      &:first-child
-        padding: 0
     +touch
       margin-bottom: (-$column-gap)
   .columnsidemenu
@@ -303,31 +302,29 @@
     .tabs
       &.tabsmenu
         background-color: $dark
+        ul
+          border-bottom-color: $primary
+          border-bottom-width: 8px
         a
           border-bottom-width: 0
           margin-bottom: 0
-        ul
-          border-bottom-width: 8px
-      a
-        border-bottom-color: transparent
-        border-bottom-width: 2px
-        color: $grey-light
-        margin-bottom: -2px
-        &.background
-          color: currentColor
-          &.is-light
-            color: $light-invert
-        &:hover
-          color: $tabs-link-hover-color
       li
+        &.tabtitle
+          a
+            color: $primary
+            &:hover
+              color: $tabs-link-hover-color
         &.is-active
           a
             background: $primary
             border-color: $primary
             color: $primary-invert
-      ul
-        border-bottom-color: $primary
-        border-bottom-width: 2px
+      a
+        color: $grey-light
+        &.background
+          color: currentColor
+        &:hover
+          color: $tabs-link-hover-color
     .button
       &.is-link
         color: $button-link-hover-background-color
@@ -375,6 +372,10 @@
       .pagination-previous:not([disabled])
         &:hover
           background: $link-hover-border
+    .content
+      blockquote
+        background-color: $dark
+        border-left-color: darken($dark, 10%)
     .slick-slider
       .slick-prev,
       .slick-next
@@ -448,12 +449,12 @@
 
 // Other
 .body
-  padding: $column-gap 0 0
   .content
     overflow: hidden
 
 // Corner Buttons
 .normalcorner
+  margin-bottom: 0.75rem
   .button
     border-radius: $radius $radius 0 0 !important
     border-style: solid
