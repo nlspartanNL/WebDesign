@@ -12,6 +12,8 @@
         margin-right: 0.25rem
     .tablesubtitle
       font-size: 0.875em
+      .tags
+        margin-top: 0.5rem
     &.has-text-right
       .field
         float: right
@@ -32,10 +34,18 @@
       &:hover
         .titletable
           color: currentColor !important
+    &.is-selected,
     &:hover
       a.titletable
         color: $primary !important
         opacity: 1
+  &.is-bordered
+    thead
+      tr
+        &.is-selected
+          background-color: $table-row-active-background-color
+          th
+            color: $table-row-active-color
   &:last-child
     margin-bottom: 0
   &:not(.is-bordered)

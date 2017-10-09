@@ -113,8 +113,8 @@
         margin: 0 auto
       &.is-active
         &:before
-          border: 10px solid $white
-          border-color: transparent transparent transparent $white
+          border: 10px solid $primary-invert
+          border-color: transparent transparent transparent $primary-invert
           border-radius: $radius-small
           content: ""
           display: inline-block
@@ -209,15 +209,14 @@
   .columnsheader
     .column
       padding-bottom: 0
+    .normalcorner
+      margin-bottom: 0
   .columninner 
     border-radius: $radius
     padding: $column-gap
     a:not(.button)
       &:hover
         color: inherit
-    .body
-      &:first-child
-        padding: 0
     +touch
       margin-bottom: (-$column-gap)
   .columnsidemenu
@@ -231,6 +230,12 @@
       +touch
         #sharemod
           display: none
+  .columncontent
+    .columnsidemenu
+      margin-top: 0
+      padding-top: 0
+      .columninner
+        border-radius: 0 0 $radius $radius
   .columngallery
     .columninner
       +touch
@@ -297,24 +302,29 @@
     .tabs
       &.tabsmenu
         background-color: $dark
-      a
-        border-bottom-color: transparent
-        border-bottom-width: 2px
-        color: $grey-light
-        margin-bottom: -2px
-        &.background
-          color: currentColor
-        &:hover
-          color: $tabs-link-hover-color
+        ul
+          border-bottom-color: $primary
+          border-bottom-width: 8px
+        a
+          border-bottom-width: 0
+          margin-bottom: 0
       li
+        &.tabtitle
+          a
+            color: $primary
+            &:hover
+              color: $tabs-link-hover-color
         &.is-active
           a
             background: $primary
             border-color: $primary
             color: $primary-invert
-      ul
-        border-bottom-color: $primary
-        border-bottom-width: 2px
+      a
+        color: $grey-light
+        &.background
+          color: currentColor
+        &:hover
+          color: $tabs-link-hover-color
     .button
       &.is-link
         color: $button-link-hover-background-color
@@ -362,6 +372,10 @@
       .pagination-previous:not([disabled])
         &:hover
           background: $link-hover-border
+    .content
+      blockquote
+        background-color: $dark
+        border-left-color: darken($dark, 10%)
     .slick-slider
       .slick-prev,
       .slick-next
@@ -435,9 +449,27 @@
 
 // Other
 .body
-  padding: $column-gap 0 0
   .content
     overflow: hidden
+
+// Corner Buttons
+.normalcorner
+  margin-bottom: 0.75rem
+  .button
+    border-radius: $radius $radius 0 0 !important
+    border-style: solid
+    border-width: 0 0 4px 0
+    &.is-primary,
+    &.is-dark
+      background: none
+      border-bottom-color: $primary
+      color: inherit
+    &.is-dark
+      &:hover
+        background: $primary
+        color: $primary-invert
+    &.control
+      padding-left: 0
 
 // Browse
 .tablebrowse

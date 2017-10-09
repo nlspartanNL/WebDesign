@@ -1,3 +1,23 @@
+.tabs
+  &.is-opposite
+    ul
+      border-bottom-width: 0
+    li
+      a
+        border-bottom-width: 0
+        border-radius: $radius
+        margin: 0
+      &.is-active
+        a
+          background: $primary
+          border-color: $primary
+          color: $primary-invert
+      &.is-disabled
+        a
+          cursor: not-allowed
+    &:not(:last-child)
+      margin-bottom: 0.75rem
+
 .tabfilter
   margin-right: 0.25rem
   a
@@ -6,3 +26,5 @@
     margin-left: 0.25rem
 .tabtitle
   margin-right: auto
+  a
+    color: $primary
