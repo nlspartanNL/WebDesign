@@ -80,7 +80,8 @@ $column-gap: 0.75rem !default
       // &.is-offset-#{$i}-mobile
         // margin-left: ($i / 12) * 100%
   +tablet
-    &.is-narrow
+    &.is-narrow,
+    &.is-narrow-tablet
       flex: none
     // &.is-full,
     // &.is-full-tablet
@@ -122,7 +123,8 @@ $column-gap: 0.75rem !default
     // &.is-offset-one-quarter-tablet
       // margin-left: 25%
     @for $i from 1 through 12
-      &.is-#{$i}
+      &.is-#{$i},
+      &.is-#{$i}-tablet
         flex: none
         width: ($i / 12) * 100%
       // &.is-offset-#{$i},
