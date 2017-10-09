@@ -345,10 +345,11 @@
       tr.rowtitle td,
       tr.rowtitle th
         color: $grey-lighter
-      tbody
-        tr
-          &:hover
-            background-color: $dark
+      &.is-hoverable
+        tbody
+          tr
+            &:hover
+              background-color: $dark
     .media
       border-color: $dark
     .background.is-dark
