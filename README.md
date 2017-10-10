@@ -8,8 +8,8 @@ The enhancements for bulma we use are stored in the sass/extensions/ folder (if 
 To get the [design](https://design.mod.io) up and running on your local machine:
 
 1. Clone or fork this repository
-2. Point your SASS compiler at the file bulma.sass
-3. Output the bulma.css file to the docs/ folder
+2. Point your SASS compiler at the files in the sass/modio/ folder
+3. Output the .css files to the docs/ folder
 4. Load [index.html in the docs folder](https://design.mod.io) to preview how your changes will look before submitting your contribution
 
 ## Contributions Welcome
