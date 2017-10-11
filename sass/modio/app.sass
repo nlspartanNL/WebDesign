@@ -411,10 +411,13 @@
     padding: $gap
 
 // Boxes
-.normalbox,
-.headerbox
+.normalbox
   &:not(:last-child)
     margin-bottom: 1.5rem
+  & + .normalbox
+    margin-top: 3rem
+  & + .mediabox
+    margin-top: 0
 .mediabox
   &:not(:last-child)
     margin-bottom: $column-gap
