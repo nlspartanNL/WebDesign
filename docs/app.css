@@ -569,18 +569,18 @@ a.box:active {
   .button:active, .button.is-active {
     border-color: #4a4a4a;
     color: #363636; }
-  .button.is-link {
+  .button.is-text {
     background-color: transparent;
     border-color: transparent;
     color: #4a4a4a;
     text-decoration: underline; }
-    .button.is-link:hover, .button.is-link.is-hovered, .button.is-link:focus, .button.is-link.is-focused {
+    .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
       background-color: whitesmoke;
       color: #363636; }
-    .button.is-link:active, .button.is-link.is-active {
+    .button.is-text:active, .button.is-text.is-active {
       background-color: #e8e8e8;
       color: #363636; }
-    .button.is-link[disabled] {
+    .button.is-text[disabled] {
       background-color: transparent;
       border-color: transparent;
       -webkit-box-shadow: none;
@@ -1754,6 +1754,15 @@ a.box:active {
     font-size: 1rem; }
   .tag.is-large {
     font-size: 1.25rem; }
+  .tag .icon:first-child:not(:last-child) {
+    margin-left: -0.375em;
+    margin-right: 0.1875em; }
+  .tag .icon:last-child:not(:first-child) {
+    margin-left: 0.1875em;
+    margin-right: -0.375em; }
+  .tag .icon:first-child:last-child {
+    margin-left: -0.375em;
+    margin-right: -0.375em; }
   .tag.is-rounded {
     border-radius: 290486px; }
 
@@ -2061,7 +2070,7 @@ ul.help {
   .table tr.is-selected th {
     color: currentColor; }
   .table tr.is-selected .titletable,
-  .table tr.is-selected .is-link {
+  .table tr.is-selected .is-text {
     color: currentColor; }
   .table tr.is-selected:hover .titletable {
     color: currentColor !important; }
@@ -2086,7 +2095,7 @@ ul.help {
     .tags.is-pulled-right .tag:not(:first-child) {
       margin-left: 0.5rem; }
 
-.tag.is-link {
+.tag.is-text {
   color: inherit !important;
   background: none; }
 
@@ -2237,7 +2246,7 @@ ul.help {
   border-radius: 3px;
   -webkit-box-shadow: 0 0 1px rgba(10, 10, 10, 0.15);
           box-shadow: 0 0 1px rgba(10, 10, 10, 0.15); }
-  .card .button.is-link {
+  .card .button.is-text {
     background: none; }
   .card .is-overlay, .card.is-overlay {
     position: absolute; }
@@ -2841,9 +2850,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
     .navbar.is-transparent a.navbar-item:hover, .navbar.is-transparent a.navbar-item.is-active,
     .navbar.is-transparent .navbar-link:hover,
     .navbar.is-transparent .navbar-link.is-active {
-      background-color: transparent; }
+      background-color: transparent !important; }
     .navbar.is-transparent .navbar-item.has-dropdown.is-active .navbar-link, .navbar.is-transparent .navbar-item.has-dropdown.is-hoverable:hover .navbar-link {
-      background-color: transparent; }
+      background-color: transparent !important; }
     .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
       background-color: whitesmoke;
       color: #0a0a0a; }
@@ -4231,9 +4240,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
       color: inherit; }
       #appmenu .footer a:hover, #appmenu .footer a:visited:hover {
         color: whitesmoke; }
-    #appmenu .footer .is-link {
+    #appmenu .footer .is-text {
       color: #44bfd5; }
-      #appmenu .footer .is-link:hover, #appmenu .footer .is-link:visited:hover {
+      #appmenu .footer .is-text:hover, #appmenu .footer .is-text:visited:hover {
         color: #171727; }
   @media screen and (max-width: 768px) {
     #appmenu {
@@ -4257,7 +4266,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
     max-width: 160px; }
     #appcontent .navbar .navbar-brand img.original {
       max-width: 120px; }
-  #appcontent .navbar .navbar-item .is-link {
+  #appcontent .navbar .navbar-item .is-text {
     color: #44bfd5; }
   @media screen and (min-width: 769px), print {
     #appcontent .navbar {
@@ -4322,9 +4331,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
         color: inherit; }
         #appcontent .footer .footer-foot a:hover, #appcontent .footer .footer-foot a:visited:hover {
           color: white; }
-      #appcontent .footer .footer-foot .is-link {
+      #appcontent .footer .footer-foot .is-text {
         color: #44bfd5 !important; }
-        #appcontent .footer .footer-foot .is-link:hover, #appcontent .footer .footer-foot .is-link:visited:hover {
+        #appcontent .footer .footer-foot .is-text:hover, #appcontent .footer .footer-foot .is-text:visited:hover {
           color: #171727 !important; }
     #appcontent .footer .footer-title {
       color: #44bfd5;
@@ -4367,9 +4376,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
         color: currentColor; }
       #appcontent.background.is-dark .tabs a:hover {
         color: #363636; }
-    #appcontent.background.is-dark .button.is-link {
+    #appcontent.background.is-dark .button.is-text {
       color: whitesmoke; }
-      #appcontent.background.is-dark .button.is-link:hover, #appcontent.background.is-dark .button.is-link.is-hovered, #appcontent.background.is-dark .button.is-link:focus, #appcontent.background.is-dark .button.is-link.is-focused, #appcontent.background.is-dark .button.is-link:active, #appcontent.background.is-dark .button.is-link.is-active {
+      #appcontent.background.is-dark .button.is-text:hover, #appcontent.background.is-dark .button.is-text.is-hovered, #appcontent.background.is-dark .button.is-text:focus, #appcontent.background.is-dark .button.is-text.is-focused, #appcontent.background.is-dark .button.is-text:active, #appcontent.background.is-dark .button.is-text.is-active {
         color: #363636; }
     #appcontent.background.is-dark .table {
       color: #b5b5b5; }
@@ -4392,7 +4401,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
       border-color: rgba(219, 219, 219, 0.2); }
     #appcontent.background.is-dark .tablethread .media .author {
       color: #dbdbdb; }
-    #appcontent.background.is-dark .card .button.is-link {
+    #appcontent.background.is-dark .card .button.is-text {
       color: #4a4a4a; }
     #appcontent.background.is-dark .checkbox:hover,
     #appcontent.background.is-dark .radio:hover {
