@@ -1672,7 +1672,7 @@ a.box:active {
   .table.is-bordered tr:last-child td,
   .table.is-bordered tr:last-child th {
     border-bottom-width: 1px; }
-  .table.is-hoverable tbody tr:hover {
+  .table.is-hoverable tbody tr:not(.is-selected):hover {
     background-color: #fafafa; }
   .table.is-narrow td,
   .table.is-narrow th {
@@ -2058,7 +2058,9 @@ ul.help {
     color: #363636; }
   .table tr.is-clickable {
     cursor: pointer; }
-  .table tr.is-selected .titletable:hover,
+  .table tr.is-selected th {
+    color: currentColor; }
+  .table tr.is-selected .titletable,
   .table tr.is-selected .is-link {
     color: currentColor; }
   .table tr.is-selected:hover .titletable {
@@ -2083,6 +2085,10 @@ ul.help {
     margin-right: 0; }
     .tags.is-pulled-right .tag:not(:first-child) {
       margin-left: 0.5rem; }
+
+.tag.is-link {
+  color: inherit !important;
+  background: none; }
 
 .title.is-0 {
   font-size: 5rem; }
@@ -3344,11 +3350,15 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .tabs.is-opposite li a {
   border-bottom-width: 0;
   border-radius: 3px;
+  height: 2.25em;
   margin: 0; }
 .tabs.is-opposite li.is-active a {
   background: #44bfd5;
   border-color: #44bfd5;
   color: #fff; }
+.tabs.is-opposite li.is-icontab a {
+  padding-left: 0;
+  padding-right: 0; }
 .tabs.is-opposite li.is-disabled a {
   cursor: not-allowed; }
 .tabs.is-opposite:not(:last-child) {
@@ -4200,6 +4210,13 @@ a.navbar-item:hover, a.navbar-item.is-active,
     #appmenu .navbar .navbar-item img {
       margin: 0 auto;
       max-width: 180px; }
+      #appmenu .navbar .navbar-brand img.original,
+      #appmenu .navbar .navbar-item img.original {
+        max-width: 120px; }
+      @media screen and (min-width: 769px), print {
+        #appmenu .navbar .navbar-brand img,
+        #appmenu .navbar .navbar-item img {
+          max-height: 4rem; } }
   #appmenu .navscroll .navscroll-content {
     width: 240px;
     padding-left: 0.75rem;
@@ -4238,6 +4255,8 @@ a.navbar-item:hover, a.navbar-item.is-active,
     z-index: 18; }
   #appcontent .navbar .navbar-brand img {
     max-width: 160px; }
+    #appcontent .navbar .navbar-brand img.original {
+      max-width: 120px; }
   #appcontent .navbar .navbar-item .is-link {
     color: #44bfd5; }
   @media screen and (min-width: 769px), print {
@@ -4280,10 +4299,10 @@ a.navbar-item:hover, a.navbar-item.is-active,
       overflow-x: auto;
       overflow-y: hidden;
       white-space: nowrap; }
-      #appcontent .columngallery .columninner .scrollbox .mediabox {
+      #appcontent .columngallery .columninner .scrollbox .normalbox {
         display: inline-block;
         margin: 0 0 0 0.75rem; }
-        #appcontent .columngallery .columninner .scrollbox .mediabox:first-child {
+        #appcontent .columngallery .columninner .scrollbox .normalbox:first-child {
           margin-left: 0; }
       #appcontent .columngallery .columninner .scrollbox img {
         height: 117px;
@@ -4336,16 +4355,14 @@ a.navbar-item:hover, a.navbar-item.is-active,
       #appcontent.background.is-dark .tabs.tabsmenu a {
         border-bottom-width: 0;
         margin-bottom: 0; }
-    #appcontent.background.is-dark .tabs li.tabtitle a {
-      color: #44bfd5; }
-      #appcontent.background.is-dark .tabs li.tabtitle a:hover {
-        color: #363636; }
+    #appcontent.background.is-dark .tabs li.tabtitle a:hover {
+      color: #363636; }
     #appcontent.background.is-dark .tabs li.is-active a {
       background: #44bfd5;
       border-color: #44bfd5;
       color: #fff; }
     #appcontent.background.is-dark .tabs a {
-      color: #b5b5b5; }
+      color: #44bfd5; }
       #appcontent.background.is-dark .tabs a.background {
         color: currentColor; }
       #appcontent.background.is-dark .tabs a:hover {
@@ -4366,6 +4383,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
         color: #dbdbdb; }
       #appcontent.background.is-dark .table.is-hoverable tbody tr:hover {
         background-color: #171727; }
+      #appcontent.background.is-dark .table .tablesubtitle .tags .tag {
+        background: #171727;
+        color: whitesmoke !important; }
     #appcontent.background.is-dark .media {
       border-color: #171727; }
     #appcontent.background.is-dark .background.is-dark .media {
@@ -4426,7 +4446,9 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .normalbox:not(:last-child) {
   margin-bottom: 1.5rem; }
 .normalbox + .normalbox {
-  margin-top: 1.5rem; }
+  margin-top: 3rem; }
+.normalbox + .mediabox {
+  margin-top: 0; }
 
 .mediabox:not(:last-child) {
   margin-bottom: 0.75rem; }
