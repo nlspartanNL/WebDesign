@@ -569,18 +569,18 @@ a.box:active {
   .button:active, .button.is-active {
     border-color: #4a4a4a;
     color: #363636; }
-  .button.is-link {
+  .button.is-text {
     background-color: transparent;
     border-color: transparent;
     color: #4a4a4a;
     text-decoration: underline; }
-    .button.is-link:hover, .button.is-link.is-hovered, .button.is-link:focus, .button.is-link.is-focused {
+    .button.is-text:hover, .button.is-text.is-hovered, .button.is-text:focus, .button.is-text.is-focused {
       background-color: whitesmoke;
       color: #363636; }
-    .button.is-link:active, .button.is-link.is-active {
+    .button.is-text:active, .button.is-text.is-active {
       background-color: #e8e8e8;
       color: #363636; }
-    .button.is-link[disabled] {
+    .button.is-text[disabled] {
       background-color: transparent;
       border-color: transparent;
       -webkit-box-shadow: none;
@@ -1754,6 +1754,15 @@ a.box:active {
     font-size: 1rem; }
   .tag.is-large {
     font-size: 1.25rem; }
+  .tag .icon:first-child:not(:last-child) {
+    margin-left: -0.375em;
+    margin-right: 0.1875em; }
+  .tag .icon:last-child:not(:first-child) {
+    margin-left: 0.1875em;
+    margin-right: -0.375em; }
+  .tag .icon:first-child:last-child {
+    margin-left: -0.375em;
+    margin-right: -0.375em; }
   .tag.is-rounded {
     border-radius: 290486px; }
 
@@ -2061,7 +2070,7 @@ ul.help {
   .table tr.is-selected th {
     color: currentColor; }
   .table tr.is-selected .titletable,
-  .table tr.is-selected .is-link {
+  .table tr.is-selected .is-text {
     color: currentColor; }
   .table tr.is-selected:hover .titletable {
     color: currentColor !important; }
@@ -2086,7 +2095,7 @@ ul.help {
     .tags.is-pulled-right .tag:not(:first-child) {
       margin-left: 0.5rem; }
 
-.tag.is-link {
+.tag.is-text {
   color: inherit !important;
   background: none; }
 
@@ -2237,7 +2246,7 @@ ul.help {
   border-radius: 3px;
   -webkit-box-shadow: 0 0 1px rgba(10, 10, 10, 0.15);
           box-shadow: 0 0 1px rgba(10, 10, 10, 0.15); }
-  .card .button.is-link {
+  .card .button.is-text {
     background: none; }
   .card .is-overlay, .card.is-overlay {
     position: absolute; }
@@ -3113,7 +3122,7 @@ a.dropdown-item {
       color: rgba(245, 245, 245, 0.9); }
       .hero.is-dark .subtitle a:not(.button),
       .hero.is-dark .subtitle strong {
-        color: #44bfd5; }
+        color: whitesmoke; }
   @media screen and (min-width: 769px), print {
     .hero.is-medium .hero-body {
       padding-bottom: 9rem;
