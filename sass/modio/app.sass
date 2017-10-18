@@ -158,6 +158,10 @@
       img
         margin: 0 auto
         max-width: $navmenu-width - $navbar-width
+        &.original
+          max-width: $navmenu-width / 2
+        +tablet
+          max-height: 4rem
   .navscroll
     .navscroll-content
       width: $navmenu-width
@@ -199,6 +203,8 @@
     .navbar-brand
       img
         max-width: 160px
+        &.original
+          max-width: 120px
     .navbar-item
       .is-link
         color: $primary
@@ -311,7 +317,6 @@
       li
         &.tabtitle
           a
-            color: $primary
             &:hover
               color: $tabs-link-hover-color
         &.is-active
@@ -320,7 +325,7 @@
             border-color: $primary
             color: $primary-invert
       a
-        color: $grey-light
+        color: $primary
         &.background
           color: currentColor
         &:hover
@@ -350,6 +355,11 @@
           tr
             &:hover
               background-color: $dark
+      .tablesubtitle
+        .tags
+          .tag
+            background: $dark
+            color: $dark-invert !important
     .media
       border-color: $dark
     .background.is-dark
@@ -411,10 +421,13 @@
     padding: $gap
 
 // Boxes
-.normalbox,
-.headerbox
+.normalbox
   &:not(:last-child)
     margin-bottom: 1.5rem
+  & + .normalbox
+    margin-top: 3rem
+  & + .mediabox
+    margin-top: 0
 .mediabox
   &:not(:last-child)
     margin-bottom: $column-gap
