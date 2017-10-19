@@ -373,6 +373,17 @@
       background: $dark
     .card-header-title
       color: $dark-invert
+    .card-header
+      .background.is-dark
+        background: $dark-alt
+      .button
+        &.is-text
+          &:hover
+            color: $dark-invert
+    .card-content
+      .button
+        &.is-text
+          color: inherit
     .checkbox,
     .radio
       &:hover

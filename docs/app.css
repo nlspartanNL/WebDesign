@@ -4405,6 +4405,12 @@ a.navbar-item:hover, a.navbar-item.is-active,
       background: #171727; }
     #appcontent.background.is-dark .card-header-title {
       color: whitesmoke; }
+    #appcontent.background.is-dark .card-header .background.is-dark {
+      background: #2c2c3f; }
+    #appcontent.background.is-dark .card-header .button.is-text:hover {
+      color: whitesmoke; }
+    #appcontent.background.is-dark .card-content .button.is-text {
+      color: inherit; }
     #appcontent.background.is-dark .checkbox:hover,
     #appcontent.background.is-dark .radio:hover {
       color: #dbdbdb; }
