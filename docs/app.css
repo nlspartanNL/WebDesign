@@ -4401,8 +4401,10 @@ a.navbar-item:hover, a.navbar-item.is-active,
       border-color: rgba(219, 219, 219, 0.2); }
     #appcontent.background.is-dark .tablethread .media .author {
       color: #dbdbdb; }
-    #appcontent.background.is-dark .card .button.is-text {
-      color: #4a4a4a; }
+    #appcontent.background.is-dark .card {
+      background: #171727; }
+    #appcontent.background.is-dark .card-header-title {
+      color: whitesmoke; }
     #appcontent.background.is-dark .checkbox:hover,
     #appcontent.background.is-dark .radio:hover {
       color: #dbdbdb; }
