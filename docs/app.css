@@ -4294,9 +4294,6 @@ a.navbar-item:hover, a.navbar-item.is-active,
       margin-top: 0.75rem; }
     #appcontent .columnsidemenu .columninner #sharemod {
       margin-top: 0.75rem; }
-    @media screen and (max-width: 1023px) {
-      #appcontent .columnsidemenu .columninner #sharemod {
-        display: none; } }
   #appcontent .columncontent .columnsidemenu {
     margin-top: 0;
     padding-top: 0; }
