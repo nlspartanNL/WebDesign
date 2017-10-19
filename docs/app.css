@@ -4318,7 +4318,7 @@ a.navbar-item:hover, a.navbar-item.is-active,
   #appcontent .footer {
     border-bottom: 3px solid #44bfd5; }
     #appcontent .footer .footer-foot {
-      color: #7a7a7a;
+      color: rgba(255, 255, 255, 0.5);
       padding: 3rem 0; }
       #appcontent .footer .footer-foot ul {
         margin-bottom: 1rem; }
