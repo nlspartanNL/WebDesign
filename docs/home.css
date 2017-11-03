@@ -420,7 +420,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
     font-size: 16px; } }
 
 body {
-  background: #fff; }
+  background: white; }
 
 a:hover {
   color: inherit; }
@@ -3406,24 +3406,6 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .badge {
   position: relative;
   white-space: nowrap; }
-  .badge.badge-white[data-badge]::after, .badge.badge-white:not([data-badge])::after {
-    background: white;
-    color: #0a0a0a; }
-  .badge.badge-light[data-badge]::after, .badge.badge-light:not([data-badge])::after {
-    background: whitesmoke;
-    color: #171727; }
-  .badge.badge-dark[data-badge]::after, .badge.badge-dark:not([data-badge])::after {
-    background: #171727;
-    color: whitesmoke; }
-  .badge.badge-primary[data-badge]::after, .badge.badge-primary:not([data-badge])::after {
-    background: #44bfd5;
-    color: #fff; }
-  .badge.badge-success[data-badge]::after, .badge.badge-success:not([data-badge])::after {
-    background: #23d160;
-    color: #fff; }
-  .badge.badge-warning[data-badge]::after, .badge.badge-warning:not([data-badge])::after {
-    background: #ffdd57;
-    color: rgba(0, 0, 0, 0.7); }
   .badge.badge-danger[data-badge]::after, .badge.badge-danger:not([data-badge])::after {
     background: #ff3860;
     color: #fff; }

@@ -384,7 +384,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
     font-size: 16px; } }
 
 body {
-  background: #fff; }
+  background: white; }
 
 a:hover {
   color: inherit; }
@@ -1597,33 +1597,38 @@ a.box:active {
     background-color: #4a4a4a; }
   .progress::-moz-progress-bar {
     background-color: #4a4a4a; }
-  .progress.is-white::-webkit-progress-value {
-    background-color: white; }
-  .progress.is-white::-moz-progress-bar {
-    background-color: white; }
+  .progress::-ms-fill {
+    background-color: #4a4a4a;
+    border: none; }
   .progress.is-light::-webkit-progress-value {
     background-color: whitesmoke; }
   .progress.is-light::-moz-progress-bar {
     background-color: whitesmoke; }
-  .progress.is-dark::-webkit-progress-value {
-    background-color: #171727; }
-  .progress.is-dark::-moz-progress-bar {
-    background-color: #171727; }
+  .progress.is-light::-ms-fill {
+    background-color: whitesmoke; }
   .progress.is-primary::-webkit-progress-value {
     background-color: #44bfd5; }
   .progress.is-primary::-moz-progress-bar {
+    background-color: #44bfd5; }
+  .progress.is-primary::-ms-fill {
     background-color: #44bfd5; }
   .progress.is-success::-webkit-progress-value {
     background-color: #23d160; }
   .progress.is-success::-moz-progress-bar {
     background-color: #23d160; }
+  .progress.is-success::-ms-fill {
+    background-color: #23d160; }
   .progress.is-warning::-webkit-progress-value {
     background-color: #ffdd57; }
   .progress.is-warning::-moz-progress-bar {
     background-color: #ffdd57; }
+  .progress.is-warning::-ms-fill {
+    background-color: #ffdd57; }
   .progress.is-danger::-webkit-progress-value {
     background-color: #ff3860; }
   .progress.is-danger::-moz-progress-bar {
+    background-color: #ff3860; }
+  .progress.is-danger::-ms-fill {
     background-color: #ff3860; }
   .progress.is-small {
     height: 0.75rem; }
@@ -3860,24 +3865,6 @@ a.navbar-item:hover, a.navbar-item.is-active,
 .badge {
   position: relative;
   white-space: nowrap; }
-  .badge.badge-white[data-badge]::after, .badge.badge-white:not([data-badge])::after {
-    background: white;
-    color: #0a0a0a; }
-  .badge.badge-light[data-badge]::after, .badge.badge-light:not([data-badge])::after {
-    background: whitesmoke;
-    color: #171727; }
-  .badge.badge-dark[data-badge]::after, .badge.badge-dark:not([data-badge])::after {
-    background: #171727;
-    color: whitesmoke; }
-  .badge.badge-primary[data-badge]::after, .badge.badge-primary:not([data-badge])::after {
-    background: #44bfd5;
-    color: #fff; }
-  .badge.badge-success[data-badge]::after, .badge.badge-success:not([data-badge])::after {
-    background: #23d160;
-    color: #fff; }
-  .badge.badge-warning[data-badge]::after, .badge.badge-warning:not([data-badge])::after {
-    background: #ffdd57;
-    color: rgba(0, 0, 0, 0.7); }
   .badge.badge-danger[data-badge]::after, .badge.badge-danger:not([data-badge])::after {
     background: #ff3860;
     color: #fff; }
