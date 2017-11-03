@@ -1,7 +1,7 @@
 .badge
   position: relative
   white-space: nowrap
-  @each $name, $pair in $colors
+  @each $name, $pair in $badgecolors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &.badge-#{$name}

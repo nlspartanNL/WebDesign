@@ -42,7 +42,7 @@
   display: inline-block
   flex-grow: 0
   flex-shrink: 0
-  font-size: 0
+  font-size: $size-normal
   height: 20px
   max-height: 20px
   max-width: 20px
@@ -115,30 +115,34 @@
     background-color: currentColor
     display: block
     height: 1px
-    left: calc(50% - 8px)
+    left: 50%
+    margin-left: -7px
     position: absolute
-    transform-origin: center
-    transition-duration: $speed
-    transition-property: background-color, opacity, transform
-    transition-timing-function: $easing
-    width: 16px
+    top: 50%
+    transition: none $speed $easing
+    transition-property: background, left, opacity, transform
+    width: 15px
     &:nth-child(1)
-      top: calc(50% - 6px)
+      margin-top: -6px
     &:nth-child(2)
-      top: calc(50% - 1px)
+      margin-top: -1px
     &:nth-child(3)
-      top: calc(50% + 4px)
+      margin-top: 4px
   &:hover
     background-color: rgba(black, 0.05)
   // Modifers
   &.is-active
     span
       &:nth-child(1)
-        transform: translateY(5px) rotate(45deg)
+        margin-left: -5px
+        transform: rotate(45deg)
+        transform-origin: left top
       &:nth-child(2)
         opacity: 0
       &:nth-child(3)
-        transform: translateY(-5px) rotate(-45deg)
+        margin-left: -5px
+        transform: rotate(-45deg)
+        transform-origin: left bottom
 
 =loader
   animation: spinAround 500ms infinite linear

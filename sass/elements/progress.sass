@@ -22,7 +22,7 @@ $progress-value-background-color: $text !default
     background-color: $progress-value-background-color
     border: none
   // Colors
-  @each $name, $pair in $colors
+  @each $name, $pair in $progresscolors
     $color: nth($pair, 1)
     &.is-#{$name}
       &::-webkit-progress-value
