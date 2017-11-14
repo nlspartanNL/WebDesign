@@ -1134,6 +1134,8 @@ a.box:active {
       position: absolute;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
+      -webkit-transform-origin: center;
+              transform-origin: center;
       width: 0.5em;
       margin-top: -0.375em;
       right: 1.125em;
@@ -1650,6 +1652,15 @@ a.box:active {
     .table th.is-narrow {
       white-space: nowrap;
       width: 1%; }
+    .table td.is-selected,
+    .table th.is-selected {
+      background-color: #171727;
+      color: whitesmoke; }
+      .table td.is-selected a,
+      .table td.is-selected strong,
+      .table th.is-selected a,
+      .table th.is-selected strong {
+        color: currentColor; }
   .table th {
     color: #363636; }
   .table tr.is-selected {
@@ -1785,6 +1796,12 @@ a.tag:hover {
   .subtitle em,
   .subtitle span {
     font-weight: inherit; }
+  .title sub,
+  .subtitle sub {
+    font-size: 0.75em; }
+  .title sup,
+  .subtitle sup {
+    font-size: 0.75em; }
   .title .tag,
   .subtitle .tag {
     vertical-align: middle; }
