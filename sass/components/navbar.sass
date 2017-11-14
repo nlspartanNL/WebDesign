@@ -99,21 +99,21 @@ $navbar-divider-background-color: $border !default
     width: 100%
   &.has-shadow
     box-shadow: 0 2px 3px rgba($black, 0.1)
-  &.is-fixed-bottom,
-  &.is-fixed-top
-    +navbar-fixed
-  &.is-fixed-bottom
-    bottom: 0
-    &.has-shadow
-      box-shadow: 0 -2px 3px rgba($black, 0.1)
-  &.is-fixed-top
-    top: 0
+  // &.is-fixed-bottom,
+  // &.is-fixed-top
+    // +navbar-fixed
+  // &.is-fixed-bottom
+    // bottom: 0
+    // &.has-shadow
+      // box-shadow: 0 -2px 3px rgba($black, 0.1)
+  // &.is-fixed-top
+    // top: 0
 
-html.has-navbar-fixed-top
-  padding-top: $navbar-height
+// html.has-navbar-fixed-top
+  // padding-top: $navbar-height
 
-html.has-navbar-fixed-bottom
-  padding-bottom: $navbar-height
+// html.has-navbar-fixed-bottom
+  // padding-bottom: $navbar-height
 
 .navbar-brand,
 .navbar-tabs
@@ -212,26 +212,26 @@ a.navbar-link
     &.is-active
       display: block
   // Fixed navbar
-  .navbar
-    &.is-fixed-bottom-touch,
-    &.is-fixed-top-touch
-      +navbar-fixed
-    &.is-fixed-bottom-touch
-      bottom: 0
-      &.has-shadow
-        box-shadow: 0 -2px 3px rgba($black, 0.1)
-    &.is-fixed-top-touch
-      top: 0
-    &.is-fixed-top,
-    &.is-fixed-top-touch
-      .navbar-menu
-        +overflow-touch
-        max-height: calc(100vh - #{$navbar-height})
-        overflow: auto
-  html.has-navbar-fixed-top-touch
-    padding-top: $navbar-height
-  html.has-navbar-fixed-bottom-touch
-    padding-bottom: $navbar-height
+  // .navbar
+    // &.is-fixed-bottom-touch,
+    // &.is-fixed-top-touch
+      // +navbar-fixed
+    // &.is-fixed-bottom-touch
+      // bottom: 0
+      // &.has-shadow
+        // box-shadow: 0 -2px 3px rgba($black, 0.1)
+    // &.is-fixed-top-touch
+      // top: 0
+    // &.is-fixed-top,
+    // &.is-fixed-top-touch
+      // .navbar-menu
+        // +overflow-touch
+        // max-height: calc(100vh - #{$navbar-height})
+        // overflow: auto
+  // html.has-navbar-fixed-top-touch
+    // padding-top: $navbar-height
+  // html.has-navbar-fixed-bottom-touch
+    // padding-bottom: $navbar-height
 
 +tablet
   .navbar,
@@ -270,16 +270,16 @@ a.navbar-link
   .navbar-item
     &.has-dropdown
       align-items: stretch
-    &.has-dropdown-up
-      .navbar-link::after
-        transform: rotate(135deg) translate(0.25em, -0.25em)
-      .navbar-dropdown
-        border-bottom: $navbar-dropdown-border-top
-        border-radius: $navbar-dropdown-radius $navbar-dropdown-radius 0 0
-        border-top: none
-        bottom: 100%
-        box-shadow: 0 -8px 8px rgba($black, 0.1)
-        top: auto
+    // &.has-dropdown-up
+      // .navbar-link::after
+        // transform: rotate(135deg) translate(0.25em, -0.25em)
+      // .navbar-dropdown
+        // border-bottom: $navbar-dropdown-border-top
+        // border-radius: $navbar-dropdown-radius $navbar-dropdown-radius 0 0
+        // border-top: none
+        // bottom: 100%
+        // box-shadow: 0 -8px 8px rgba($black, 0.1)
+        // top: auto
     &.is-active,
     &.is-hoverable:hover
       .navbar-dropdown
