@@ -4,7 +4,6 @@ Design for [mod.io](https://mod.io) is powered by the [bulma.io](http://bulma.io
 ## Extensions
 The enhancements for bulma we use are stored in the sass/extensions/ folder (if they were made by a 3rd party), and our own enhancements are stored in the sass/modio/ folder.
 
-<<<<<<< HEAD
 ## Setup
 To get the [design](https://design.mod.io) up and running on your local machine:
 
@@ -12,12 +11,6 @@ To get the [design](https://design.mod.io) up and running on your local machine:
 2. Point your SASS compiler at the files in the sass/modio/ folder
 3. Output the .css files to the docs/ folder
 4. Load [index.html in the docs folder](https://design.mod.io) to preview how your changes will look before submitting your contribution
-=======
-[![npm](https://img.shields.io/npm/v/bulma.svg)](https://www.npmjs.com/package/bulma)
-[![npm](https://img.shields.io/npm/dm/bulma.svg)](https://www.npmjs.com/package/bulma)
-[![Join the chat at https://gitter.im/jgthms/bulma](https://badges.gitter.im/jgthms/bulma.svg)](https://gitter.im/jgthms/bulma)
-[![Build Status](https://travis-ci.org/jgthms/bulma.svg?branch=master)](https://travis-ci.org/jgthms/bulma)
->>>>>>> refs/remotes/upstream/master
 
 ## Contributions Welcome
 Want to enhance the design of [mod.io](https://mod.io)? Submit a pull request with your recommended changes to the SASS files.
