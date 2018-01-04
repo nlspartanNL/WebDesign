@@ -803,6 +803,8 @@ a.box:active {
     -webkit-box-shadow: none;
             box-shadow: none;
     pointer-events: none; }
+  .button.is-rounded {
+    border-radius: 290486px; }
 
 .container {
   margin: 0 auto;
@@ -1335,46 +1337,46 @@ a.box:active {
           justify-content: flex-start; }
   .field.has-addons .control:not(:last-child) {
     margin-right: -1px; }
+  .field.has-addons .control:not(:first-child):not(:last-child) .button,
+  .field.has-addons .control:not(:first-child):not(:last-child) .input,
+  .field.has-addons .control:not(:first-child):not(:last-child) .select select {
+    border-radius: 0; }
   .field.has-addons .control:first-child .button,
   .field.has-addons .control:first-child .input,
   .field.has-addons .control:first-child .select select {
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px; }
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
   .field.has-addons .control:last-child .button,
   .field.has-addons .control:last-child .input,
   .field.has-addons .control:last-child .select select {
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px; }
-  .field.has-addons .control .button,
-  .field.has-addons .control .input,
-  .field.has-addons .control .select select {
-    border-radius: 0; }
-    .field.has-addons .control .button:hover, .field.has-addons .control .button.is-hovered,
-    .field.has-addons .control .input:hover,
-    .field.has-addons .control .input.is-hovered,
-    .field.has-addons .control .select select:hover,
-    .field.has-addons .control .select select.is-hovered {
-      z-index: 2; }
-    .field.has-addons .control .button:focus, .field.has-addons .control .button.is-focused, .field.has-addons .control .button:active, .field.has-addons .control .button.is-active,
-    .field.has-addons .control .input:focus,
-    .field.has-addons .control .input.is-focused,
-    .field.has-addons .control .input:active,
-    .field.has-addons .control .input.is-active,
-    .field.has-addons .control .select select:focus,
-    .field.has-addons .control .select select.is-focused,
-    .field.has-addons .control .select select:active,
-    .field.has-addons .control .select select.is-active {
-      z-index: 3; }
-      .field.has-addons .control .button:focus:hover, .field.has-addons .control .button.is-focused:hover, .field.has-addons .control .button:active:hover, .field.has-addons .control .button.is-active:hover,
-      .field.has-addons .control .input:focus:hover,
-      .field.has-addons .control .input.is-focused:hover,
-      .field.has-addons .control .input:active:hover,
-      .field.has-addons .control .input.is-active:hover,
-      .field.has-addons .control .select select:focus:hover,
-      .field.has-addons .control .select select.is-focused:hover,
-      .field.has-addons .control .select select:active:hover,
-      .field.has-addons .control .select select.is-active:hover {
-        z-index: 4; }
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  .field.has-addons .control .button:hover, .field.has-addons .control .button.is-hovered,
+  .field.has-addons .control .input:hover,
+  .field.has-addons .control .input.is-hovered,
+  .field.has-addons .control .select select:hover,
+  .field.has-addons .control .select select.is-hovered {
+    z-index: 2; }
+  .field.has-addons .control .button:focus, .field.has-addons .control .button.is-focused, .field.has-addons .control .button:active, .field.has-addons .control .button.is-active,
+  .field.has-addons .control .input:focus,
+  .field.has-addons .control .input.is-focused,
+  .field.has-addons .control .input:active,
+  .field.has-addons .control .input.is-active,
+  .field.has-addons .control .select select:focus,
+  .field.has-addons .control .select select.is-focused,
+  .field.has-addons .control .select select:active,
+  .field.has-addons .control .select select.is-active {
+    z-index: 3; }
+    .field.has-addons .control .button:focus:hover, .field.has-addons .control .button.is-focused:hover, .field.has-addons .control .button:active:hover, .field.has-addons .control .button.is-active:hover,
+    .field.has-addons .control .input:focus:hover,
+    .field.has-addons .control .input.is-focused:hover,
+    .field.has-addons .control .input:active:hover,
+    .field.has-addons .control .input.is-active:hover,
+    .field.has-addons .control .select select:focus:hover,
+    .field.has-addons .control .select select.is-focused:hover,
+    .field.has-addons .control .select select:active:hover,
+    .field.has-addons .control .select select.is-active:hover {
+      z-index: 4; }
   .field.has-addons .control.is-expanded {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -1476,7 +1478,8 @@ a.box:active {
     width: 1em;
     position: absolute !important;
     right: 0.625em;
-    top: 0.625em; }
+    top: 0.625em;
+    z-index: 4; }
   .control.is-loading.is-small:after {
     font-size: 0.75rem; }
   .control.is-loading.is-medium:after {
@@ -1553,8 +1556,8 @@ a.box:active {
     background: transparent; }
   .notification > .delete {
     position: absolute;
-    right: 0.5em;
-    top: 0.5em; }
+    right: 0.5rem;
+    top: 0.5rem; }
   .notification .title,
   .notification .subtitle,
   .notification .content {
@@ -1938,11 +1941,9 @@ a.tag:hover {
           justify-content: flex-end; }
 .button.is-nolink {
   text-decoration: none; }
-.button.is-circle {
-  border-radius: 1024px; }
-  .button.is-circle.is-padded {
-    padding-left: 23px;
-    padding-right: 20px; }
+.button.is-padded {
+  padding-left: 1em;
+  padding-right: 1em; }
 
 .container.is-fluid {
   max-width: none; }
@@ -2374,7 +2375,7 @@ a.dropdown-item {
           justify-content: center;
   overflow: hidden;
   position: fixed;
-  z-index: 20; }
+  z-index: 40; }
   .modal.is-active {
     display: -webkit-box;
     display: -ms-flexbox;
