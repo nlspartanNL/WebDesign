@@ -3093,7 +3093,6 @@ a.navbar-item:hover, a.navbar-item.is-active {
 .pagination-next,
 .pagination-link {
   border-color: #44bfd5;
-  color: #363636;
   min-width: 2.25em; }
   .pagination-previous:hover,
   .pagination-next:hover,
