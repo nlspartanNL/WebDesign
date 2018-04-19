@@ -20,8 +20,8 @@
   transform-origin: center center
   vertical-align: top
   width: 20px
-  &:before,
-  &:after
+  &::before,
+  &::after
     background-color: $white
     content: ""
     display: block
@@ -32,7 +32,7 @@
     position: absolute
     top: 50%
     width: 50%
-  &:after
+  &::after
     transform: rotate(-90deg)
   &:hover,
   &:focus
@@ -72,8 +72,8 @@
   transform-origin: center center
   vertical-align: top
   width: 20px
-  &:before,
-  &:after
+  &::before,
+  &::after
     background-color: $white
     content: ""
     display: block
@@ -84,12 +84,12 @@
     position: absolute
     top: 50%
     width: 50%
-  &:before
+  &::before
     left: 45%
     top: 60%
     transform: rotate(45deg)
     width: 25%
-  &:after
+  &::after
     left: 55%
     transform: rotate(-45deg)
   &:hover,

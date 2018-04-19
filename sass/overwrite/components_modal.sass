@@ -32,7 +32,7 @@
   top: 50%
   width: $modal-close-dimensions
   z-index: 2
-  &:before
+  &::before
     border-bottom: $modal-close-dimensions / 4 solid transparent
     border-top: $modal-close-dimensions / 4 solid transparent
     content: ""
@@ -48,12 +48,12 @@
 
 .modal-prev
   left: $modal-close-right
-  &:before
+  &::before
     border-right: $modal-close-dimensions / 2.66666666666 solid $white
 
 .modal-next
   right: $modal-close-right
-  &:before
+  &::before
     border-left: $modal-close-dimensions / 2.66666666666 solid $white
 
 .modal-title

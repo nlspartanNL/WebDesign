@@ -112,7 +112,7 @@
       span
         margin: 0 auto
       &.is-active
-        &:before
+        &::before
           border: 10px solid $primary-invert
           border-color: transparent transparent transparent $primary-invert
           border-radius: $radius-small
@@ -123,7 +123,7 @@
           transform: translateY(-50%)
       &.sortable-drag
         border-radius: $radius
-        &:before
+        &::before
           display: none
       &.sortable-ghost
         span
@@ -399,9 +399,9 @@
         .button
           background-color: $dark-alt
           color: $dark-invert
-        &:before
+        &::before
           background: linear-gradient(to bottom, rgba($dark-alt,1) 0%, rgba($dark-alt,0.75) 50%, rgba($dark-alt,0) 100%)
-        &:after
+        &::after
           background: linear-gradient(to top, rgba($dark-alt,1) 0%, rgba($dark-alt,0.75) 50%, rgba($dark-alt,0) 100%)
 
 #appcontent,
