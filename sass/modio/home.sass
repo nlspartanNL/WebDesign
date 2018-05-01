@@ -102,13 +102,16 @@
   .hero-foot
     margin-top: 4em
     z-index: 1
-    .button
-      &.is-dark
-        bottom: 0
-        left: 50%
+    .buttonpulse
+      bottom: 0
+      left: 50%
+      position: absolute
+      transform: translate(-50%, 50%)
+      z-index: 2
+      a
+        z-index: 1
+      span
         position: absolute
-        transform: translate(-50%, 50%)
-        z-index: 2
     .container
       padding-bottom: 4em
       a
