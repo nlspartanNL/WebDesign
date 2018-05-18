@@ -230,7 +230,6 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-iframe,
 canvas,
 img,
 audio,
@@ -242,7 +241,8 @@ img:not(.mce-object) {
   height: auto; }
 
 iframe {
-  border: 0; }
+  border: 0;
+  max-width: 100%; }
 
 table {
   border-collapse: collapse;
@@ -4301,7 +4301,8 @@ a.navbar-item {
   .normalcorner .button {
     border-radius: 4px 4px 0 0 !important;
     border-style: solid;
-    border-width: 0 0 4px 0; }
+    border-width: 0 0 4px 0;
+    font-weight: 600; }
     .normalcorner .button.is-primary, .normalcorner .button.is-dark {
       background: none;
       border-bottom-color: #44bfd5;

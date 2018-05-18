@@ -209,7 +209,6 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-iframe,
 canvas,
 img,
 audio,
@@ -221,7 +220,8 @@ img:not(.mce-object) {
   height: auto; }
 
 iframe {
-  border: 0; }
+  border: 0;
+  max-width: 100%; }
 
 table {
   border-collapse: collapse;
