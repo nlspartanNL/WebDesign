@@ -302,18 +302,18 @@
           color: $navbar-item-hover-color
     .tabs
       &.tabsmenu
-        background-color: $dark
+        background-color: $dark-alt
         ul
-          border-bottom-color: $primary
-          border-bottom-width: 8px
+          border-color: $primary
+        li
+          &.is-active
+            a
+              background: $dark-alt
         a
-          border-bottom-width: 0
-          margin-bottom: 0
+          &:hover
+            color: $primary-invert
+            background: none
       li
-        &.tabtitle
-          a
-            &:hover
-              color: $tabs-link-hover-color
         &.is-active
           a
             background: $primary
