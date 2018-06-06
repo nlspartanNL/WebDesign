@@ -2610,8 +2610,8 @@ a.dropdown-item {
     min-height: 4.4rem;
     width: 100%; }
   .navbar.has-shadow {
-    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
-            box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1); }
+    -webkit-box-shadow: 0 2px 0 0 whitesmoke;
+            box-shadow: 0 2px 0 0 whitesmoke; }
 
 .navbar-brand,
 .navbar-tabs {
