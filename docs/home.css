@@ -2698,6 +2698,8 @@ a.navbar-item {
 .navbar-item {
   padding-left: 0.75rem;
   padding-right: 0.75rem; }
+  .navbar-item .icon.is-centered-text {
+    margin: 0; }
 
 .navbar .navbar-burger {
   z-index: 20; }
@@ -2715,7 +2717,7 @@ a.navbar-item {
     border-bottom-right-radius: 6px; }
 .navbar .avatar {
   border-radius: 4px;
-  margin-left: 1.5rem; }
+  margin-left: 0.75rem; }
   .navbar .avatar img {
     border-radius: 4px; }
 .navbar.is-dark .navbar-item {
