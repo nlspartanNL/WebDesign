@@ -467,6 +467,26 @@
       .image
         background-size: contain
 
+// Clamp
+.clamptoggle
+  cursor: pointer
+.clamptext
+  display: block
+  max-width: 10ch
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+.clampavatar
+  +clamp(2)
+.clamp
+  +clamp(4)
++touch
+  .clamp
+    +clamp(3)
++mobile
+  .clamp
+    +clamp(2)
+
 // Other
 .body
   .content
@@ -501,24 +521,14 @@
   tbody
     td
       vertical-align: middle
-      .clamptoggle
-        cursor: pointer
-      .clampavatar
-        +clamp(2)
-      .clamp
-        +clamp(4)
       .imageholder
         width: 160px
       +touch
         .imageholder
           width: 120px
-        .clamp
-          +clamp(3)
       +mobile
         .imageholder
           width: 80px
-        .clamp
-          +clamp(2)
 
 // Forums
 .tableforum

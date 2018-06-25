@@ -4299,6 +4299,44 @@ a.navbar-item {
   .formbox .previewmultiple .previewimage .image {
     background-size: contain; }
 
+.clamptoggle {
+  cursor: pointer; }
+
+.clamptext {
+  display: block;
+  max-width: 10ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.clampavatar {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.clamp {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+@media screen and (max-width: 1087px) {
+  .clamp {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis; } }
+@media screen and (max-width: 768px) {
+  .clamp {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis; } }
 .body .content {
   overflow: hidden; }
 
@@ -4324,40 +4362,14 @@ a.navbar-item {
   white-space: nowrap; }
 .tablebrowse tbody td {
   vertical-align: middle; }
-  .tablebrowse tbody td .clamptoggle {
-    cursor: pointer; }
-  .tablebrowse tbody td .clampavatar {
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-  .tablebrowse tbody td .clamp {
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-    text-overflow: ellipsis; }
   .tablebrowse tbody td .imageholder {
     width: 160px; }
   @media screen and (max-width: 1087px) {
     .tablebrowse tbody td .imageholder {
-      width: 120px; }
-    .tablebrowse tbody td .clamp {
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      overflow: hidden;
-      text-overflow: ellipsis; } }
+      width: 120px; } }
   @media screen and (max-width: 768px) {
     .tablebrowse tbody td .imageholder {
-      width: 80px; }
-    .tablebrowse tbody td .clamp {
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-      text-overflow: ellipsis; } }
+      width: 80px; } }
 
 .tableforum tfoot td {
   padding-top: 1em !important; }
