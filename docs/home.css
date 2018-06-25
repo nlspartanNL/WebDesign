@@ -108,6 +108,7 @@
   border: none;
   border-radius: 290486px;
   cursor: pointer;
+  pointer-events: auto;
   display: inline-block;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
@@ -1554,6 +1555,7 @@ a.box:active {
       margin-bottom: 0; }
 
 .control {
+  clear: both;
   font-size: 1rem;
   position: relative;
   text-align: left; }
@@ -2326,6 +2328,10 @@ a.dropdown-item {
       -ms-flex-align: center;
           align-items: center;
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2463,6 +2469,7 @@ a.dropdown-item {
   overflow-y: hidden; }
 
 .navbar-burger {
+  color: #171727;
   cursor: pointer;
   display: block;
   height: 4.4rem;
