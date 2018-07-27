@@ -3523,6 +3523,11 @@ a.navbar-item {
 
 #home {
   overflow-x: hidden; }
+  #home .navbar .navbar-brand img {
+    max-width: 160px; }
+    @media screen and (min-width: 769px), print {
+      #home .navbar .navbar-brand img {
+        min-width: 160px; } }
   #home .hero-head .is-text {
     color: #44bfd5; }
   #home .hero-body h1 {
