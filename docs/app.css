@@ -2252,10 +2252,11 @@ ul.help {
       opacity: 1; }
     .card:hover .card-overlay {
       opacity: 0.98; }
-    .card:hover .togglehover {
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
-      display: inline-flex; }
+    @media screen and (min-width: 1088px) {
+      .card:hover .togglehover {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex; } }
 
 .dropdown {
   display: -webkit-inline-box;

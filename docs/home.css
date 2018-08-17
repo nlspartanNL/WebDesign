@@ -2136,10 +2136,11 @@ a.tag:hover {
       opacity: 1; }
     .card:hover .card-overlay {
       opacity: 0.98; }
-    .card:hover .togglehover {
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
-      display: inline-flex; }
+    @media screen and (min-width: 1088px) {
+      .card:hover .togglehover {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex; } }
 
 .dropdown {
   display: -webkit-inline-box;
@@ -3599,9 +3600,6 @@ a.navbar-item {
     margin: 7em 0 2em; }
   #home .sectionprofile {
     margin: 6em 0 7em; }
-  #home .is-particles {
-    overflow: hidden;
-    z-index: 0; }
   #home .benefits {
     background: none;
     padding-bottom: 3em; }
