@@ -566,9 +566,11 @@ hr.is-bold {
   max-width: 100%; }
 
 .spoiler {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5T/wDltzBKAAAAE0lEQVR42mJgYGDEQAzYBAECDAABJgANo0Ss7wAAAABJRU5ErkJggg==); }
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5T/wDltzBKAAAAE0lEQVR42mJgYGDEQAzYBAECDAABJgANo0Ss7wAAAABJRU5ErkJggg==);
+  color: transparent; }
   .spoiler:hover {
-    background: none; }
+    background: none;
+    color: inherit; }
 
 .center .twitter-tweet {
   margin-left: auto;
