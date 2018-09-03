@@ -4313,10 +4313,11 @@ a.navbar-item {
       #appcontent.background.is-dark .tabs.tabsmenu ul {
         border-color: #44bfd5; }
       #appcontent.background.is-dark .tabs.tabsmenu li.is-active a {
-        background: #2c2c3f; }
+        background: #2c2c3f;
+        color: whitesmoke; }
       #appcontent.background.is-dark .tabs.tabsmenu a:hover {
-        color: #fff;
-        background: none; }
+        background: none;
+        color: whitesmoke; }
     #appcontent.background.is-dark .tabs li.is-active a {
       background: #44bfd5;
       border-color: #44bfd5;
