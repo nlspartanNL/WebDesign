@@ -44,6 +44,8 @@ $navbar-divider-height: 2px !default
 
 $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default
 
+$navbar-breakpoint: $desktop !default
+
 =navbar-fixed
   left: 0
   position: fixed
@@ -74,7 +76,9 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default
         // .navbar-link
           // &::after
             // border-color: $color-invert
-      +desktop
+      .navbar-burger
+        color: $color-invert
+      +from($navbar-breakpoint)
         .navbar-start,
         .navbar-end
           // .navbar-link,
@@ -201,7 +205,8 @@ a.navbar-item
 // .navbar-link:not(.is-arrowless)
   // padding-right: 2.5em
   // &::after
-    // +arrow($navbar-dropdown-arrow)
+    // @extend %arrow
+    // border-color: $navbar-dropdown-arrow
     // margin-top: -0.375em
     // right: 1.125em
 
@@ -220,7 +225,7 @@ a.navbar-item
   height: $navbar-divider-height
   margin: 0.5rem 0
 
-+mobile
++until($navbar-breakpoint)
   .navbar > .container
     display: block
   .navbar-brand,
@@ -261,7 +266,7 @@ a.navbar-item
     // &.has-navbar-fixed-bottom-touch
       // padding-bottom: $navbar-height
 
-+tablet
++from($navbar-breakpoint)
   .navbar,
   .navbar-menu,
   .navbar-start,
@@ -415,3 +420,9 @@ a.navbar-item
     // &.is-active
       // .navbar-link
         // background-color: $navbar-item-hover-background-color
+
+// Combination
+
+// .hero
+  // &.is-fullheight-with-navbar
+    // min-height: calc(100vh - #{$navbar-height})
