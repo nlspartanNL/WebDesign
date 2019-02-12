@@ -623,6 +623,12 @@ hr.is-bold {
     background: none;
     color: inherit; }
 
+.acronym {
+  cursor: help;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted; }
+
 .center .twitter-tweet {
   margin-left: auto;
   margin-right: auto; }
