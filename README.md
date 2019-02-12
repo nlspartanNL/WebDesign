@@ -1,7 +1,7 @@
 <a href="https://mod.io"><img src="https://static.mod.io/v1/images/branding/modio-color-dark.svg" alt="mod.io" width="400"/></a>
 
 # mod.io Design
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/DBolical/modioUNITY/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/modio/UnityPlugin/blob/master/LICENSE)
 [![Discord](https://img.shields.io/discord/389039439487434752.svg)](https://discord.mod.io)
 
 
@@ -22,9 +22,12 @@ To get the [design](https://design.mod.io) up and running on your local machine:
 Want to enhance the design of [mod.io](https://mod.io)? Submit a pull request with your recommended changes to the SASS files.
 
 ## Other Repositories
-Our aim with [mod.io](https://mod.io), is to provide an open modding API. You are welcome to view, fork and contribute to our other codebases in use:
+Our aim with [mod.io](https://mod.io), is to provide an open modding API. You are welcome to [view, fork and contribute to our other codebases](https://github.com/modio) in use:
 
-* [SDK](https://sdk.mod.io) is public and open source, the repository with documentation can be [found here](https://github.com/DBolical/modioSDK). Game developers are welcome to utilize it directly, to add support for mods in their games, or extend it to create plugins and wrappers for other engines and codebases.
-* [API documentation](https://docs.mod.io) is public and open source, the repository can be [found here](https://github.com/DBolical/modioAPIDOCS).
+* [API documentation](https://docs.mod.io) is public and open source, the repository can be [found here](https://github.com/modio/APIDocs).
 * [Browse engine tools](https://apps.mod.io), plugins and wrappers created by the community, or [share your own](https://apps.mod.io/add).
-* [Unity plugin](https://github.com/DBolical/modioUNITY), easily manage the browsing and install of mods in Unity Engine games.
+* [Unreal Engine 4 plugin](https://github.com/modio/UE4Plugin), easily manage the browsing and install of mods in Unreal Engine 4 games
+* [Unity plugin](https://github.com/modio/UnityPlugin), easily manage the browsing and install of mods in Unity Engine games
+* [Python wrapper](https://github.com/ClementJ18/mod.io), a python wrapper for the mod.io API
+* [Rust wrapper](https://github.com/nickelc/modio-rs), rust interface for mod.io
+* And more...
