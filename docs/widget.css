@@ -3158,6 +3158,13 @@ button.dropdown-item {
   .is-google:hover {
     background-color: #d73925 !important; }
 
+.is-github {
+  background: #24292e !important;
+  border-color: transparent !important;
+  color: white !important; }
+  .is-github:hover {
+    background-color: #191c20 !important; }
+
 .is-steam {
   background: #171a21 !important;
   border-color: transparent !important;
