@@ -78,8 +78,6 @@ gulp.task('combine', (done) => {
 
 // Upload to s3
 gulp.task('upload', (done) => {
-  console.log(process.argv);
-  done();
   if (process.argv[3] === undefined || process.argv[4] === undefined) {
     console.log('You must supply the S3 bucket name: gulp upload --bucket mybucket. Aborting upload.');
     done();
