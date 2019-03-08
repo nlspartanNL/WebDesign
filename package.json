@@ -1,0 +1,40 @@
+{
+  "name": "design",
+  "version": "1.0.0",
+  "description": "<a href=\"https://mod.io\"><img src=\"https://static.mod.io/v1/images/branding/modio-color-dark.svg\" alt=\"mod.io\" width=\"400\"/></a>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modio/WebDesign.git"
+  },
+  "author": "Patrick Sotiriou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modio/WebDesign/issues"
+  },
+  "homepage": "https://github.com/modio/WebDesign#readme",
+  "dependencies": {
+    "aws-sdk": "^2.416.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-scss-combine": "^1.0.0",
+    "gulp-util": "^3.0.8",
+    "node-sass": "^4.11.0",
+    "s3": "^4.4.0",
+    "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1"
+  }
+}
