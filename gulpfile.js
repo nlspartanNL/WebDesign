@@ -2,8 +2,8 @@
 /* eslint-disable no-console */
 /* eslint-disable max-len */
 
-// Original Author: DeathMark
-// Modified: Patrick Sotiriou
+// Original Author of sassMerge() code: DeathMark
+// Modified sassMerge() + the rest: Patrick Sotiriou
 
 const gulp = require('gulp');
 const concat = require('gulp-concat');
@@ -68,6 +68,7 @@ const combine = function () {
 };
 
 // Merge Sass files and respect their @imports
+// command: gulp combine
 gulp.task('combine', (done) => {
   gulp.src(`sass/modio/${filename}`)
     .pipe(combine())
@@ -76,13 +77,15 @@ gulp.task('combine', (done) => {
   done();
 });
 
-// Upload to s3
+// Upload dist/app.sass to S3 bucket.
+// command: gulp combine --bucket mybucket
 gulp.task('upload', (done) => {
-  if (process.argv[3] === undefined || process.argv[4] === undefined) {
+  const cmdArgs = process.argv;
+  if (cmdArgs[3] === undefined || cmdArgs[3] !== '--bucket' || cmdArgs[4] === undefined) {
     console.log('You must supply the S3 bucket name: gulp upload --bucket mybucket. Aborting upload.');
     done();
   } else {
-    const bucket = process.argv[4];
+    const bucket = cmdArgs[4];
     const client = s3.createClient({
       s3Options: {
         region: 'us-west-1',

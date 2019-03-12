@@ -4,6 +4,8 @@
 .ruby-version
 test.sass
 npm-debug.log
+.githooks/.pre-push-config.sh
+.githooks/log.txt
 
 # Folders
 .idea/
@@ -12,3 +14,4 @@ _gh_pages
 _site
 node_modules
 test/output/
+upath/

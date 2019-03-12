@@ -1,0 +1,81 @@
+#!/bin/sh
+# Pre-push hook that does the following.
+# 1. Merge's profile.sass and it's dependencies
+#    into a single file (dist/app.sass)
+# 2. Uploads it to the required S3 buckets as
+#    defined in the CONFIG_FILE constant.
+
+BASE_DIR=$(dirname $(dirname $(readlink -fm $0)))
+LOG_FILE=$BASE_DIR/.githooks/log.txt
+CONFIG_FILE=.pre-push-config.sh
+
+exists() {
+  command -v "$1" >/dev/null 2>&1
+}
+
+upload() {
+	command gulp upload --bucket $1
+}
+
+log() {
+	echo "$(date --utc +%FT%TZ) - $1" |& tee -a $LOG_FILE
+}
+
+z40=0000000000000000000000000000000000000000
+read local_ref local_sha remote_ref remote_sha
+
+if ! [ -e $CONFIG_FILE ]; then
+  log "Local config file $(CONFIG_FILE) not found. Aborting."
+  exit 1;
+fi
+
+source ./$CONFIG_FILE
+
+if [ "$local_sha" = $z40 ]; then
+	# Handle delete
+	:
+else
+	if [ "$remote_sha" = $z40 ]; then
+		# New branch, examine all commits
+		range="$local_sha"
+	else
+		# Update to existing branch, examine new commits
+		range="$remote_sha..$local_sha"
+	fi
+
+	# Check if changes are being uploaded to test bucket only	
+	commit_msg=$(git rev-list -n 1 --grep '^TEST:' "$range")
+
+	if ! exists npm; then
+		log "npm not found. Aborting."
+		exit 1
+	fi
+
+	if ! exists gulp; then
+		log "gulp not installed. Please run npm install -g gulp first."
+		exit 1
+	fi
+
+	cd $BASE_DIR
+
+	log "Starting npm update"
+	npm update |& tee -a $LOG_FILE
+  log "Complete!"
+	log "Starting sass merge"
+	gulp combine |& tee -a $LOG_FILE
+  log "Complete!"
+	log "Starting S3 upload"
+
+	if [ -n "$commit_msg" ]; then
+		log >&2 "Found TEST: $local_ref, only pushing to $BUCKET_TEST"
+		upload $BUCKET_TEST	|& tee -a $LOG_FILE
+	else
+		upload $BUCKET |& tee -a $LOG_FILE
+		upload $BUCKET_TEST |& tee -a $LOG_FILE
+	fi
+
+	log "Complete!"
+	log "Pre-hook routine complete - pushing to GitHub."
+fi
+
+exit 0
