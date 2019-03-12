@@ -7,7 +7,7 @@
 
 BASE_DIR=$(dirname $(dirname $(readlink -fm $0)))
 LOG_FILE=$BASE_DIR/.githooks/log.txt
-CONFIG_FILE=.pre-push-config.sh
+CONFIG_FILE=$BASE_DIR/.githooks/.pre-push-config.sh
 
 exists() {
   command -v "$1" >/dev/null 2>&1
@@ -29,7 +29,7 @@ if ! [ -e $CONFIG_FILE ]; then
   exit 1;
 fi
 
-source ./$CONFIG_FILE
+source $CONFIG_FILE
 
 if [ "$local_sha" = $z40 ]; then
 	# Handle delete
@@ -57,7 +57,6 @@ else
 	fi
 
 	cd $BASE_DIR
-
 	log "Starting npm update"
 	npm update |& tee -a $LOG_FILE
   log "Complete!"
