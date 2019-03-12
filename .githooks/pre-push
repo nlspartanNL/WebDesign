@@ -25,7 +25,7 @@ z40=0000000000000000000000000000000000000000
 read local_ref local_sha remote_ref remote_sha
 
 if ! [ -e $CONFIG_FILE ]; then
-  log "Local config file $(CONFIG_FILE) not found. Aborting."
+  log "Config file not found. Aborting."
   exit 1;
 fi
 
@@ -46,12 +46,12 @@ else
 	# Check if changes are being uploaded to test bucket only	
 	commit_msg=$(git rev-list -n 1 --grep '^TEST:' "$range")
 
-	if ! exists npm; then
+	if ! [ exists npm ]; then
 		log "npm not found. Aborting."
 		exit 1
 	fi
 
-	if ! exists gulp; then
+	if ! [ exists gulp ]; then
 		log "gulp not installed. Please run npm install -g gulp first."
 		exit 1
 	fi
