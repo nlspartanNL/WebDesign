@@ -1,8 +1,7 @@
-<a href="https://mod.io"><img src="https://static.mod.io/v1/images/branding/modio-color-dark.svg" alt="mod.io" width="400"/></a>
-
+<a href="https://mod.io"><img src="https://static.mod.io/v1/images/branding/modio-color-dark.svg" alt="mod.io" width="360" align="right"/></a>
 # mod.io Design
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/modio/UnityPlugin/blob/master/LICENSE)
-[![Discord](https://img.shields.io/discord/389039439487434752.svg)](https://discord.mod.io)
+[![Discord](https://img.shields.io/discord/389039439487434752.svg?label=Discord&logo=discord&color=7289DA&labelColor=2C2F33)](https://discord.mod.io)
 
 
 Design for [mod.io](https://mod.io) is powered by the [bulma.io](http://bulma.io) CSS framework. The [bulma repository](https://github.com/jgthms/bulma) can be found here. We make minimal changes to it, opting to extend and overwrite its base functionality, so future updates to bulma.io can be easily merged in. We primarily comment out unused functionality to keep our compiled CSS filesize down.
