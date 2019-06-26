@@ -52,15 +52,9 @@ html
 
 // Media
 // img,
-// iframe,
-embed,
-object,
-video
-  height: auto
-  max-width: 100%
-
-audio
-  max-width: 100%
+// video
+  // height: auto
+  // max-width: 100%
 
 // Fix Tinymce bug
 img:not(.mce-object)
@@ -79,4 +73,5 @@ table
 td,
 th
   padding: 0
-  text-align: left
+  &:not([align])
+    text-align: left
