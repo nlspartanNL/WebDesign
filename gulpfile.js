@@ -89,7 +89,7 @@ gulp.task('upload', (done) => {
     const client = s3.createClient({
       s3Options: {
         region: 'us-west-1',
-      },
+      }, 
     });
 
     const params = {
@@ -108,7 +108,7 @@ gulp.task('upload', (done) => {
     });
     uploader.on('progress', () => {
       console.log(`Upload progress of ${filename}:`, uploader.progressAmount, '/', uploader.progressTotal);
-    });
+    }); 
     uploader.on('end', () => {
       console.log(`Finished uploading ${filename}`);
       done();

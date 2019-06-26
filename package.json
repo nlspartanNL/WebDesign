@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/modio/WebDesign#readme",
   "dependencies": {
-    "aws-sdk": "^2.419.0",
+    "aws-sdk": "^2.421.0",
+    "babel-preset-php": "^1.2.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-scss-combine": "^1.0.0",
