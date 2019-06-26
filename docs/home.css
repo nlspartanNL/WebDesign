@@ -221,7 +221,7 @@
   [disabled].button, [disabled].input, [disabled].textarea, .select select[disabled], fieldset[disabled] .button, fieldset[disabled] .input, fieldset[disabled] .textarea, fieldset[disabled] .select select, .select fieldset[disabled] select {
     cursor: not-allowed; }
 
-/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+/*! minireset.css v0.0.4 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
 p,
@@ -267,9 +267,13 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-audio,
+embed,
+object,
 video {
   height: auto;
+  max-width: 100%; }
+
+audio {
   max-width: 100%; }
 
 img:not(.mce-object) {
@@ -467,6 +471,42 @@ table th {
 
 .is-uppercase {
   text-transform: uppercase !important; }
+
+.has-text-white {
+  color: white !important; }
+
+a.has-text-white:hover, a.has-text-white:focus {
+  color: #e6e6e6 !important; }
+
+.has-background-white {
+  background-color: white !important; }
+
+.has-text-light {
+  color: whitesmoke !important; }
+
+a.has-text-light:hover, a.has-text-light:focus {
+  color: #dbdbdb !important; }
+
+.has-background-light {
+  background-color: whitesmoke !important; }
+
+.has-text-dark {
+  color: #171727 !important; }
+
+a.has-text-dark:hover, a.has-text-dark:focus {
+  color: #040406 !important; }
+
+.has-background-dark {
+  background-color: #171727 !important; }
+
+.has-text-primary {
+  color: #44bfd5 !important; }
+
+a.has-text-primary:hover, a.has-text-primary:focus {
+  color: #2aa5bb !important; }
+
+.has-background-primary {
+  background-color: #44bfd5 !important; }
 
 .has-text-success {
   color: #23d160 !important; }
@@ -1127,6 +1167,7 @@ a.box:active {
 .input, .textarea {
   background-color: white;
   border-color: #dbdbdb;
+  border-radius: 4px;
   color: #363636;
   -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
           box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
@@ -1280,6 +1321,7 @@ a.box:active {
   .select select {
     background-color: white;
     border-color: #dbdbdb;
+    border-radius: 4px;
     color: #363636;
     cursor: pointer;
     display: block;
