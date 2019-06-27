@@ -45,8 +45,9 @@ ul
 
 .control
   &.is-dark
-    .button,      
-    .input
+    .button,
+    .input,
+    select
       background-color: $dark-alt
       border-color: $dark-alt
       color: $white
@@ -58,6 +59,11 @@ ul
       &:active,
       &.is-active
         border-color: $primary
+    .select
+      &:hover
+        &:not(.is-multiple):not(.is-loading)
+          &::after
+            border-color: $white
   &.is-loading
     &.has-icons-right
       .icon
