@@ -1893,7 +1893,6 @@ a.tag:hover {
     font-size: 1.5rem; }
 
 .label {
-  color: #363636;
   display: block;
   font-size: 1rem;
   font-weight: 700; }
@@ -2119,32 +2118,43 @@ ul.help {
   margin-left: 2.25em; }
 
 .control.is-dark .button,
-.control.is-dark .input {
+.control.is-dark .input,
+.control.is-dark select {
   background-color: #2c2c3f;
   border-color: #2c2c3f;
   color: white; }
   .control.is-dark .button::-webkit-input-placeholder,
-  .control.is-dark .input::-webkit-input-placeholder {
+  .control.is-dark .input::-webkit-input-placeholder,
+  .control.is-dark select::-webkit-input-placeholder {
     color: white;
     opacity: 0.5; }
   .control.is-dark .button:-ms-input-placeholder,
-  .control.is-dark .input:-ms-input-placeholder {
+  .control.is-dark .input:-ms-input-placeholder,
+  .control.is-dark select:-ms-input-placeholder {
     color: white;
     opacity: 0.5; }
   .control.is-dark .button::-ms-input-placeholder,
-  .control.is-dark .input::-ms-input-placeholder {
+  .control.is-dark .input::-ms-input-placeholder,
+  .control.is-dark select::-ms-input-placeholder {
     color: white;
     opacity: 0.5; }
   .control.is-dark .button::placeholder,
-  .control.is-dark .input::placeholder {
+  .control.is-dark .input::placeholder,
+  .control.is-dark select::placeholder {
     color: white;
     opacity: 0.5; }
   .control.is-dark .button:focus, .control.is-dark .button.is-focused, .control.is-dark .button:active, .control.is-dark .button.is-active,
   .control.is-dark .input:focus,
   .control.is-dark .input.is-focused,
   .control.is-dark .input:active,
-  .control.is-dark .input.is-active {
+  .control.is-dark .input.is-active,
+  .control.is-dark select:focus,
+  .control.is-dark select.is-focused,
+  .control.is-dark select:active,
+  .control.is-dark select.is-active {
     border-color: #44bfd5; }
+.control.is-dark .select:hover:not(.is-multiple):not(.is-loading)::after {
+  border-color: white; }
 .control.is-loading.has-icons-right .icon {
   display: none; }
 
