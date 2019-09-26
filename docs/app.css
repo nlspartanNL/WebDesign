@@ -4518,37 +4518,6 @@ a.navbar-item {
     .tablebrowse tbody td .imageholder {
       width: 80px; } }
 
-.tableforum tfoot td {
-  padding-top: 1em !important; }
-.tableforum td {
-  vertical-align: middle; }
-  .tableforum td.bicon {
-    padding-right: 0; }
-.tableforum tr.post td {
-  vertical-align: top; }
-  .tableforum tr.post td.details {
-    min-width: 110px;
-    width: 1%; }
-.tableforum tr.post .actions {
-  font-weight: 700;
-  margin-bottom: 0.5rem; }
-.tableforum tr.post .username {
-  font-weight: 700;
-  margin-top: 0.5rem;
-  white-space: nowrap; }
-  .tableforum tr.post .username .icon {
-    margin-right: 0.25rem; }
-  .tableforum tr.post .username:hover {
-    color: #44bfd5; }
-.tableforum tr.poll td {
-  padding: 1em !important; }
-.tableforum .postdeleted {
-  opacity: 0.5; }
-.tableforum .subcategorydeleted {
-  opacity: 0.5; }
-  .tableforum .subcategorydeleted .thread {
-    text-decoration: line-through; }
-
 .levelinfo {
   line-height: 32px;
   margin-bottom: 5px; }
