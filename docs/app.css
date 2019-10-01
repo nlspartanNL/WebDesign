@@ -4490,7 +4490,8 @@ a.navbar-item {
 .normalcorner {
   margin-bottom: 0.75rem; }
   .normalcorner .button {
-    border-radius: 4px 4px 0 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
     border-style: solid;
     border-width: 0 0 4px 0;
     font-weight: 600; }
