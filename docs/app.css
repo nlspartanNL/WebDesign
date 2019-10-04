@@ -3922,6 +3922,13 @@ a.navbar-item {
   .is-steam:hover {
     background-color: #0d0e12 !important; }
 
+.is-microsoft {
+  background: #f8f8f8 !important;
+  border-color: transparent !important;
+  color: #707070 !important; }
+  .is-microsoft:hover {
+    background-color: #ebebeb !important; }
+
 .is-reddit {
   background: #FF4500 !important;
   border-color: transparent !important;
