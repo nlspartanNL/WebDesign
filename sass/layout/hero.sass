@@ -17,7 +17,8 @@
     &.is-#{$name}
       background-color: $color
       color: $color-invert
-      a:not(.button):not(.dropdown-item):not(.tag),// this breaks stuff:not(.pagination-link.is-current),
+      a:not(.button):not(.dropdown-item):not(.navbar-item):not(.tag),// this breaks stuff:not(.pagination-link.is-current),
+      .navbar-dropdown a.navbar-item,
       strong
         color: inherit
       .title

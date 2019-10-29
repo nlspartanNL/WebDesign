@@ -3287,7 +3287,8 @@ a.navbar-item {
   .hero.is-dark {
     background-color: #171727;
     color: whitesmoke; }
-    .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-dark a:not(.button):not(.dropdown-item):not(.navbar-item):not(.tag),
+    .hero.is-dark .navbar-dropdown a.navbar-item,
     .hero.is-dark strong {
       color: inherit; }
     .hero.is-dark .title {
