@@ -616,6 +616,9 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 @media screen and (min-width: 1408px) {
   .is-hidden-fullhd {
     display: none !important; } }
+.is-invisible {
+  visibility: hidden !important; }
+
 .is-marginless {
   margin: 0 !important; }
 
@@ -698,7 +701,7 @@ hr.is-bold {
   padding-right: 0 !important; }
 
 .is-autowidth {
-  width: auto; }
+  width: auto !important; }
 
 .is-cursor-pointer {
   cursor: pointer; }
