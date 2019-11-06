@@ -4104,6 +4104,19 @@ a.navbar-item {
         .pricing-table .pricing-plan:not(.pricing-labels):hover .plan-footer .button[disabled] {
           background-color: #44bfd5;
           border-color: transparent; }
+    .pricing-table .pricing-plan.is-dark {
+      background-color: #363636;
+      border-color: #363636;
+      color: white; }
+      .pricing-table .pricing-plan.is-dark .plan-header,
+      .pricing-table .pricing-plan.is-dark .plan-footer,
+      .pricing-table .pricing-plan.is-dark .plan-price,
+      .pricing-table .pricing-plan.is-dark .plan-item {
+        background-color: #363636;
+        border-color: #363636;
+        color: white; }
+      .pricing-table .pricing-plan.is-dark .plan-item {
+        background-color: #4a4a4a; }
 
 @media screen and (min-width: 1216px) {
   .pricing-table .pricing-plan:not(.pricing-labels) .plan-item .plan-icons {
