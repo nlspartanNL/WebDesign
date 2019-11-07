@@ -616,6 +616,9 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 @media screen and (min-width: 1408px) {
   .is-hidden-fullhd {
     display: none !important; } }
+.is-invisible {
+  visibility: hidden !important; }
+
 .is-marginless {
   margin: 0 !important; }
 
@@ -698,7 +701,7 @@ hr.is-bold {
   padding-right: 0 !important; }
 
 .is-autowidth {
-  width: auto; }
+  width: auto !important; }
 
 .is-cursor-pointer {
   cursor: pointer; }
@@ -3287,7 +3290,8 @@ a.navbar-item {
   .hero.is-dark {
     background-color: #171727;
     color: whitesmoke; }
-    .hero.is-dark a:not(.button):not(.dropdown-item):not(.tag),
+    .hero.is-dark a:not(.button):not(.dropdown-item):not(.navbar-item):not(.tag),
+    .hero.is-dark .navbar-dropdown a.navbar-item,
     .hero.is-dark strong {
       color: inherit; }
     .hero.is-dark .title {
@@ -3424,6 +3428,13 @@ a.navbar-item {
   color: white !important; }
   .is-steam:hover {
     background-color: #0d0e12 !important; }
+
+.is-microsoft {
+  background: #f8f8f8 !important;
+  border-color: transparent !important;
+  color: #707070 !important; }
+  .is-microsoft:hover {
+    background-color: #ebebeb !important; }
 
 .is-reddit {
   background: #FF4500 !important;
