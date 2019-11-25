@@ -3236,6 +3236,13 @@ button.dropdown-item {
   .is-microsoft:hover {
     background-color: #ebebeb !important; }
 
+.is-itchio {
+  background: #fa5c5c !important;
+  border-color: transparent !important;
+  color: white !important; }
+  .is-itchio:hover {
+    background-color: #f94343 !important; }
+
 .is-reddit {
   background: #FF4500 !important;
   border-color: transparent !important;
