@@ -3925,11 +3925,11 @@ a.navbar-item {
   .is-steam:hover {
     background-color: #0d0e12 !important; }
 
-.is-microsoft {
+.is-xbox {
   background: #f8f8f8 !important;
   border-color: transparent !important;
   color: #707070 !important; }
-  .is-microsoft:hover {
+  .is-xbox:hover {
     background-color: #ebebeb !important; }
 
 .is-itchio {
