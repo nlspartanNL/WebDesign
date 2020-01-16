@@ -3926,11 +3926,11 @@ a.navbar-item {
     background-color: #0d0e12 !important; }
 
 .is-xbox {
-  background: #f8f8f8 !important;
+  background: #107c10 !important;
   border-color: transparent !important;
-  color: #707070 !important; }
+  color: white !important; }
   .is-xbox:hover {
-    background-color: #ebebeb !important; }
+    background-color: #0d650d !important; }
 
 .is-itchio {
   background: #fa5c5c !important;
